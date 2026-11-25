@@ -6,5 +6,6 @@
 4. **V4 clause-parity phase is not a SAT conjunction oracle.** It phases odd counts of violated clauses. Occasional satisfying measurements do not make it a correct replacement. Unit propagation already solves the simplest unique instance without quantum work.
 5. **V4 zero-solution quantum runs can be inconclusive.** Exhausting a finite measurement budget does not certify UNSAT. The saved zero-no-units quantum runs remain inconclusive; DPLL proves the instance unsatisfiable.
 6. **V6 recursive confidence costs exceed full-space Grover in the saved tiny groups.** The benchmark retains one failed first run and all restart costs. The sample is too small for a general performance ratio.
+7. **V5 structure-aware branching is classical and does not beat direct Glucose4 in these small controls.** Some heuristics reduce internal decisions relative to prefix self-reduction on certain seeds, but direct PySAT is usually cheaper and lookahead/symmetry scoring adds classical work. No quantum operator was run, so no quantum advantage is inferred. See `results/phase2_structural.json`.
 
 These findings remain part of the project history. A new operator should be compared against them at matched success targets and full resource cost.

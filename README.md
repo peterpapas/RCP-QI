@@ -2,7 +2,7 @@
 
 An initial, reproducible investigation of **Recursive Complementary Partitioning with Quantum Interference (RCP-QI)**. RCP-QI is an **unproven hypothesis**, not an established quantum speedup. This package compares three explicit baselines on promised unique-solution problems:
 
-**Current status:** V1's one-iteration formula is analytically derived and numerically validated; V2–V4 and V6 contain small costed controls and negative results. Lean proves abstract partition facts and conditional correctness, not a speedup or correspondence to Qiskit. The project is an unpublished research framework. See the [experiment registry](research/experiment_registry.md), [formal status](theory/formal_status.md), [negative results](research/negative_results.md), and [architecture plan](docs/architecture.md).
+**Current status:** V1's one-iteration formula is analytically derived and numerically validated; V2–V4 and V6 contain small costed controls and negative results. V5 adds a classical, PySAT-backed structural partition benchmark over unique/multiple/zero cases. Lean proves abstract partition facts, conditional correctness, and conditional V1/V2 probability algebra; it proves no speedup or correspondence to Qiskit. The project is an unpublished research framework. See the [experiment registry](research/experiment_registry.md), [formal status](theory/formal_status.md), [structural complementarity analysis](theory/structural_complementarity.md), [literature review](research/literature_review.md), and [negative results](research/negative_results.md).
 
 1. Classical exhaustive search over `0, ..., 2^n - 1`.
 2. Grover search over the full space, with measured and classically verified candidates.
@@ -46,6 +46,7 @@ uv run rcp-qi-phase2 --min-n 2 --max-n 8 --seed 20261125 --shots 256 --sample-se
 uv run rcp-qi-register --min-n 2 --max-n 6
 uv run rcp-qi-sat --seed 20261125 --trials 4 --max-attempts 12
 uv run rcp-qi-recursive --min-n 2 --max-n 5 --seed 20261125 --trials 3 --max-restarts 2
+uv run rcp-qi-structural --seed 20261126 --seed-count 3
 uv run ruff check src tests scripts
 uv run python scripts/validate_results.py
 uv run python scripts/build_processed_summary.py
@@ -109,10 +110,10 @@ Testing one half at each recursive level with Grover costs a geometric sum \(\su
 | v2 | Multi-iteration and partition-specific amplification controls | Multi-iteration benchmark and local-diffuser negative control completed |
 | v3 | Entangled partition registers | Initial before/after and kickback controls completed; no advantage shown |
 | v4 | Constraint-aware quantum interference | Clause-built SAT and unit-propagation controls completed; useful operator remains open |
-| v5 | Adaptive partitioning from mathematical structure | Future work |
+| v5 | Adaptive partitioning from mathematical structure | Seven classical strategies and direct PySAT control benchmarked; a justified quantum operator remains open |
 | v6 | End-to-end recursive benchmarking | Initial confidence/restart benchmark completed |
 
-Next benchmarks should include classical constraint-aware SAT solvers, Grover, random and adversarial formulas, and zero/multiple-solution instances. Track candidate verification calls, partition decisions and their oracle calls, qubits and ancillas, gate count, depth, partition-selection accuracy, final-solution accuracy, shots, repetitions, state preparation, oracle construction, execution time, and scaling. The current results record most resource counts and final success; explicit per-level partition accuracy and a competitive classical SAT baseline remain future work. Negative results are part of the record. The working principle is to try to falsify the hypothesis as rigorously as to validate it.
+V5 compares prefix, occurrence, connectivity, propagation lookahead, symmetry scoring, residual score, and Jeroslow–Wang branching against direct Glucose4 and DPLL on small XOR, 2-SAT, planted/random 3-SAT, 3-coloring, and symmetric CNF controls. The partition-existence calls in V5 are **classical PySAT calls**; the results show no quantum advantage. The [V5 registry entry](research/experiment_registry.md) records seeds, costs, and negative results. Future work needs larger independent instances, dedicated tractable-family solvers, and a property-derived quantum operator compared with matched quantum backtracking and Grover costs. Negative results remain part of the record.
 
 **Central question:** Can an NP-complete problem's internal constraints be encoded into a quantum interference operator that reliably decides whether a partition contains a satisfying assignment without exponential computational cost?
 

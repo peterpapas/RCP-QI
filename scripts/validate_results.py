@@ -52,6 +52,19 @@ def validate() -> list[str]:
             if case["audit_solution_count"] == 0 and row["correct_outcome"] and not row["unsat_proven"]:
                 errors.append("SAT unsat result lacks proof")
 
+    structural = load("phase2_structural.json")
+    for case in structural["cases"]:
+        expected = case["audit_solution_count"] > 0
+        if case["direct_pysat"]["solution_found"] != expected or not case["direct_pysat"]["verified"]:
+            errors.append("V5 direct solver disagrees with offline audit")
+        for row in case["partition_strategies"]:
+            if row["solution_found"] != expected or not row["verified"]:
+                errors.append("V5 partition disagrees with offline audit")
+            if row["solver_calls"] != (case["n"] + 1 if expected else 1):
+                errors.append("V5 partition SAT-call accounting mismatch")
+            if row["verification_calls"] != int(expected):
+                errors.append("V5 final-verification accounting mismatch")
+
     recursive = load("phase2_recursive.json")
     for row in recursive["records"]:
         if row["total_predicate_queries"] != row["classical_evaluations"] + row["quantum_oracle_calls"] + row["verification_calls"]:
@@ -65,4 +78,4 @@ if __name__ == "__main__":
     issues = validate()
     if issues:
         raise SystemExit("\n".join(issues))
-    print("Validated result manifest, v1/v2 probabilities, and resource accounting")
+    print("Validated result manifest, v1/v2 probabilities, and V1-V6 resource accounting")

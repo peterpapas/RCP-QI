@@ -1,5 +1,11 @@
 # Changelog
 
+## Phase II — structural complementarity
+
+- Consolidated the V1/V2 probability derivations and added conditional Lean 4 proofs of their rational algebra and transformation-pair properties.
+- Expanded the primary-source literature review and documented why complementing maps, symmetries, and partition-existence promises do not by themselves yield a general SAT speedup.
+- Added PySAT-backed V5 classical self-reduction controls across seven branching strategies and 33 seeded structured cases, with direct Glucose4 and DPLL baselines. Recorded negative results and full classical scoring/SAT costs; no new quantum operator was introduced.
+
 ## Unreleased — research infrastructure
 
 - Added a pinned Lean 4 project with proofs of partition complementarity, solution preservation, conditional recursive correctness, termination/decision count, and bounded partition-cost summation.
