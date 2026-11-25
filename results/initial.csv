@@ -1,0 +1,49 @@
+case,n,N,trial,instance,seed,algorithm,candidate,success,classical_evaluations,quantum_oracle_calls,verification_calls,circuit_builds,circuit_executions,state_preparations,measurements,gate_count_total,circuit_depth_total,circuit_depth_max,elapsed_s,total_predicate_queries
+equality_n2,2,4,0,"EqualityProblem(n=2, target=1)",20261125,classical,1,True,2,0,0,0,0,0,0,0,0,0,6.499991286545992e-06,2
+equality_n2,2,4,0,"EqualityProblem(n=2, target=1)",20261125,grover,1,True,0,1,1,1,1,1,1,20,14,14,0.014897799992468208,2
+equality_n2,2,4,0,"EqualityProblem(n=2, target=1)",20261125,rcp_qi,,False,0,3,7,2,6,6,6,48,33,9,0.005862400052137673,10
+equality_n2,2,4,1,"EqualityProblem(n=2, target=3)",20269044,classical,3,True,4,0,0,0,0,0,0,0,0,0,2.7999631129205227e-06,4
+equality_n2,2,4,1,"EqualityProblem(n=2, target=3)",20269044,grover,3,True,0,1,1,1,1,1,1,18,12,12,0.0021231999853625894,2
+equality_n2,2,4,1,"EqualityProblem(n=2, target=3)",20269044,rcp_qi,3,True,0,3,7,2,6,6,6,42,30,8,0.005646000034175813,10
+equality_n2,2,4,2,"EqualityProblem(n=2, target=2)",20276963,classical,2,True,3,0,0,0,0,0,0,0,0,0,2.200016751885414e-06,3
+equality_n2,2,4,2,"EqualityProblem(n=2, target=2)",20276963,grover,2,True,0,1,1,1,1,1,1,20,12,12,0.0019240999827161431,2
+equality_n2,2,4,2,"EqualityProblem(n=2, target=2)",20276963,rcp_qi,2,True,0,3,5,2,4,4,4,42,32,10,0.004191499960143119,8
+equality_n2,2,4,3,"EqualityProblem(n=2, target=0)",20284882,classical,0,True,1,0,0,0,0,0,0,0,0,0,2.200016751885414e-06,1
+equality_n2,2,4,3,"EqualityProblem(n=2, target=0)",20284882,grover,0,True,0,1,1,1,1,1,1,22,14,14,0.0018826999585144222,2
+equality_n2,2,4,3,"EqualityProblem(n=2, target=0)",20284882,rcp_qi,0,True,0,1,3,2,2,2,2,17,11,10,0.00310700002592057,4
+equality_n3,3,8,0,"EqualityProblem(n=3, target=1)",20292801,classical,1,True,2,0,0,0,0,0,0,0,0,0,1.7999554984271526e-06,2
+equality_n3,3,8,0,"EqualityProblem(n=3, target=1)",20292801,grover,1,True,0,2,1,1,1,1,1,106,62,62,0.0034003000473603606,3
+equality_n3,3,8,0,"EqualityProblem(n=3, target=1)",20292801,rcp_qi,1,True,0,2,6,3,5,5,5,76,44,22,0.006038399995304644,8
+equality_n3,3,8,1,"EqualityProblem(n=3, target=3)",20300720,classical,3,True,4,0,0,0,0,0,0,0,0,0,1.8999562598764896e-06,4
+equality_n3,3,8,1,"EqualityProblem(n=3, target=3)",20300720,grover,3,True,0,2,1,1,1,1,1,102,62,62,0.003161100030411035,3
+equality_n3,3,8,1,"EqualityProblem(n=3, target=3)",20300720,rcp_qi,3,True,0,4,8,3,7,7,7,131,84,21,0.008013300015591085,12
+equality_n3,3,8,2,"EqualityProblem(n=3, target=7)",20308639,classical,7,True,8,0,0,0,0,0,0,0,0,0,3.00002284348011e-06,8
+equality_n3,3,8,2,"EqualityProblem(n=3, target=7)",20308639,grover,7,True,0,2,1,1,1,1,1,98,58,58,0.0031664000125601888,3
+equality_n3,3,8,2,"EqualityProblem(n=3, target=7)",20308639,rcp_qi,7,True,0,6,10,3,9,9,9,195,123,20,0.008983500010799617,16
+equality_n3,3,8,3,"EqualityProblem(n=3, target=5)",20316558,classical,5,True,6,0,0,0,0,0,0,0,0,0,2.8999638743698597e-06,6
+equality_n3,3,8,3,"EqualityProblem(n=3, target=5)",20316558,grover,5,True,0,2,1,1,1,1,1,102,58,58,0.00314839999191463,3
+equality_n3,3,8,3,"EqualityProblem(n=3, target=5)",20316558,rcp_qi,5,True,0,5,9,3,8,8,8,175,107,21,0.00887469999724999,14
+equality_n4,4,16,0,"EqualityProblem(n=4, target=6)",20324477,classical,6,True,7,0,0,0,0,0,0,0,0,0,2.8999638743698597e-06,7
+equality_n4,4,16,0,"EqualityProblem(n=4, target=6)",20324477,grover,6,True,0,3,1,1,1,1,1,266,178,178,0.006488099985290319,4
+equality_n4,4,16,0,"EqualityProblem(n=4, target=6)",20324477,rcp_qi,6,True,0,8,9,4,8,8,8,451,299,84,0.015168299956712872,17
+equality_n4,4,16,1,"EqualityProblem(n=4, target=2)",20332396,classical,2,True,3,0,0,0,0,0,0,0,0,0,2.3999600671231747e-06,3
+equality_n4,4,16,1,"EqualityProblem(n=4, target=2)",20332396,grover,2,True,0,3,1,1,1,1,1,272,178,178,0.005893699999433011,4
+equality_n4,4,16,1,"EqualityProblem(n=4, target=2)",20332396,rcp_qi,2,True,0,6,7,4,6,6,6,351,229,86,0.014354699989780784,13
+equality_n4,4,16,2,"EqualityProblem(n=4, target=10)",20340315,classical,10,True,11,0,0,0,0,0,0,0,0,0,2.700020559132099e-06,11
+equality_n4,4,16,2,"EqualityProblem(n=4, target=10)",20340315,grover,10,True,0,3,1,1,1,1,1,266,178,178,0.006024100002832711,4
+equality_n4,4,16,2,"EqualityProblem(n=4, target=10)",20340315,rcp_qi,10,True,0,10,9,4,8,8,8,622,401,86,0.015980899974238127,19
+equality_n4,4,16,3,"EqualityProblem(n=4, target=14)",20348234,classical,14,True,15,0,0,0,0,0,0,0,0,0,3.6999699659645557e-06,15
+equality_n4,4,16,3,"EqualityProblem(n=4, target=14)",20348234,grover,14,True,0,3,1,1,1,1,1,260,178,178,0.00555460003670305,4
+equality_n4,4,16,3,"EqualityProblem(n=4, target=14)",20348234,rcp_qi,14,True,0,12,11,4,10,10,10,712,467,84,0.017409400024916977,23
+cnf_chain_n3,3,8,0,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20356153,classical,7,True,8,0,0,0,0,0,0,0,0,0,1.9000028260052204e-05,8
+cnf_chain_n3,3,8,0,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20356153,grover,7,True,0,2,1,1,1,1,1,258,140,140,0.005742100009229034,3
+cnf_chain_n3,3,8,0,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20356153,rcp_qi,7,True,0,6,10,3,9,9,9,675,393,65,0.015118499984964728,16
+cnf_chain_n3,3,8,1,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20364072,classical,7,True,8,0,0,0,0,0,0,0,0,0,1.379998866468668e-05,8
+cnf_chain_n3,3,8,1,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20364072,grover,7,True,0,2,1,1,1,1,1,258,140,140,0.005697399959899485,3
+cnf_chain_n3,3,8,1,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20364072,rcp_qi,7,True,0,6,10,3,9,9,9,675,393,65,0.015215799969155341,16
+cnf_chain_n3,3,8,2,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20371991,classical,7,True,8,0,0,0,0,0,0,0,0,0,1.9199971575289965e-05,8
+cnf_chain_n3,3,8,2,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20371991,grover,7,True,0,2,1,1,1,1,1,258,140,140,0.005820700025651604,3
+cnf_chain_n3,3,8,2,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20371991,rcp_qi,7,True,0,6,10,3,9,9,9,675,393,65,0.016110400028992444,16
+cnf_chain_n3,3,8,3,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20379910,classical,7,True,8,0,0,0,0,0,0,0,0,0,1.3499986380338669e-05,8
+cnf_chain_n3,3,8,3,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20379910,grover,7,True,0,2,1,1,1,1,1,258,140,140,0.0059979999787174165,3
+cnf_chain_n3,3,8,3,"CNFProblem(n=3, clauses=((1,), (-1, 2), (-2, 3)))",20379910,rcp_qi,7,True,0,6,10,3,9,9,9,675,393,65,0.016247499966993928,16
