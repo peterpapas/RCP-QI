@@ -1,0 +1,6 @@
+name = "RCPQI"
+version = "0.1.0"
+defaultTargets = ["RCPQI"]
+
+[[lean_lib]]
+name = "RCPQI"

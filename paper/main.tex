@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\title{Recursive Complementary Partitioning with Quantum Interference: A Cost-Aware Research Framework}
+\author{Author information pending confirmation}
+\date{Unpublished working draft}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We investigate recursive partition-existence testing for quantum search under explicit oracle, circuit, measurement, and classical-preprocessing costs. A one-iteration Grover circuit biases measurement toward the half containing a unique marked item by $4/N-8/N^2$, and a multi-iteration sweep confirms that standard Grover amplification does not yield a cheaper generic partition-existence decision. We present reproducible small-instance controls and abstract Lean-verified partition theorems. No novel computational advantage is claimed.
+\end{abstract}
+
+\section{Introduction}
+The central question is whether internal constraint structure can support a costed quantum partition-existence operator beyond generic amplitude amplification. Recursive partitioning alone supplies only a logical decision tree; the cost of each decision is central.
+
+\section{Related work}
+Grover search supplies the generic quantum baseline~\cite{grover1996}. Black-box optimality constrains any unstructured-search claim~\cite{bbbv1997,zalka1999}. Amplitude amplification and unknown-count search inform the measured controls~\cite{bhmt2002,bbht1998}. A focused review of structured quantum SAT and modern classical SAT algorithms remains necessary before a novelty claim.
+
+\section{Mathematical preliminaries}
+Let $X=\{0,1\}^n$, $N=2^n$, and $f:X\to\{0,1\}$. For a partition $S$, define $G(S)=\bigvee_{x\in S}f(x)$. A unique solution and disjoint exhaustive children $A,B$ imply $G(A)\oplus G(B)=1$. This fact does not bound the cost of computing $G$.
+
+\section{Proposed algorithm}
+The candidate RCP-QI scheme chooses a bit-prefix child using a partition-existence test, repeats for $n$ levels, and verifies the final leaf. The present implementation uses measured Grover probes and may discard a witness found during an intermediate test. It is a costed control, not a new coherent algorithm.
+
+\section{Quantum implementation}
+Equality toy oracles and reversible clause-built CNF phase oracles are implemented in Qiskit. Statevector and shot-based Aer runs are reported separately. A partition-bit-only diffuser, pre/post ancilla labels, and phase kickback are controlled alternatives. Logical oracle calls, clause-phase calls, qubits, gates, depth, shots, and state preparation are recorded.
+
+\section{Correctness analysis}
+An abstract reliable partition oracle preserves a solution at every exhaustive binary split. Lean verifies complementarity, conditional preservation, structural termination, and conditional bitstring correctness. These theorems do not establish that the physical or simulated oracle is reliable or efficient. Finite-shot false negatives can lose the correct branch; bounded restarts retain all costs.
+
+\section{Complexity analysis}
+If $C(k)$ is the full cost of a decision on a $2^k$-item partition, the total is $T(n)=\sum_{k=1}^{n}C(k)$. A linear decision count is not a polynomial-time algorithm unless $C(k)$ is sufficiently small. The current Grover-based probes retain $\Theta(\sqrt N)$ generic query scaling, consistent with black-box lower bounds~\cite{bbbv1997,zalka1999}.
+
+\section{Experimental methodology}
+Locked Python dependencies, pinned Lean, fixed seeds, raw JSON, a result manifest, and small CI checks support reproduction. Equality targets span both halves. SAT instances include zero, one, and multiple solutions; offline audits are not used to construct or tune oracles. All simulator timings are classical wall-clock measurements.
+
+\section{Results}
+For one Grover iteration, the exact solution probability is $\sin^2(3\arcsin(1/\sqrt N))$ and the correct-half probability simplifies to $1/2+4/N-8/N^2$. Exact statevectors agree to numerical precision. Multi-iteration half accuracy remains linked to exact-solution amplification. A local partition diffuser gave no half bias in the tested small instances. An ancilla copied after Grover exposed existing bias but no additional advantage. Tiny SAT cases favored classical propagation and DPLL; bounded no-candidate quantum runs did not prove unsatisfiability. The end-to-end recursive control used more measured predicate calls than full-space Grover in the saved groups.
+
+\section{Limitations}
+These are ideal small simulations and toy oracles. The gate basis omits device topology, noise, and fault tolerance. The sampled groups are too small to infer an asymptotic empirical exponent. The Lean model has no proven correspondence to the Python/Qiskit circuits.
+
+\section{Future work}
+Specify a nontrivial constraint-dependent partition operator, harder SAT families, competitive classical baselines, zero/multiple-solution decision rules, full gate bounds, and a formal refinement link if a promising construction survives falsification tests.
+
+\section{Conclusion}
+The current controls do not demonstrate a novel quantum advantage. They provide a reproducible framework for testing whether a future structure-aware partition operator can do better under complete computational accounting.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

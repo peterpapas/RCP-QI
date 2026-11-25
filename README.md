@@ -2,6 +2,8 @@
 
 An initial, reproducible investigation of **Recursive Complementary Partitioning with Quantum Interference (RCP-QI)**. RCP-QI is an **unproven hypothesis**, not an established quantum speedup. This package compares three explicit baselines on promised unique-solution problems:
 
+**Current status:** V1's one-iteration formula is analytically derived and numerically validated; V2–V4 and V6 contain small costed controls and negative results. Lean proves abstract partition facts and conditional correctness, not a speedup or correspondence to Qiskit. The project is an unpublished research framework. See the [experiment registry](research/experiment_registry.md), [formal status](theory/formal_status.md), [negative results](research/negative_results.md), and [architecture plan](docs/architecture.md).
+
 1. Classical exhaustive search over `0, ..., 2^n - 1`.
 2. Grover search over the full space, with measured and classically verified candidates.
 3. Recursive partition search. At each bit, a measured Grover subroutine probes the left half; a verified hit selects left, otherwise the traversal selects right. The final leaf is verified. This is a concrete, costed interpretation of a partition-existence test, **not** a free coherent partition oracle. A hit already reveals a witness, so deliberately continuing the partition traversal is inefficient; the experiment keeps it to measure the proposed recursive structure.
@@ -44,12 +46,27 @@ uv run rcp-qi-phase2 --min-n 2 --max-n 8 --seed 20261125 --shots 256 --sample-se
 uv run rcp-qi-register --min-n 2 --max-n 6
 uv run rcp-qi-sat --seed 20261125 --trials 4 --max-attempts 12
 uv run rcp-qi-recursive --min-n 2 --max-n 5 --seed 20261125 --trials 3 --max-restarts 2
+uv run ruff check src tests scripts
+uv run python scripts/validate_results.py
+uv run python scripts/build_processed_summary.py
 uv run jupyter lab notebooks
 ```
 
 The experiment writes `results/initial.json` (metadata, raw trials, and aggregate success/resource metrics), `results/initial.csv` (raw trials), and `results/scaling.png`. It also writes `results/one_iteration.json` and `results/one_iteration.png` to check the exact correct-half probability after one Grover iteration. Equality targets are spread across the search space and their order is seeded. The notebook reads and plots the generated data. `--output-dir` can direct outputs elsewhere.
 
 The separate Phase 2 command preserves those v1 artifacts. It writes `results/phase2_multi_iteration.json`, `results/phase2_thresholds.csv`, `results/phase2_accuracy_vs_queries.png`, and `results/phase2_threshold_costs.png`.
+
+### Formal verification environment
+
+Install [Elan](https://lean-lang.org/install/manual/), then use the pinned Lean 4.36.0 project:
+
+```powershell
+cd formal/lean
+lake build
+lake env lean RCPQI/AxiomAudit.lean
+```
+
+The first proofs use Lean's bundled library, so Mathlib is not needed yet. On this Windows workspace, Elan was installed without changing PATH; use `~/.elan/bin/lake.exe` if `lake` is not found. The [Lean README](formal/lean/README.md) and [formal status table](theory/formal_status.md) identify precisely what is proven and what remains open.
 
 ## Mathematical model and accounting
 
@@ -141,6 +158,15 @@ Three ancilla variants expose what the register does and does not reveal. Copyin
 `results/phase2_recursive.json` and its accuracy-versus-query plot contain a confidence-controlled, implicit-prefix traversal. For each possible left-present decision, the shot budget makes its ideal miss probability at most \((1-c)/n\) for a requested per-run confidence \(c\); summing those bounds gives a conservative run-level bound. Every measured probe, candidate verification, failed run, and restart is charged. The true target is used only in an offline decision audit, never in branch selection. The seeded 2–5 qubit experiment had one failed first run and one wrong partition decision, recovered by restart. Its mean total predicate calls exceeded the full-space Grover baseline in every reported group. The small sample and ideal simulator do not establish a general performance ratio. The 99% Grover group at \(N=32\) observed one rare failed shot among nine trials despite its 99.9% ideal single-shot probability; the JSON retains the failure and Wilson intervals.
 
 These controls do not establish useful constraint-aware quantum interference. The remaining open task is an operator whose advantage survives complete oracle, gate, measurement, preprocessing, and end-to-end accounting.
+
+## Repository architecture and research status
+
+Working Python modules remain in `src/rcp_qi_research` to preserve imports and CLI commands. `core/partitions.py` adds a reusable implicit bit-prefix partition. The top-level `experiments/` entries identify implemented protocols; `benchmarks/` documents instances and runners. `results/manifest.json` indexes immutable flat raw files, and `results/processed/` contains a derived Pandas table. `theory/` holds derivations, limitations, and the formal-status table; `formal/lean/` holds machine-checked theorems. `research/` tracks the journal, hypotheses, experiment registry, and negative findings. `paper/` contains an unpublished LaTeX draft. [Architecture details](docs/architecture.md) explain why the existing package and result paths were retained.
+
+The pinned Lean build proves unique-solution partition complementarity, preservation under a reliable existence decision, structural termination and decision count, conditional bitstring correctness, and a cost-sum bound **conditional on a bounded partition-oracle cost**. The V1 and V2 probability formulas remain analytical derivations with statevector checks, not Lean theorems. No efficient partition-existence oracle, polynomial-time NP-complete algorithm, or Lean-to-Qiskit correspondence has been proved.
+
+Python and Lean checks run in separate GitHub Actions workflows. `uv run python scripts/validate_results.py` checks the committed result schema and accounting invariants; it does not re-execute every expensive experiment. The [paper draft](paper/README.md) is not a publication or preprint. `CITATION.cff` uses the author name already present in `pyproject.toml` and contains no DOI. No final license has been selected; public release, external disclosure, and licensing remain subject to author approval.
+The [resource accounting contract](docs/resource_accounting.md) defines each cost field and its comparison limits.
 
 ## Interpretation limits
 

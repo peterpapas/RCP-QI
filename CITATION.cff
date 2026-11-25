@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this research software, cite this repository and the specific experiment version."
+type: software
+title: "RCP-QI Research Framework"
+authors:
+  - family-names: Papas
+    given-names: Peter
+version: 0.1.0
+abstract: "Reproducible experimental and formal research framework for an unproven quantum partition-search hypothesis."

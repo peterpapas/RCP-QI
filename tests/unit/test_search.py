@@ -1,6 +1,7 @@
+import json
+
 import numpy as np
 import pytest
-import json
 from qiskit import QuantumCircuit
 from qiskit.quantum_info import Statevector
 
@@ -11,9 +12,9 @@ from rcp_qi_research import (
     grover_search,
     recursive_partition_search,
 )
-from rcp_qi_research.search import build_grover_circuit
 from rcp_qi_research.experiment import run_experiment
 from rcp_qi_research.interference import analytic_correct_half_probability
+from rcp_qi_research.search import build_grover_circuit
 
 
 @pytest.mark.parametrize(

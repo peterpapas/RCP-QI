@@ -1,0 +1,24 @@
+name: Python research checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: "0.12.5"
+      - name: Install locked dependencies
+        run: uv sync --locked --python 3.12
+      - name: Lint source, tests, and scripts
+        run: uv run ruff check src tests scripts
+      - name: Unit and mathematical consistency tests
+        run: uv run pytest -q
+      - name: Validate committed results
+        run: uv run python scripts/validate_results.py
+      - name: Small quantum simulation smoke test
+        run: uv run rcp-qi-phase2 --min-n 2 --max-n 3 --shots 16 --sample-seeds 1 --output-dir "$RUNNER_TEMP/rcp-qi-smoke"

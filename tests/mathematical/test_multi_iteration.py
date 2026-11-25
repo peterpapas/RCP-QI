@@ -18,7 +18,7 @@ def test_analytic_probabilities_and_v1_invariance(n):
     size = 2**n
     assert isclose(correct_half_probability(n, 0), 0.5, abs_tol=1e-12)
     assert isclose(correct_half_probability(n, 1), analytic_correct_half_probability(n), abs_tol=1e-12)
-    for r in range(0, 2 * n + 1):
+    for r in range(2 * n + 1):
         solution = solution_probability(n, r)
         half = correct_half_probability(n, r)
         assert 0 <= solution <= 1 + 1e-12
