@@ -1,5 +1,11 @@
 # Changelog
 
+## V7.1 — structural promise discovery
+
+- Added a source-backed taxonomy and comparison of Simon, Shor, HSP/hidden shift, Fourier, quantum walks/backtracking, affine and quadratic Boolean systems, constraint hypergraphs and local complementarity.
+- Formalized in Lean that an accessible local complement yields a classical witness, that one flipped constraint can leave arbitrary residual SAT, and that a three-clause quadratic gadget preserves satisfiability locally.
+- Recorded certification/oracle construction costs, NP-hardness reduction scope, counterexamples and a limitations/equivalence research path. V8 circuit work remains suspended.
+
 ## V7 — transformation characterization
 
 - Revisited complementing/preserving maps, quotient search, hidden shifts, constraint subspaces and Boolean Fourier structure against original literature and V1–V6/V5.1 evidence.

@@ -19,6 +19,10 @@
 | Quotient factorization through a supplied section | Conditional machine-verified characterization | `factor_implies_fiber_constant` and `fiber_constant_factors` give the fiber-constancy condition; `quotient_existence_equivalence` preserves the existence answer. No computation-time bound for quotient or representative maps is proved |
 | Semantic preservation of a supplied gate-bit flip | Machine-verified Boolean equivalence, external complexity corollary | `gated_flip_preserving_iff_unsat` proves that the flip preserves `F(x,b)=b∧H(x)` exactly when `H` is UNSAT; coNP-hardness follows by the standard CNF UNSAT reduction outside Lean |
 | Unique-marker Walsh measurement distribution | Analytic derivation, not Lean formalized | One `H^⊗n U_f H^⊗n` sample has a distribution independent of target position; this does not rule out other coherent procedures |
+| Local complementing domain with an accessible point | Conditional machine-verified theorem | `local_complementing_witness` gives a classical witness after one verifier value; finding a domain point and certifying the law are assumed |
+| One flipped constraint with invariant residual | Conditional machine-verified theorem | `constraint_complement_residual_witness` converts a given residual witness; it does not find one or imply a quantum advantage |
+| Fresh affine bit with arbitrary residual | Machine-verified Boolean equivalence | `gated_residual_existence_equivalence` states `∃(x,b), b∧H(x) ↔ ∃x,H(x)`; NP-hardness for arbitrary CNF `H` follows from standard SAT reduction outside Lean |
+| Three-clause quadratic gadget | Machine-verified local Boolean equivalence | `clause_quadratic_gadget` checks the auxiliary two-equation gadget; the polynomial-time 3-SAT-to-MQ construction and NP-completeness corollary are documented outside Lean |
 | Efficient quantum partition-existence oracle | Open problem | No proof or implementation with better complete cost |
 | Polynomial-time RCP-QI on NP-complete families | Unproven conjecture | No claim made |
 | Lean-to-Python/Qiskit correspondence | Pending | No formal refinement proof |

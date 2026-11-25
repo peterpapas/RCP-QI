@@ -27,3 +27,5 @@ Before a new quantum operator is implemented, specify a family `𝓕`, a polynom
 Lean proves the conditional pair and unique-partition claims in `formal/lean/RCPQI/{Structural,Complementarity}.lean`. The Lean statements take transformation laws as hypotheses and prove no efficient method for finding them.
 
 The [completed V7 review](../research/v7_mathematical_review.md) extends this note with a classical one-query witness theorem for total complementarity, a necessary-and-sufficient known-quotient factorization condition, a coNP-hardness reduction for **semantic** symmetry certification, and a target-independent unique-marker Walsh measurement calculation. It distinguishes these from syntactic automorphism checks and from hidden-shift oracle promises.
+
+The [V7.1 successor](../research/v7_1_structural_promise_discovery.md) formalizes accessible *local* complementarity and shows why flipping one constraint can leave arbitrary residual SAT. Its algebraic and hypergraph comparison separates syntactic structure from a proved quantum information advantage.

@@ -5,3 +5,5 @@ import RCPQI.Correctness
 import RCPQI.Complexity
 import RCPQI.Probability
 import RCPQI.Structural
+import RCPQI.PartialComplementarity
+import RCPQI.AlgebraicConstraints
