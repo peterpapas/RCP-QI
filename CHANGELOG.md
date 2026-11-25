@@ -1,5 +1,11 @@
 # Changelog
 
+## V5.1 — extended classical structural benchmarks
+
+- Added reproducible 8–512-variable held-out SAT family benchmarks and 1,024/2,048-variable tractable controls, with direct Glucose4/CaDiCaL, DPLL, seven V5 selectors, symmetry breaking, GF(2), and 2-SAT SCC comparisons.
+- Preserved all timeouts, verified SAT witnesses, checked tractable UNSAT contradiction certificates, and recorded full solver/scoring/memory accounting with PAR2 scaling plots.
+- Recorded a limited 256-variable random 3-SAT improvement over prefix self-reduction, no observed improvement over direct CDCL, public stress-case limitations, and V7 conditional Lean characterization. No new quantum operator was introduced.
+
 ## Phase II — structural complementarity
 
 - Consolidated the V1/V2 probability derivations and added conditional Lean 4 proofs of their rational algebra and transformation-pair properties.

@@ -13,3 +13,6 @@ import RCPQI.Structural
 #print axioms RCPQI.one_iteration_half_formula
 #print axioms RCPQI.complementing_pair
 #print axioms RCPQI.complementing_no_fixed_points
+#print axioms RCPQI.unique_complementing_universe_is_pair
+#print axioms RCPQI.totalCost_of_minimum_oracle
+#print axioms RCPQI.root_plus_recursive_call_count

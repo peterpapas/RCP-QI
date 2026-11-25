@@ -12,6 +12,7 @@ dependencies = [
     "matplotlib>=3.11.2",
     "numpy>=2.5.5",
     "pandas>=3.1.1",
+    "psutil>=7.2.2",
     "python-sat>=1.9.dev25",
     "qiskit>=2.6.2",
     "qiskit-aer>=0.18.4",

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "stage": "heldout",
+  "sizes": [
+    1024,
+    2048
+  ],
+  "seeds": [
+    2001,
+    2002
+  ],
+  "timeout_s": 2.0,
+  "memory_mb": 512,
+  "max_cases": null,
+  "families": [
+    "xor",
+    "two_sat",
+    "symmetry"
+  ],
+  "python": "3.12.10",
+  "python_sat": "1.9.dev25",
+  "psutil": "7.2.2",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "pid": 22048,
+  "process_start_method": "spawn",
+  "public_partition_depth_cap": 16,
+  "method_plan": "fixed by family in v51_benchmark.py; DPLL only nominal_n<=32",
+  "quantum_runs": 0
+}

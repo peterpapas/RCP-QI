@@ -12,6 +12,9 @@
 | V1 (`P(correct half)=1/2+4/N-8/N²`) | Conditional machine-verified rational algebra plus analytic/statevector derivation | `one_iteration_half_formula` assumes the one-iteration marked/unmarked probability numerators and balanced-half equation; Grover circuit semantics and Born measurement are not Lean-verified |
 | V2 multi-iteration probability relation | Conditional machine-verified rational algebra plus analytic/statevector derivation | `grover_half_relation` assumes normalization and equal unmarked probabilities; it does not apply to arbitrary quantum operators |
 | Supplied complementing/preserving transformations | Conditional machine-verified theorems | `complementing_pair`, `complementing_no_fixed_points`, `preserving_pair` assume the transformation law; no discovery/certification complexity is proved |
+| Unique solution with a total complementing involution | Conditional machine-verified pair characterization | `unique_complementing_universe_is_pair` shows every assignment equals the named winner or its transform under the explicit uniqueness/involution/flip assumptions; the finite-cardinality corollary is documented analytically |
+| Per-decision minimum cost | Conditional machine-verified bound | `totalCost_of_minimum_oracle` proves `n*c ≤ totalCost oracleCost n` if every charged decision costs at least `c`; this is not a lower bound for all SAT or quantum algorithms |
+| Root plus one binary query per bit | Machine-verified call count for this self-reduction | `root_plus_recursive_call_count` gives `n+1` existence questions for `n` chosen bits; it does not compare the cost of those calls with a direct model-producing solve |
 | Efficient quantum partition-existence oracle | Open problem | No proof or implementation with better complete cost |
 | Polynomial-time RCP-QI on NP-complete families | Unproven conjecture | No claim made |
 | Lean-to-Python/Qiskit correspondence | Pending | No formal refinement proof |
