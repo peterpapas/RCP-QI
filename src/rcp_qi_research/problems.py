@@ -66,6 +66,16 @@ class CNFProblem:
             for clause in self.clauses
         )
 
+    def phase_unsatisfied_clause(self, circuit: QuantumCircuit, data: list[int], clause_index: int) -> None:
+        """Flip phase when one clause is false; no solution list is used."""
+        clause = self.clauses[clause_index]
+        positive = [data[lit - 1] for lit in clause if lit > 0]
+        for qubit in positive:
+            circuit.x(qubit)
+        _phase_on_all_ones(circuit, [data[abs(lit) - 1] for lit in clause])
+        for qubit in reversed(positive):
+            circuit.x(qubit)
+
     def phase_oracle(self, circuit: QuantumCircuit, data: list[int]) -> None:
         work = list(range(self.n, self.n + len(self.clauses)))
 

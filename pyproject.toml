@@ -18,6 +18,10 @@ dependencies = [
 
 [project.scripts]
 rcp-qi-research = "rcp_qi_research.experiment:main"
+rcp-qi-phase2 = "rcp_qi_research.multi_iteration:main"
+rcp-qi-register = "rcp_qi_research.partition_register:main"
+rcp-qi-sat = "rcp_qi_research.sat_benchmark:main"
+rcp-qi-recursive = "rcp_qi_research.adaptive_recursive:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]

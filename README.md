@@ -40,10 +40,16 @@ Requires Python 3.12 and [uv](https://docs.astral.sh/uv/). `uv.lock` fixes packa
 uv sync --python 3.12
 uv run pytest
 uv run rcp-qi-research --seed 20261125 --trials 4 --max-n 4 --repetitions 3
+uv run rcp-qi-phase2 --min-n 2 --max-n 8 --seed 20261125 --shots 256 --sample-seeds 2
+uv run rcp-qi-register --min-n 2 --max-n 6
+uv run rcp-qi-sat --seed 20261125 --trials 4 --max-attempts 12
+uv run rcp-qi-recursive --min-n 2 --max-n 5 --seed 20261125 --trials 3 --max-restarts 2
 uv run jupyter lab notebooks
 ```
 
 The experiment writes `results/initial.json` (metadata, raw trials, and aggregate success/resource metrics), `results/initial.csv` (raw trials), and `results/scaling.png`. It also writes `results/one_iteration.json` and `results/one_iteration.png` to check the exact correct-half probability after one Grover iteration. Equality targets are spread across the search space and their order is seeded. The notebook reads and plots the generated data. `--output-dir` can direct outputs elsewhere.
+
+The separate Phase 2 command preserves those v1 artifacts. It writes `results/phase2_multi_iteration.json`, `results/phase2_thresholds.csv`, `results/phase2_accuracy_vs_queries.png`, and `results/phase2_threshold_costs.png`.
 
 ## Mathematical model and accounting
 
@@ -83,14 +89,58 @@ Testing one half at each recursive level with Grover costs a geometric sum \(\su
 | --- | --- | --- |
 | v0 | Ideal partition oracle as a conceptual control | Documented only; not used as a performance result |
 | v1 | Standard phase oracle and one-iteration interference | Implemented and checked analytically/numerically |
-| v2 | Partition-specific amplitude amplification | Implemented as a measured Grover baseline |
-| v3 | Entangled partition registers | Future work |
-| v4 | Constraint-aware quantum interference | Future work |
+| v2 | Multi-iteration and partition-specific amplification controls | Multi-iteration benchmark and local-diffuser negative control completed |
+| v3 | Entangled partition registers | Initial before/after and kickback controls completed; no advantage shown |
+| v4 | Constraint-aware quantum interference | Clause-built SAT and unit-propagation controls completed; useful operator remains open |
 | v5 | Adaptive partitioning from mathematical structure | Future work |
+| v6 | End-to-end recursive benchmarking | Initial confidence/restart benchmark completed |
 
 Next benchmarks should include classical constraint-aware SAT solvers, Grover, random and adversarial formulas, and zero/multiple-solution instances. Track candidate verification calls, partition decisions and their oracle calls, qubits and ancillas, gate count, depth, partition-selection accuracy, final-solution accuracy, shots, repetitions, state preparation, oracle construction, execution time, and scaling. The current results record most resource counts and final success; explicit per-level partition accuracy and a competitive classical SAT baseline remain future work. Negative results are part of the record. The working principle is to try to falsify the hypothesis as rigorously as to validate it.
 
 **Central question:** Can an NP-complete problem's internal constraints be encoded into a quantum interference operator that reliably decides whether a partition contains a satisfying assignment without exponential computational cost?
+
+## Phase 2: multi-iteration benchmark
+
+This first Phase 2 increment uses the **same full-space Grover operator** as v1. It sweeps the number \(r\) of phase-oracle calls, without introducing a new partition operator. For one marked state, let \(\theta=\arcsin(1/\sqrt N)\). The exact solution probability after \(r\) iterations is
+
+\[
+P_{\mathrm{sol}}(r)=\sin^2((2r+1)\theta).
+\]
+
+All \(N-1\) unmarked basis states have equal probability \((1-P_{\mathrm{sol}})/(N-1)\). Hence the half containing the marked item has
+
+\[
+P_{\mathrm{half}}(r)=P_{\mathrm{sol}}(r)+\left(\frac N2-1\right)\frac{1-P_{\mathrm{sol}}(r)}{N-1}
+=\frac{N-2+N P_{\mathrm{sol}}(r)}{2(N-1)}.
+\]
+
+At \(r=1\), this reduces to the validated v1 formula. To reach a fixed one-shot correct-half probability \(q>1/2\), the same symmetric circuit needs \(P_{\mathrm{sol}}\ge 2q-1+2(1-q)/N\). A constant-confidence partition decision therefore requires substantial exact-solution amplification and \(\Theta(\sqrt N)\) generic phase queries. Repeating **only the partition-bit measurement** after one iteration starts with bias \(P_{\mathrm{half}}-1/2=4/N-8/N^2\); independent majority sampling needs \(\Theta(N^2)\) shots for a fixed confidence above 1/2. Each such shot repeats the state preparation, oracle, diffuser, and measurement.
+
+The benchmark reports the first single-shot iteration count for 90%, 95%, and 99% confidence. It also minimizes total calls within two precisely defined fixed-iteration protocols: odd-shot majority of partition bits, and independent Grover samples followed by classical candidate verification, accepting any verified candidate. For Grover, the reported total includes one classical verification call per planned shot. The minimization starts from a feasible one-shot cost bound, then exhaustively checks all lower-cost iteration/shot combinations; the single-shot search uses \(r\le4N\). It does not optimize adaptive stopping or arbitrary quantum algorithms.
+
+| \(N\) | Threshold | Partition majority: phase / total calls | Grover verified: phase / total calls |
+| ---: | ---: | ---: | ---: |
+| 256 | 90% | 9 / 9 | 10 / 11 |
+| 256 | 95% | 10 / 10 | 11 / 12 |
+| 256 | 99% | 11 / 11 | 12 / 13 |
+
+These are **different tasks**: selecting one half versus producing a verified solution. Completing a recursive search requires further partition decisions, error control, and final verification. The small query-count difference above is not an algorithmic speedup. The cost curves remain consistent with generic Grover scaling. This is a negative result for the idea that full-space Grover interference alone exposes a cheap partition-existence decision.
+
+The saved Phase 2 run covers \(N=4\) through \(256\), multiple marked positions including both half boundaries, and two seeded 256-shot samples per selected circuit. Exact statevector probabilities agree with the analytic values to roughly \(6\times10^{-14}\). Seeded frequencies fluctuate around those probabilities. Each validation records logical phase calls, state preparations, measurements, qubit count, transpiled `u`/`cx` gates and depth per shot, and simulator/compilation time. Repeated-shot resource totals follow from the per-shot counts and the recorded shot count. Simulator time is not quantum runtime.
+
+### Partition-specific operators and an explicit register
+
+`results/phase2_partition_register.json` and its plot compare the standard full diffuser, a diffuser on only the partition bit, and an oracle-only control. The local diffuser leaves \(P(\text{correct half})=1/2\) in every tested setting (\(N=4\)–\(64\), zero, one, and near-peak iteration counts). This is a negative result: a cheaper, partition-local reflection does not amplify the correct half. The oracle-only control likewise changes phase without changing measurement probabilities.
+
+Three ancilla variants expose what the register does and does not reveal. Copying the partition bit **after** Grover gives an ancilla with left/right-target trace distance \(|2P_{\mathrm{half}}-1|\), exactly the existing measurement bias. Copying it **before** data-only Grover leaves the ancilla's reduced density matrix unchanged: \(\mathrm{Tr}_{D}[(U_D\otimes I)\rho(U_D^\dagger\otimes I)]=\mathrm{Tr}_{D}\rho\). A \(|-\rangle\) ancilla used for partition-bit phase kickback also has zero left/right-target trace distance on its own. Reduced density matrices, partition probabilities, oracle calls, qubits, transpiled gates, and depth are saved per circuit. The extra qubit can change Qiskit's multi-control synthesis and gate count, so gate comparisons must include qubit requirements and not be read as a free improvement.
+
+### Structured SAT and recursive completion
+
+`results/phase2_sat.json` compares clause-built reversible CNF oracles with exhaustive search, unit propagation, and a small DPLL implementation. It includes unique-, multiple-, and zero-solution formulas. The quantum baseline uses a seeded, increasing randomized Grover-iteration schedule; it does not receive the solution count. Constraint-aware preparation fixes only variables proven by unit propagation and records literal inspections. A clause-parity phase circuit is an explicit negative control: phasing each violated clause separately marks odd violation parity, **not** the CNF conjunction. Its calls are recorded separately from complete verification-oracle calls, with transpiled gates also reported. On the simple handover formula, unit propagation alone fixes all three variables; that is classical work, not quantum advantage. DPLL solves the five tiny benchmark cases in one to three nodes. On an unsatisfiable formula without unit clauses, a bounded quantum run reports **inconclusive**, while DPLL proves unsatisfiability.
+
+`results/phase2_recursive.json` and its accuracy-versus-query plot contain a confidence-controlled, implicit-prefix traversal. For each possible left-present decision, the shot budget makes its ideal miss probability at most \((1-c)/n\) for a requested per-run confidence \(c\); summing those bounds gives a conservative run-level bound. Every measured probe, candidate verification, failed run, and restart is charged. The true target is used only in an offline decision audit, never in branch selection. The seeded 2–5 qubit experiment had one failed first run and one wrong partition decision, recovered by restart. Its mean total predicate calls exceeded the full-space Grover baseline in every reported group. The small sample and ideal simulator do not establish a general performance ratio. The 99% Grover group at \(N=32\) observed one rare failed shot among nine trials despite its 99.9% ideal single-shot probability; the JSON retains the failure and Wilson intervals.
+
+These controls do not establish useful constraint-aware quantum interference. The remaining open task is an operator whose advantage survives complete oracle, gate, measurement, preprocessing, and end-to-end accounting.
 
 ## Interpretation limits
 
@@ -107,3 +157,5 @@ Next benchmarks should include classical constraint-aware SAT solvers, Grover, r
 1. Bennett, Bernstein, Brassard, and Vazirani, [*Strengths and Weaknesses of Quantum Computing*](https://arxiv.org/abs/quant-ph/9701001), SIAM Journal on Computing 26 (1997).
 2. Zalka, [*Grover's quantum searching algorithm is optimal*](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.60.2746), Physical Review A 60 (1999).
 3. [Qiskit documentation](https://quantum.cloud.ibm.com/docs/en/api/qiskit) and [Qiskit Aer documentation](https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.AerSimulator.html) for circuit and simulator APIs.
+4. Grover, [*A fast quantum mechanical algorithm for database search*](https://arxiv.org/abs/quant-ph/9605043), STOC (1996).
+5. Brassard, Høyer, Mosca, and Tapp, [*Quantum Amplitude Amplification and Estimation*](https://arxiv.org/abs/quant-ph/0005055), Contemporary Mathematics 305 (2002).

@@ -1,0 +1,4769 @@
+{
+  "metadata": {
+    "scope": "ideal statevector, equality oracle, no correct-partition prior",
+    "variants": {
+      "standard": "full data-register diffuser",
+      "local_partition_diffuser": "diffuser on the most significant data qubit only",
+      "oracle_only": "verification phase oracle without a diffuser",
+      "label_before": "copy partition bit to ancilla before data-only Grover iterations",
+      "label_after": "copy partition bit to ancilla after Grover iterations",
+      "phase_kickback": "ancilla in |->, controlled-X from partition bit before Grover iterations"
+    },
+    "gate_basis": [
+      "u",
+      "cx"
+    ],
+    "density_format": "each complex entry serialized as [real, imaginary]",
+    "no_shots": true
+  },
+  "rows": [
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 2,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.029437099990900606
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 3,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 2,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0016596000059507787
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 2,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.00133200001437217
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 3,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 2,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0012170000118203461
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 2,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.00119859998812899
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 3,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 2,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0011871999595314264
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0012867000186815858
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 3,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0012986999936401844
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.001336999994236976
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 3,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0012335999635979533
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            -0.4999999999999998,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999998,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0014271000400185585
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 3,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            -0.4999999999999998,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999998,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.001596100046299398
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9999999999999984,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 20,
+      "depth_before_measurement": 13,
+      "statevector_and_compilation_s": 0.0017926999717019498
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 3,
+      "correct_half_probability_from_data": 0.9999999999999984,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 16,
+      "depth_before_measurement": 11,
+      "statevector_and_compilation_s": 0.0016696000238880515
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999995,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 14,
+      "depth_before_measurement": 11,
+      "statevector_and_compilation_s": 0.0015331999748013914
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 3,
+      "correct_half_probability_from_data": 0.49999999999999956,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 10,
+      "depth_before_measurement": 9,
+      "statevector_and_compilation_s": 0.001443199987988919
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999967,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 9,
+      "depth_before_measurement": 6,
+      "statevector_and_compilation_s": 0.0013848000089637935
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 3,
+      "correct_half_probability_from_data": 0.49999999999999967,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 2,
+      "ancillas": 0,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 4,
+      "statevector_and_compilation_s": 0.0012577999732457101
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9999999999999984,
+      "ancilla_one_probability": 0.4999999999999992,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999992,
+            0.0
+          ],
+          [
+            -1.5119700634303728e-31,
+            0.0
+          ]
+        ],
+        [
+          [
+            -1.5119700634303728e-31,
+            0.0
+          ],
+          [
+            0.4999999999999992,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 21,
+      "depth_before_measurement": 14,
+      "statevector_and_compilation_s": 0.0016935000312514603
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 3,
+      "correct_half_probability_from_data": 0.9999999999999984,
+      "ancilla_one_probability": 0.4999999999999992,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999992,
+            0.0
+          ],
+          [
+            1.509929076399593e-31,
+            0.0
+          ]
+        ],
+        [
+          [
+            1.509929076399593e-31,
+            0.0
+          ],
+          [
+            0.4999999999999992,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 17,
+      "depth_before_measurement": 12,
+      "statevector_and_compilation_s": 0.0016019000322557986
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9999999999999984,
+      "ancilla_one_probability": 3.6284213880533455e-34,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.9999999999999984,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            3.6284213880533455e-34,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 21,
+      "depth_before_measurement": 14,
+      "statevector_and_compilation_s": 0.001686600036919117
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 3,
+      "correct_half_probability_from_data": 0.9999999999999984,
+      "ancilla_one_probability": 0.9999999999999984,
+      "ancilla_density_real_imag": [
+        [
+          [
+            2.9609855762220913e-33,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.9999999999999984,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 17,
+      "depth_before_measurement": 12,
+      "statevector_and_compilation_s": 0.001693099969998002
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9999999999999982,
+      "ancilla_one_probability": 0.4999999999999991,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999991,
+            0.0
+          ],
+          [
+            -0.4999999999999991,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999991,
+            0.0
+          ],
+          [
+            0.4999999999999991,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 23,
+      "depth_before_measurement": 15,
+      "statevector_and_compilation_s": 0.0017133000073954463
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 3,
+      "correct_half_probability_from_data": 0.9999999999999982,
+      "ancilla_one_probability": 0.4999999999999991,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999991,
+            0.0
+          ],
+          [
+            -0.4999999999999991,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999991,
+            0.0
+          ],
+          [
+            0.4999999999999991,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 1,
+      "gate_count_before_measurement": 19,
+      "depth_before_measurement": 13,
+      "statevector_and_compilation_s": 0.001837100018747151
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.001196600031107664
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 7,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0011658999719657004
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0011579000274650753
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 7,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.001167299982625991
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0011306999949738383
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 7,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 3,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.001163699955213815
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0012386000016704202
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 7,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0012146999943070114
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0012670000432990491
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 7,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0013721000286750495
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999967,
+      "ancilla_one_probability": 0.49999999999999967,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999967,
+            0.0
+          ],
+          [
+            -0.49999999999999967,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.49999999999999967,
+            0.0
+          ],
+          [
+            0.49999999999999967,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0013832999975420535
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 7,
+      "correct_half_probability_from_data": 0.49999999999999967,
+      "ancilla_one_probability": 0.49999999999999967,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999967,
+            0.0
+          ],
+          [
+            -0.49999999999999967,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.49999999999999967,
+            0.0
+          ],
+          [
+            0.49999999999999967,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0013621000107377768
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.874999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 55,
+      "depth_before_measurement": 31,
+      "statevector_and_compilation_s": 0.0022482999484054744
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 7,
+      "correct_half_probability_from_data": 0.8749999999999981,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 49,
+      "depth_before_measurement": 29,
+      "statevector_and_compilation_s": 0.0019668000168167055
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999944,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 31,
+      "depth_before_measurement": 20,
+      "statevector_and_compilation_s": 0.0018219000194221735
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 7,
+      "correct_half_probability_from_data": 0.49999999999999944,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 25,
+      "depth_before_measurement": 18,
+      "statevector_and_compilation_s": 0.0016617000219412148
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 26,
+      "depth_before_measurement": 15,
+      "statevector_and_compilation_s": 0.0016426999936811626
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 7,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 20,
+      "depth_before_measurement": 13,
+      "statevector_and_compilation_s": 0.0014927000156603754
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.874999999999998,
+      "ancilla_one_probability": 0.49999999999999895,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999895,
+            0.0
+          ],
+          [
+            -2.3429744054116774e-17,
+            0.0
+          ]
+        ],
+        [
+          [
+            -2.3429744054116774e-17,
+            0.0
+          ],
+          [
+            0.49999999999999895,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 56,
+      "depth_before_measurement": 32,
+      "statevector_and_compilation_s": 0.0020886000129394233
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 7,
+      "correct_half_probability_from_data": 0.874999999999998,
+      "ancilla_one_probability": 0.4999999999999989,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999895,
+            0.0
+          ],
+          [
+            -1.7563085053000922e-17,
+            0.0
+          ]
+        ],
+        [
+          [
+            -1.7563085053000922e-17,
+            0.0
+          ],
+          [
+            0.4999999999999989,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 50,
+      "depth_before_measurement": 30,
+      "statevector_and_compilation_s": 0.0019387000356800854
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.874999999999998,
+      "ancilla_one_probability": 0.12499999999999971,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.874999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.12499999999999971,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 56,
+      "depth_before_measurement": 32,
+      "statevector_and_compilation_s": 0.0020326999947428703
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 7,
+      "correct_half_probability_from_data": 0.8749999999999981,
+      "ancilla_one_probability": 0.8749999999999981,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.12499999999999974,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.8749999999999981,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 50,
+      "depth_before_measurement": 30,
+      "statevector_and_compilation_s": 0.001934700005222112
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.874999999999998,
+      "ancilla_one_probability": 0.4999999999999988,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999988,
+            0.0
+          ],
+          [
+            -0.4999999999999988,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999988,
+            0.0
+          ],
+          [
+            0.4999999999999988,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 58,
+      "depth_before_measurement": 33,
+      "statevector_and_compilation_s": 0.002092399983666837
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 7,
+      "correct_half_probability_from_data": 0.8749999999999979,
+      "ancilla_one_probability": 0.4999999999999987,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999987,
+            0.0
+          ],
+          [
+            -0.4999999999999987,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999987,
+            0.0
+          ],
+          [
+            0.4999999999999987,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 52,
+      "depth_before_measurement": 31,
+      "statevector_and_compilation_s": 0.0019624000415205956
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9687499999999959,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 2,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 107,
+      "depth_before_measurement": 61,
+      "statevector_and_compilation_s": 0.002636799996253103
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "standard",
+      "target": 7,
+      "correct_half_probability_from_data": 0.9687499999999959,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 2,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 95,
+      "depth_before_measurement": 57,
+      "statevector_and_compilation_s": 0.0023971000337041914
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999991,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 2,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 59,
+      "depth_before_measurement": 39,
+      "statevector_and_compilation_s": 0.0021181999472901225
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "local_partition_diffuser",
+      "target": 7,
+      "correct_half_probability_from_data": 0.4999999999999991,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 2,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 47,
+      "depth_before_measurement": 35,
+      "statevector_and_compilation_s": 0.0019221000256948173
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999944,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 2,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 49,
+      "depth_before_measurement": 29,
+      "statevector_and_compilation_s": 0.0019381999736651778
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "oracle_only",
+      "target": 7,
+      "correct_half_probability_from_data": 0.49999999999999944,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 2,
+      "qubits": 3,
+      "ancillas": 0,
+      "gate_count_before_measurement": 37,
+      "depth_before_measurement": 25,
+      "statevector_and_compilation_s": 0.0016638999804854393
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.5937499999999978,
+      "ancilla_one_probability": 0.4999999999999982,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999806,
+            0.0
+          ],
+          [
+            -5.139685944349187e-17,
+            0.0
+          ]
+        ],
+        [
+          [
+            -5.139685944349187e-17,
+            0.0
+          ],
+          [
+            0.4999999999999982,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 2,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 108,
+      "depth_before_measurement": 62,
+      "statevector_and_compilation_s": 0.002738300012424588
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "label_before",
+      "target": 7,
+      "correct_half_probability_from_data": 0.5937499999999978,
+      "ancilla_one_probability": 0.4999999999999979,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999982,
+            0.0
+          ],
+          [
+            4.026714572198777e-17,
+            0.0
+          ]
+        ],
+        [
+          [
+            4.026714572198777e-17,
+            0.0
+          ],
+          [
+            0.4999999999999979,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 2,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 96,
+      "depth_before_measurement": 58,
+      "statevector_and_compilation_s": 0.002482399984728545
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9687499999999959,
+      "ancilla_one_probability": 0.03124999999999986,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.9687499999999959,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.03124999999999986,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 2,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 108,
+      "depth_before_measurement": 62,
+      "statevector_and_compilation_s": 0.002800600021146238
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "label_after",
+      "target": 7,
+      "correct_half_probability_from_data": 0.9687499999999959,
+      "ancilla_one_probability": 0.9687499999999959,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.031249999999999875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.9687499999999959,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 2,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 96,
+      "depth_before_measurement": 58,
+      "statevector_and_compilation_s": 0.002465199970174581
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.21874999999999903,
+      "ancilla_one_probability": 0.499999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.499999999999998,
+            0.0
+          ],
+          [
+            -0.499999999999998,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.499999999999998,
+            0.0
+          ],
+          [
+            0.499999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 2,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 110,
+      "depth_before_measurement": 63,
+      "statevector_and_compilation_s": 0.0027523000026121736
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "phase_kickback",
+      "target": 7,
+      "correct_half_probability_from_data": 0.21874999999999906,
+      "ancilla_one_probability": 0.499999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.499999999999998,
+            0.0
+          ],
+          [
+            -0.499999999999998,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.499999999999998,
+            0.0
+          ],
+          [
+            0.499999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 2,
+      "qubits": 4,
+      "ancillas": 1,
+      "gate_count_before_measurement": 98,
+      "depth_before_measurement": 59,
+      "statevector_and_compilation_s": 0.0026792000280693173
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.001261299999896437
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 15,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0012362999841570854
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.001208400004543364
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 15,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.001186799956485629
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0011796000180765986
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 15,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 4,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0011876999633386731
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": 0.49999999999999967,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999967,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.49999999999999967,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.00132460001623258
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 15,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": 0.49999999999999967,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999967,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.49999999999999967,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0013021999620832503
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": 0.49999999999999967,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999967,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.49999999999999967,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0012951000244356692
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 15,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": 0.49999999999999967,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999967,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.49999999999999967,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0013719999697059393
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            -0.4999999999999998,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999998,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 7,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0014414000324904919
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 15,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            -0.4999999999999998,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999998,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 7,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0014006999554112554
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.7187499999999968,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 94,
+      "depth_before_measurement": 61,
+      "statevector_and_compilation_s": 0.004047600028570741
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 15,
+      "correct_half_probability_from_data": 0.7187499999999969,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 86,
+      "depth_before_measurement": 59,
+      "statevector_and_compilation_s": 0.0033442999701946974
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999895,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 50,
+      "depth_before_measurement": 36,
+      "statevector_and_compilation_s": 0.002482699987012893
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 15,
+      "correct_half_probability_from_data": 0.499999999999999,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 42,
+      "depth_before_measurement": 34,
+      "statevector_and_compilation_s": 0.002324800007045269
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999906,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 45,
+      "depth_before_measurement": 31,
+      "statevector_and_compilation_s": 0.0022832999820820987
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 15,
+      "correct_half_probability_from_data": 0.4999999999999991,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 37,
+      "depth_before_measurement": 29,
+      "statevector_and_compilation_s": 0.002154399990104139
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.7187499999999974,
+      "ancilla_one_probability": 0.49999999999999817,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.499999999999998,
+            2.9851914138002145e-33
+          ],
+          [
+            2.6598602013982977e-17,
+            -2.0816681711721627e-17
+          ]
+        ],
+        [
+          [
+            2.6598602013982977e-17,
+            2.0816681711721627e-17
+          ],
+          [
+            0.49999999999999817,
+            -2.877115019735885e-48
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 95,
+      "depth_before_measurement": 61,
+      "statevector_and_compilation_s": 0.003429599979426712
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 15,
+      "correct_half_probability_from_data": 0.7187499999999973,
+      "ancilla_one_probability": 0.49999999999999795,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999817,
+            -4.361952006870463e-48
+          ],
+          [
+            7.112366251504951e-17,
+            2.081668171172162e-17
+          ]
+        ],
+        [
+          [
+            7.112366251504951e-17,
+            -2.0816681711721624e-17
+          ],
+          [
+            0.49999999999999795,
+            1.5407439555097558e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 87,
+      "depth_before_measurement": 59,
+      "statevector_and_compilation_s": 0.0034416000125929713
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.7187499999999968,
+      "ancilla_one_probability": 0.281249999999999,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.7187499999999968,
+            2.648153673532391e-34
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.281249999999999,
+            -3.9722305102987005e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 99,
+      "depth_before_measurement": 53,
+      "statevector_and_compilation_s": 0.0037933000130578876
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 15,
+      "correct_half_probability_from_data": 0.7187499999999969,
+      "ancilla_one_probability": 0.7187499999999968,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.28124999999999883,
+            3.1296361596293746e-34
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.7187499999999968,
+            -5.2000108498456134e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 91,
+      "depth_before_measurement": 53,
+      "statevector_and_compilation_s": 0.0038178000249899924
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.7187499999999972,
+      "ancilla_one_probability": 0.49999999999999784,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999784,
+            -1.5577313192910768e-34
+          ],
+          [
+            -0.49999999999999784,
+            1.5577313192910768e-34
+          ]
+        ],
+        [
+          [
+            -0.49999999999999784,
+            1.5577313192910768e-34
+          ],
+          [
+            0.49999999999999784,
+            -1.5577313192910768e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 97,
+      "depth_before_measurement": 61,
+      "statevector_and_compilation_s": 0.0038367999950423837
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 15,
+      "correct_half_probability_from_data": 0.7187499999999976,
+      "ancilla_one_probability": 0.49999999999999833,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999833,
+            1.212908573185023e-33
+          ],
+          [
+            -0.49999999999999833,
+            -1.212908573185023e-33
+          ]
+        ],
+        [
+          [
+            -0.49999999999999833,
+            -1.212908573185023e-33
+          ],
+          [
+            0.49999999999999833,
+            1.212908573185023e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 89,
+      "depth_before_measurement": 59,
+      "statevector_and_compilation_s": 0.0036870999610982835
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9793701171874905,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 3,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 274,
+      "depth_before_measurement": 177,
+      "statevector_and_compilation_s": 0.0073982999892905354
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "standard",
+      "target": 15,
+      "correct_half_probability_from_data": 0.9793701171874893,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 3,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 250,
+      "depth_before_measurement": 171,
+      "statevector_and_compilation_s": 0.006938100035768002
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999978,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 3,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 142,
+      "depth_before_measurement": 92,
+      "statevector_and_compilation_s": 0.0045072000357322395
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "local_partition_diffuser",
+      "target": 15,
+      "correct_half_probability_from_data": 0.49999999999999795,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 3,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 118,
+      "depth_before_measurement": 86,
+      "statevector_and_compilation_s": 0.004095899988897145
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999895,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 3,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 127,
+      "depth_before_measurement": 87,
+      "statevector_and_compilation_s": 0.004558300017379224
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "oracle_only",
+      "target": 15,
+      "correct_half_probability_from_data": 0.49999999999999895,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 3,
+      "qubits": 4,
+      "ancillas": 0,
+      "gate_count_before_measurement": 103,
+      "depth_before_measurement": 81,
+      "statevector_and_compilation_s": 0.004497400019317865
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.8768310546874912,
+      "ancilla_one_probability": 0.49999999999999484,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999951,
+            -4.358262855108707e-33
+          ],
+          [
+            2.7484525072507436e-17,
+            -5.798575798666097e-17
+          ]
+        ],
+        [
+          [
+            2.7484525072507436e-17,
+            5.798575798666097e-17
+          ],
+          [
+            0.49999999999999484,
+            -2.398384633869719e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 3,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 275,
+      "depth_before_measurement": 177,
+      "statevector_and_compilation_s": 0.007994700048584491
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "label_before",
+      "target": 15,
+      "correct_half_probability_from_data": 0.8768310546874911,
+      "ancilla_one_probability": 0.4999999999999948,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999484,
+            6.012512545133524e-33
+          ],
+          [
+            2.211772431871081e-17,
+            7.413105299427504e-17
+          ]
+        ],
+        [
+          [
+            2.211772431871081e-17,
+            -7.413105299427504e-17
+          ],
+          [
+            0.4999999999999948,
+            3.4719401145874494e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 3,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 251,
+      "depth_before_measurement": 171,
+      "statevector_and_compilation_s": 0.007232300005853176
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9793701171874905,
+      "ancilla_one_probability": 0.020629882812499757,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.9793701171874905,
+            5.233042241103624e-33
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.020629882812499757,
+            -7.041211161425502e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 3,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 287,
+      "depth_before_measurement": 157,
+      "statevector_and_compilation_s": 0.0077741999994032085
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "label_after",
+      "target": 15,
+      "correct_half_probability_from_data": 0.9793701171874893,
+      "ancilla_one_probability": 0.9793701171874893,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.02062988281249974,
+            1.5460101702013904e-34
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.9793701171874893,
+            -3.171765877163517e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 3,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 263,
+      "depth_before_measurement": 157,
+      "statevector_and_compilation_s": 0.008260700036771595
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.7742919921874918,
+      "ancilla_one_probability": 0.4999999999999945,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999945,
+            6.655297696262424e-34
+          ],
+          [
+            -0.4999999999999945,
+            -6.655297696262424e-34
+          ]
+        ],
+        [
+          [
+            -0.4999999999999945,
+            -6.655297696262424e-34
+          ],
+          [
+            0.4999999999999945,
+            6.655297696262424e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 3,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 277,
+      "depth_before_measurement": 177,
+      "statevector_and_compilation_s": 0.008119800011627376
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "phase_kickback",
+      "target": 15,
+      "correct_half_probability_from_data": 0.7742919921874922,
+      "ancilla_one_probability": 0.49999999999999484,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999484,
+            -1.6047841159851227e-33
+          ],
+          [
+            -0.49999999999999484,
+            1.6047841159851227e-33
+          ]
+        ],
+        [
+          [
+            -0.49999999999999484,
+            1.6047841159851227e-33
+          ],
+          [
+            0.49999999999999484,
+            -1.6047841159851227e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 3,
+      "qubits": 5,
+      "ancillas": 1,
+      "gate_count_before_measurement": 253,
+      "depth_before_measurement": 171,
+      "statevector_and_compilation_s": 0.007396299974061549
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.001504399988334626
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 31,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0014111999771557748
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0013455000007525086
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 31,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0013136999914422631
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0013914000010117888
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 31,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 5,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0012976000434719026
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0013990000006742775
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 31,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0014075000071898103
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0014170999638736248
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 31,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.002341700019314885
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999999,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999999,
+            0.0
+          ],
+          [
+            -0.4999999999999999,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999999,
+            0.0
+          ],
+          [
+            0.4999999999999999,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 8,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0015839000116102397
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 31,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": 0.4999999999999999,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999999,
+            0.0
+          ],
+          [
+            -0.4999999999999999,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999999,
+            0.0
+          ],
+          [
+            0.4999999999999999,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 8,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0015078000142239034
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.6171874999999909,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 249,
+      "depth_before_measurement": 173,
+      "statevector_and_compilation_s": 0.0058447999763302505
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 31,
+      "correct_half_probability_from_data": 0.6171874999999911,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 239,
+      "depth_before_measurement": 171,
+      "statevector_and_compilation_s": 0.00540050002746284
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999656,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 127,
+      "depth_before_measurement": 91,
+      "statevector_and_compilation_s": 0.003860900003928691
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 31,
+      "correct_half_probability_from_data": 0.49999999999999656,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 117,
+      "depth_before_measurement": 89,
+      "statevector_and_compilation_s": 0.0033793000038713217
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999966,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 122,
+      "depth_before_measurement": 86,
+      "statevector_and_compilation_s": 0.0034419000148773193
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 31,
+      "correct_half_probability_from_data": 0.49999999999999656,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 112,
+      "depth_before_measurement": 84,
+      "statevector_and_compilation_s": 0.0033624000498093665
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.6171874999999912,
+      "ancilla_one_probability": 0.49999999999999284,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999295,
+            2.89128770899669e-34
+          ],
+          [
+            -1.7965857741138723e-17,
+            -1.0988628925700157e-16
+          ]
+        ],
+        [
+          [
+            -1.7965857741138723e-17,
+            1.0988628925700158e-16
+          ],
+          [
+            0.49999999999999284,
+            1.3742147648184867e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 148,
+      "depth_before_measurement": 109,
+      "statevector_and_compilation_s": 0.0394790000282228
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 31,
+      "correct_half_probability_from_data": 0.6171874999999915,
+      "ancilla_one_probability": 0.49999999999999306,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999931,
+            9.06095171382836e-34
+          ],
+          [
+            1.8411795901106368e-17,
+            8.040101321633587e-17
+          ]
+        ],
+        [
+          [
+            1.8411795901106368e-17,
+            -8.040101321633587e-17
+          ],
+          [
+            0.49999999999999306,
+            1.1114555047352096e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 138,
+      "depth_before_measurement": 108,
+      "statevector_and_compilation_s": 0.00577079999493435
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.6171874999999909,
+      "ancilla_one_probability": 0.3828124999999943,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.6171874999999909,
+            1.3998329751413848e-33
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.3828124999999943,
+            4.363986692067211e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 146,
+      "depth_before_measurement": 89,
+      "statevector_and_compilation_s": 0.005661699979100376
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 31,
+      "correct_half_probability_from_data": 0.6171874999999911,
+      "ancilla_one_probability": 0.6171874999999911,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.3828124999999946,
+            1.3865482920746822e-34
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.6171874999999911,
+            -6.264635600002064e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 136,
+      "depth_before_measurement": 89,
+      "statevector_and_compilation_s": 0.005273799994029105
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.6171874999999905,
+      "ancilla_one_probability": 0.49999999999999245,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999245,
+            -1.660541834510707e-34
+          ],
+          [
+            -0.49999999999999245,
+            1.660541834510707e-34
+          ]
+        ],
+        [
+          [
+            -0.49999999999999245,
+            1.660541834510707e-34
+          ],
+          [
+            0.49999999999999245,
+            -1.660541834510707e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 150,
+      "depth_before_measurement": 110,
+      "statevector_and_compilation_s": 0.005395499989390373
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 31,
+      "correct_half_probability_from_data": 0.6171874999999907,
+      "ancilla_one_probability": 0.4999999999999925,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999925,
+            -7.048624333988248e-34
+          ],
+          [
+            -0.4999999999999925,
+            7.048624333988248e-34
+          ]
+        ],
+        [
+          [
+            -0.4999999999999925,
+            7.048624333988248e-34
+          ],
+          [
+            0.4999999999999925,
+            -7.048624333988248e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 140,
+      "depth_before_measurement": 109,
+      "statevector_and_compilation_s": 0.005588800006080419
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9995779693126104,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 4,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 981,
+      "depth_before_measurement": 689,
+      "statevector_and_compilation_s": 0.017376600007992238
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "standard",
+      "target": 31,
+      "correct_half_probability_from_data": 0.9995779693126093,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 4,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 941,
+      "depth_before_measurement": 681,
+      "statevector_and_compilation_s": 0.016075799998361617
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999998723,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 4,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 493,
+      "depth_before_measurement": 361,
+      "statevector_and_compilation_s": 0.01034300000173971
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "local_partition_diffuser",
+      "target": 31,
+      "correct_half_probability_from_data": 0.4999999999999871,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 4,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 453,
+      "depth_before_measurement": 353,
+      "statevector_and_compilation_s": 0.008842600043863058
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999998757,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 4,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 473,
+      "depth_before_measurement": 341,
+      "statevector_and_compilation_s": 0.009031000023242086
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "oracle_only",
+      "target": 31,
+      "correct_half_probability_from_data": 0.49999999999998757,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 4,
+      "qubits": 5,
+      "ancillas": 0,
+      "gate_count_before_measurement": 433,
+      "depth_before_measurement": 333,
+      "statevector_and_compilation_s": 0.009296400006860495
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.6690797507762521,
+      "ancilla_one_probability": 0.4999999999999711,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999704,
+            -1.6694719168902842e-33
+          ],
+          [
+            3.312308575727049e-16,
+            -2.910662332409067e-17
+          ]
+        ],
+        [
+          [
+            3.312308575727049e-16,
+            2.910662332409068e-17
+          ],
+          [
+            0.4999999999999711,
+            -6.781730341876487e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 4,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 574,
+      "depth_before_measurement": 421,
+      "statevector_and_compilation_s": 0.01666379999369383
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "label_before",
+      "target": 31,
+      "correct_half_probability_from_data": 0.6690797507762518,
+      "ancilla_one_probability": 0.4999999999999703,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999712,
+            -1.4179017299708498e-32
+          ],
+          [
+            -1.1839544132781343e-16,
+            1.7301079143724078e-16
+          ]
+        ],
+        [
+          [
+            -1.1839544132781343e-16,
+            -1.7301079143724078e-16
+          ],
+          [
+            0.4999999999999703,
+            -1.0114912810481967e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 4,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 534,
+      "depth_before_measurement": 420,
+      "statevector_and_compilation_s": 0.01573149999603629
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9995779693126104,
+      "ancilla_one_probability": 0.00042203068733213364,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.9995779693126104,
+            2.827639161901537e-33
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.00042203068733213364,
+            3.127640309020962e-35
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 4,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 566,
+      "depth_before_measurement": 353,
+      "statevector_and_compilation_s": 0.0169581999653019
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "label_after",
+      "target": 31,
+      "correct_half_probability_from_data": 0.9995779693126093,
+      "ancilla_one_probability": 0.9995779693126092,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.00042203068733212914,
+            -4.574065565369568e-35
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.9995779693126092,
+            1.6262213287739127e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 4,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 526,
+      "depth_before_measurement": 353,
+      "statevector_and_compilation_s": 0.016433499986305833
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.33858153223989407,
+      "ancilla_one_probability": 0.4999999999999703,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999703,
+            8.477929796474144e-34
+          ],
+          [
+            -0.4999999999999703,
+            -8.477929796474144e-34
+          ]
+        ],
+        [
+          [
+            -0.4999999999999703,
+            -8.477929796474144e-34
+          ],
+          [
+            0.4999999999999703,
+            8.477929796474144e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 4,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 576,
+      "depth_before_measurement": 422,
+      "statevector_and_compilation_s": 0.017191799997817725
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "phase_kickback",
+      "target": 31,
+      "correct_half_probability_from_data": 0.33858153223989423,
+      "ancilla_one_probability": 0.49999999999997036,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999997036,
+            -2.5749569909050437e-34
+          ],
+          [
+            -0.49999999999997036,
+            2.5749569909050437e-34
+          ]
+        ],
+        [
+          [
+            -0.49999999999997036,
+            2.5749569909050437e-34
+          ],
+          [
+            0.49999999999997036,
+            -2.5749569909050437e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 4,
+      "qubits": 6,
+      "ancillas": 1,
+      "gate_count_before_measurement": 536,
+      "depth_before_measurement": 421,
+      "statevector_and_compilation_s": 0.017615499964449555
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0025519999908283353
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "standard",
+      "target": 63,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.002134700014721602
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0019813000108115375
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "local_partition_diffuser",
+      "target": 63,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0017543999711051583
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.001395900035277009
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "oracle_only",
+      "target": 63,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 0,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 6,
+      "depth_before_measurement": 1,
+      "statevector_and_compilation_s": 0.0012886000331491232
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": 0.4999999999999999,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999999,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 7,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.001360700000077486
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "label_before",
+      "target": 63,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": 0.4999999999999999,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999999,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 7,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0014340999769046903
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": 0.4999999999999999,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999999,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 7,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0013698999537155032
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "label_after",
+      "target": 63,
+      "correct_half_probability_from_data": 0.4999999999999999,
+      "ancilla_one_probability": 0.4999999999999999,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.4999999999999999,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 7,
+      "depth_before_measurement": 2,
+      "statevector_and_compilation_s": 0.0013405000208877027
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999967,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            -0.4999999999999998,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999998,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 9,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0014281999901868403
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "target": 63,
+      "correct_half_probability_from_data": 0.49999999999999967,
+      "ancilla_one_probability": 0.4999999999999998,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999998,
+            0.0
+          ],
+          [
+            -0.4999999999999998,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.4999999999999998,
+            0.0
+          ],
+          [
+            0.4999999999999998,
+            0.0
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 0,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 9,
+      "depth_before_measurement": 3,
+      "statevector_and_compilation_s": 0.0015516999992541969
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.5605468749999989,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 460,
+      "depth_before_measurement": 232,
+      "statevector_and_compilation_s": 0.00622730003669858
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "standard",
+      "target": 63,
+      "correct_half_probability_from_data": 0.5605468749999983,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 448,
+      "depth_before_measurement": 230,
+      "statevector_and_compilation_s": 0.006932300049811602
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999995,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 232,
+      "depth_before_measurement": 116,
+      "statevector_and_compilation_s": 0.00424179999390617
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "local_partition_diffuser",
+      "target": 63,
+      "correct_half_probability_from_data": 0.49999999999999956,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 220,
+      "depth_before_measurement": 114,
+      "statevector_and_compilation_s": 0.004022300010547042
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.49999999999999967,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 227,
+      "depth_before_measurement": 116,
+      "statevector_and_compilation_s": 0.004069000016897917
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "oracle_only",
+      "target": 63,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 1,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 215,
+      "depth_before_measurement": 114,
+      "statevector_and_compilation_s": 0.0037250000168569386
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.5605468749999986,
+      "ancilla_one_probability": 0.4999999999999986,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999985,
+            8.748216098557562e-35
+          ],
+          [
+            -1.513938981050891e-16,
+            -2.0057052667279162e-18
+          ]
+        ],
+        [
+          [
+            -1.513938981050891e-16,
+            2.005705266727913e-18
+          ],
+          [
+            0.4999999999999986,
+            3.175914855903063e-35
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 303,
+      "depth_before_measurement": 213,
+      "statevector_and_compilation_s": 0.006029099982697517
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "label_before",
+      "target": 63,
+      "correct_half_probability_from_data": 0.5605468749999981,
+      "ancilla_one_probability": 0.4999999999999982,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999833,
+            7.434137582025461e-35
+          ],
+          [
+            -8.86877377093142e-17,
+            -1.4465006219444197e-17
+          ]
+        ],
+        [
+          [
+            -8.86877377093142e-17,
+            1.44650062194442e-17
+          ],
+          [
+            0.4999999999999982,
+            -2.513282136973666e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 291,
+      "depth_before_measurement": 212,
+      "statevector_and_compilation_s": 0.0062682999996468425
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.5605468749999989,
+      "ancilla_one_probability": 0.439453124999999,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.5605468749999989,
+            2.1943101249842477e-34
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.439453124999999,
+            3.165881761933268e-35
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 193,
+      "depth_before_measurement": 121,
+      "statevector_and_compilation_s": 0.006523599964566529
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "label_after",
+      "target": 63,
+      "correct_half_probability_from_data": 0.5605468749999983,
+      "ancilla_one_probability": 0.5605468749999983,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4394531249999988,
+            -6.323844341518143e-34
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.5605468749999983,
+            -7.220751222950158e-35
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 181,
+      "depth_before_measurement": 121,
+      "statevector_and_compilation_s": 0.005612900014966726
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.5605468749999979,
+      "ancilla_one_probability": 0.4999999999999981,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999981,
+            9.005234525737525e-34
+          ],
+          [
+            -0.4999999999999981,
+            -9.005234525737525e-34
+          ]
+        ],
+        [
+          [
+            -0.4999999999999981,
+            -9.005234525737525e-34
+          ],
+          [
+            0.4999999999999981,
+            9.005234525737525e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 305,
+      "depth_before_measurement": 214,
+      "statevector_and_compilation_s": 0.006819700007326901
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "target": 63,
+      "correct_half_probability_from_data": 0.5605468749999982,
+      "ancilla_one_probability": 0.49999999999999856,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999856,
+            -6.913661384274525e-34
+          ],
+          [
+            -0.49999999999999856,
+            6.913661384274525e-34
+          ]
+        ],
+        [
+          [
+            -0.49999999999999856,
+            6.913661384274525e-34
+          ],
+          [
+            0.49999999999999856,
+            -6.913661384274525e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 1,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 293,
+      "depth_before_measurement": 213,
+      "statevector_and_compilation_s": 0.005847399996127933
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "standard",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9982657426218541,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 6,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 2730,
+      "depth_before_measurement": 1382,
+      "statevector_and_compilation_s": 0.02969580003991723
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "standard",
+      "target": 63,
+      "correct_half_probability_from_data": 0.9982657426218551,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 6,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 2658,
+      "depth_before_measurement": 1370,
+      "statevector_and_compilation_s": 0.028075899987015873
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "local_partition_diffuser",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999987,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 6,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 1362,
+      "depth_before_measurement": 686,
+      "statevector_and_compilation_s": 0.01563560002250597
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "local_partition_diffuser",
+      "target": 63,
+      "correct_half_probability_from_data": 0.49999999999999856,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 6,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 1290,
+      "depth_before_measurement": 674,
+      "statevector_and_compilation_s": 0.01791850000154227
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "oracle_only",
+      "target": 0,
+      "correct_half_probability_from_data": 0.4999999999999996,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 6,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 1332,
+      "depth_before_measurement": 686,
+      "statevector_and_compilation_s": 0.016463199979625642
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "oracle_only",
+      "target": 63,
+      "correct_half_probability_from_data": 0.4999999999999998,
+      "ancilla_one_probability": null,
+      "ancilla_density_real_imag": null,
+      "phase_oracle_calls": 6,
+      "qubits": 6,
+      "ancillas": 0,
+      "gate_count_before_measurement": 1260,
+      "depth_before_measurement": 674,
+      "statevector_and_compilation_s": 0.014548100007232279
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "label_before",
+      "target": 0,
+      "correct_half_probability_from_data": 0.6906114217500677,
+      "ancilla_one_probability": 0.49999999999999384,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999944,
+            -2.3209362268355326e-34
+          ],
+          [
+            -2.8312507398850034e-16,
+            -2.451133263611404e-17
+          ]
+        ],
+        [
+          [
+            -2.8312507398850034e-16,
+            2.4511332636114036e-17
+          ],
+          [
+            0.49999999999999384,
+            7.540567846658042e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 6,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 1783,
+      "depth_before_measurement": 1263,
+      "statevector_and_compilation_s": 0.028047799947671592
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "label_before",
+      "target": 63,
+      "correct_half_probability_from_data": 0.6906114217500663,
+      "ancilla_one_probability": 0.4999999999999935,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999931,
+            -5.3351722461023476e-33
+          ],
+          [
+            1.4575676202877617e-16,
+            -1.2969013784338658e-16
+          ]
+        ],
+        [
+          [
+            1.4575676202877617e-16,
+            1.2969013784338658e-16
+          ],
+          [
+            0.4999999999999935,
+            1.8133418273606582e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 6,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 1711,
+      "depth_before_measurement": 1252,
+      "statevector_and_compilation_s": 0.02591349999420345
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "label_after",
+      "target": 0,
+      "correct_half_probability_from_data": 0.9982657426218541,
+      "ancilla_one_probability": 0.0017342573781338065,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.9982657426218541,
+            4.7923214382585785e-32
+          ],
+          [
+            -0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            0.0
+          ],
+          [
+            0.0017342573781338065,
+            7.619860622362965e-35
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 6,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 1123,
+      "depth_before_measurement": 721,
+      "statevector_and_compilation_s": 0.026709900004789233
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "label_after",
+      "target": 63,
+      "correct_half_probability_from_data": 0.9982657426218551,
+      "ancilla_one_probability": 0.9982657426218551,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.0017342573781338132,
+            -3.98148072019273e-36
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.9982657426218551,
+            1.3303828192403726e-32
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 6,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 1051,
+      "depth_before_measurement": 721,
+      "statevector_and_compilation_s": 0.02574139996431768
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "phase_kickback",
+      "target": 0,
+      "correct_half_probability_from_data": 0.3829571008782786,
+      "ancilla_one_probability": 0.49999999999999234,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.49999999999999234,
+            -2.882486973913028e-34
+          ],
+          [
+            -0.49999999999999234,
+            2.882486973913028e-34
+          ]
+        ],
+        [
+          [
+            -0.49999999999999234,
+            2.882486973913028e-34
+          ],
+          [
+            0.49999999999999234,
+            -2.882486973913028e-34
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 6,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 1785,
+      "depth_before_measurement": 1264,
+      "statevector_and_compilation_s": 0.029074300022330135
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "phase_kickback",
+      "target": 63,
+      "correct_half_probability_from_data": 0.38295710087827933,
+      "ancilla_one_probability": 0.4999999999999929,
+      "ancilla_density_real_imag": [
+        [
+          [
+            0.4999999999999929,
+            -1.6945700054759732e-33
+          ],
+          [
+            -0.4999999999999929,
+            1.6945700054759732e-33
+          ]
+        ],
+        [
+          [
+            -0.4999999999999929,
+            1.6945700054759732e-33
+          ],
+          [
+            0.4999999999999929,
+            -1.6945700054759732e-33
+          ]
+        ]
+      ],
+      "phase_oracle_calls": 6,
+      "qubits": 7,
+      "ancillas": 1,
+      "gate_count_before_measurement": 1713,
+      "depth_before_measurement": 1253,
+      "statevector_and_compilation_s": 0.02596070000436157
+    }
+  ],
+  "left_right_pairs": [
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 3.021899139829966e-31
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.9999999999999984
+    },
+    {
+      "n": 2,
+      "N": 4,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 2.836881501914149e-17
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.7499999999999983
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 5.551115123125783e-17
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 2.6608724140988707e-16
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.937499999999996
+    },
+    {
+      "n": 3,
+      "N": 8,
+      "iterations": 2,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 2.0362722036250944e-16
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.4374999999999979
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 4.996003610813204e-16
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 1.7265458562743602e-16
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.9587402343749901
+    },
+    {
+      "n": 4,
+      "N": 16,
+      "iterations": 3,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 3.3306690738754696e-16
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 1.957114282428327e-16
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.23437499999999656
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 5.551115123125783e-17
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 9.203189059085005e-16
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.9991559386252777
+    },
+    {
+      "n": 5,
+      "N": 32,
+      "iterations": 4,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 5.551115123125783e-17
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 0,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 0.0
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 2.7755575615628923e-16
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.12109374999999972
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 1,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 4.440892098500626e-16
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "label_before",
+      "left_vs_right_ancilla_trace_distance": 8.049116928532385e-16
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "label_after",
+      "left_vs_right_ancilla_trace_distance": 0.9965314852437208
+    },
+    {
+      "n": 6,
+      "N": 64,
+      "iterations": 6,
+      "variant": "phase_kickback",
+      "left_vs_right_ancilla_trace_distance": 5.551115123125783e-16
+    }
+  ]
+}

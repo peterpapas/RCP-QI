@@ -72,25 +72,43 @@ def _diffuse(circuit: QuantumCircuit, free: list[int]) -> None:
 
 
 def build_grover_circuit(
-    problem: SearchProblem, prefix: tuple[int, ...] = (), *, iterations: int | None = None
+    problem: SearchProblem,
+    prefix: tuple[int, ...] = (),
+    *,
+    iterations: int | None = None,
+    fixed_bits: dict[int, int] | None = None,
+    phase_mode: str = "predicate",
 ) -> tuple[QuantumCircuit, int]:
     """Build one measured shot restricted to a fixed most-significant-bit prefix."""
     if len(prefix) > problem.n or any(bit not in (0, 1) for bit in prefix):
         raise ValueError("invalid partition prefix")
+    if phase_mode not in ("predicate", "clause_parity") or (phase_mode == "clause_parity" and not isinstance(problem, CNFProblem)):
+        raise ValueError("invalid phase mode")
     ancillas = len(problem.clauses) if isinstance(problem, CNFProblem) else 0
     circuit = QuantumCircuit(problem.n + ancillas, problem.n)
-    for offset, bit in enumerate(prefix):
+    fixed = {problem.n - 1 - offset: bit for offset, bit in enumerate(prefix)}
+    for qubit, bit in (fixed_bits or {}).items():
+        if qubit not in range(problem.n) or bit not in (0, 1) or (qubit in fixed and fixed[qubit] != bit):
+            raise ValueError("invalid or conflicting fixed bit")
+        fixed[qubit] = bit
+    for qubit, bit in fixed.items():
         if bit:
-            circuit.x(problem.n - 1 - offset)
-    free = list(range(problem.n - len(prefix)))
+            circuit.x(qubit)
+    free = [qubit for qubit in range(problem.n) if qubit not in fixed]
     for qubit in free:
         circuit.h(qubit)
     if iterations is None:
         iterations = _grover_iterations(2 ** len(free))
     elif iterations < 0:
         raise ValueError("iterations must be nonnegative")
+    if iterations and not free:
+        raise ValueError("cannot diffuse a fully fixed state")
     for _ in range(iterations):
-        problem.phase_oracle(circuit, list(range(problem.n)))
+        if phase_mode == "predicate":
+            problem.phase_oracle(circuit, list(range(problem.n)))
+        else:
+            for clause_index in range(len(problem.clauses)):
+                problem.phase_unsatisfied_clause(circuit, list(range(problem.n)), clause_index)
         _diffuse(circuit, free)
     circuit.measure(list(range(problem.n)), list(range(problem.n)))
     return circuit, iterations
