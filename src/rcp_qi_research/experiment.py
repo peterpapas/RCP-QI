@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import binomtest
 
+from .interference import run_one_iteration_experiment
 from .problems import CNFProblem, EqualityProblem
 from .search import classical_exhaustive, grover_search, recursive_partition_search
 
@@ -34,6 +35,11 @@ def run_experiment(
     sat = CNFProblem(3, ((1,), (-1, 2), (-2, 3)))
     for trial in range(trials):
         cases.append(("cnf_chain_n3", trial, sat))
+    # User-supplied example: (a OR b) AND (NOT b OR c) AND (NOT a) AND c.
+    # Variable 1 is the least-significant bit, so abc=011 is integer 6.
+    sat_handover = CNFProblem(3, ((1, 2), (-2, 3), (-1,), (3,)))
+    for trial in range(trials):
+        cases.append(("cnf_handover_n3", trial, sat_handover))
 
     records = []
     for index, (case, trial, problem) in enumerate(cases):
@@ -126,6 +132,7 @@ def run_experiment(
     fig.tight_layout()
     fig.savefig(output_dir / "scaling.png", dpi=160)
     plt.close(fig)
+    run_one_iteration_experiment(output_dir, max_n=max(8, max_n))
     return result
 
 
@@ -145,7 +152,7 @@ def main() -> None:
             f"queries={row['mean_total_predicate_queries']:.2f} "
             f"time={row['mean_elapsed_s']:.4f}s"
         )
-    print(f"Saved {args.output_dir / 'initial.json'}, initial.csv, and scaling.png")
+    print(f"Saved initial.json, initial.csv, scaling.png, one_iteration.json, and one_iteration.png in {args.output_dir}")
 
 
 if __name__ == "__main__":

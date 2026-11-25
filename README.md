@@ -6,6 +6,32 @@ An initial, reproducible investigation of **Recursive Complementary Partitioning
 2. Grover search over the full space, with measured and classically verified candidates.
 3. Recursive partition search. At each bit, a measured Grover subroutine probes the left half; a verified hit selects left, otherwise the traversal selects right. The final leaf is verified. This is a concrete, costed interpretation of a partition-existence test, **not** a free coherent partition oracle. A hit already reveals a witness, so deliberately continuing the partition traversal is inefficient; the experiment keeps it to measure the proposed recursive structure.
 
+## Objective and handover
+
+The motivating question is whether quantum interference combined with the *internal constraint structure* of an NP-complete problem can eliminate entire partitions of an exponentially large solution space at a cost below generic unstructured search. The immediate objective is a rigorous experimental framework, not a claim about P vs NP. A polynomial-time quantum algorithm for NP-complete problems would show \(\mathrm{NP}\subseteq\mathrm{BQP}\); it would not, by itself, establish classical \(\mathrm{P}=\mathrm{NP}\).
+
+The idea evolved as follows:
+
+1. Pair individual candidates so exactly one in each pair is valid. Evaluating one would determine the other: \(f(a)\oplus f(b)=1\).
+2. Arbitrary candidates cannot generally be paired this way without knowing their answers. Repeated elimination can also destroy the proposed pairwise complementarity.
+3. Move complementarity to **disjoint, exhaustive partitions**. Under a unique-solution promise, exactly one of two halves contains the solution.
+4. Recursively ask whether the left partition contains a solution, then retain that half or its complement. The central unsolved step is implementing this existence decision efficiently and reliably.
+5. Investigate whether constraint-aware quantum interference can amplify the successful partition and suppress the other without hiding the work in an oracle.
+
+Conceptually, with implicit partitions and a reliable existence procedure:
+
+```python
+def rcp_qi(space):
+    if space.size == 1:
+        return space.only_candidate
+    left, right = space.halve()
+    if quantum_exists(left):
+        return rcp_qi(left)
+    return rcp_qi(right)
+```
+
+This pseudocode assumes the initial space contains exactly one solution. A range or bit prefix represents a partition; it never materializes an exponential candidate list. The implemented baseline uses measured Grover probes and can make a wrong branch decision.
+
 ## Reproduce
 
 Requires Python 3.12 and [uv](https://docs.astral.sh/uv/). `uv.lock` fixes package versions.
@@ -17,25 +43,61 @@ uv run rcp-qi-research --seed 20261125 --trials 4 --max-n 4 --repetitions 3
 uv run jupyter lab notebooks
 ```
 
-The experiment writes `results/initial.json` (metadata, raw trials, and aggregate success/resource metrics), `results/initial.csv` (raw trials), and `results/scaling.png`. Equality targets are spread across the search space and their order is seeded. The notebook reads and plots the generated data. `--output-dir` can direct outputs elsewhere.
+The experiment writes `results/initial.json` (metadata, raw trials, and aggregate success/resource metrics), `results/initial.csv` (raw trials), and `results/scaling.png`. It also writes `results/one_iteration.json` and `results/one_iteration.png` to check the exact correct-half probability after one Grover iteration. Equality targets are spread across the search space and their order is seeded. The notebook reads and plots the generated data. `--output-dir` can direct outputs elsewhere.
 
 ## Mathematical model and accounting
 
-The search space has size \(N=2^n\), with **exactly one** satisfying assignment. The phase oracle is \(O_f|x\rangle=(-1)^{f(x)}|x\rangle\). The equality oracle uses bit flips and a multi-controlled phase. The CNF oracle computes every clause into a work qubit, phases on all clauses being true, and uncomputes the work qubits. The sample CNF is an implication chain \(x_1 \land (\neg x_1\lor x_2) \land (\neg x_2\lor x_3)\), whose only solution is `111`. The algorithm is given the formula, **not** a precomputed list of solutions.
+The search space has size \(N=2^n\), with **exactly one** satisfying assignment in the current experiments. Candidate verification is \(f(x)\in\{0,1\}\). Partition existence is \(G(S)=\bigvee_{x\in S}f(x)\); for disjoint, exhaustive halves \(A,B\), the unique-solution promise gives \(G(A)\oplus G(B)=1\). Starting from a uniform superposition, the phase oracle is \(U_f|x\rangle=(-1)^{f(x)}|x\rangle\). The desired future construction would transfer information about \(G(S)\) to a partition register through interference while accounting for all its operations.
+
+The equality oracle uses bit flips and a multi-controlled phase. The CNF oracle computes every clause into a work qubit, phases on all clauses being true, and uncomputes the work qubits. The first sample CNF is an implication chain \(x_1 \land (\neg x_1\lor x_2) \land (\neg x_2\lor x_3)\), whose only solution is `111`. The handover's second sample is \((a\lor b)\land(\neg b\lor c)\land\neg a\land c\), with unique assignment \(abc=011\). In the package, `a` is variable 1 and the least-significant bit, so this assignment is integer `6` and Qiskit's displayed bitstring is `110`. The algorithm is given each formula, **not** a precomputed list of solutions.
+
+### One-iteration interference check
+
+For a unique marked solution in a uniform state, one full Grover iteration gives the marked basis state amplitude \((3-4/N)/\sqrt N\) and each unmarked amplitude \((1-4/N)/\sqrt N\), up to a common global phase. The half containing the solution therefore has probability
+
+\[
+P(\text{correct half}) = \frac12 + \frac4N - \frac8{N^2}.
+\]
+
+This is `1` for \(N=4\), then approaches `1/2` as \(N\) grows. `one_iteration.json` compares that formula with exact, noiseless Qiskit statevector probabilities for targets in both halves over \(N=4,8,\ldots,256\). It records the circuit's oracle call, qubits, gate count, depth, and simulation time. This is an exact probability calculation, **not** a shot-based hardware measurement or a partition-existence algorithm.
 
 For a partition of size \(M\) with one solution, \(r\) Grover iterations give ideal single-shot success
 \(p=\sin^2((2r+1)\arcsin(1/\sqrt M))\). We choose the nearest integer to \(\pi/(4\arcsin(1/\sqrt M))-1/2\), using only the unique-solution promise and partition size. With `t` independent measured attempts, detection probability is \(1-(1-p)^t\). An empty partition gives no verified hit. A missed hit can send RCP-QI down the wrong branch; there is no backtracking in this baseline. Multiple solutions and unknown counts need a different iteration schedule or counting method and are outside this first experiment.
 
 Each actual circuit execution includes initial-state preparation, its Grover iterations, and measurement. A candidate check is a separate classical predicate evaluation. Results report `quantum_oracle_calls` (one phase oracle per Grover iteration), `verification_calls`, `classical_evaluations`, their sum `total_predicate_queries`, `circuit_executions`, `state_preparations`, `measurements`, circuit builds, total transpiled gate count, summed and maximum transpiled depth, and wall-clock time. Circuits are decomposed into Qiskit `u` and `cx` gates at optimization level 0 for a reproducible logical basis; measurement is also counted as an operation. The cost of preparing, constructing, transpiling, simulating, and verifying is included in observed elapsed time. Circuit builds are counted separately because compilation has no hardware-independent gate-equivalent cost. The JSON records both per-trial values and mean resources, empirical success probability, and 95% Wilson intervals.
 
-Classical exhaustive search takes at most \(N\) predicate evaluations and averages \((N+1)/2\) for uniformly located unique solutions. Grover uses \(\Theta(\sqrt N)\) phase queries for constant success. Testing one half at each recursive level with Grover costs a geometric sum \(\sum_{j=1}^{n}O(\sqrt{N/2^j})=O(\sqrt N)\) phase queries for fixed repetitions, plus measurements and verification. This accounting offers **no asymptotic improvement over Grover**. A hypothetical constant-cost exact partition-existence oracle for arbitrary unstructured search would conceal the search cost and conflict with the standard black-box lower bound of \(\Omega(\sqrt N)\) quantum queries for bounded-error search [1, 2]. Any proposal that improves the bound must identify an additional structure or a different oracle model and include its implementation cost.
+Classical exhaustive search takes at most \(N=2^n\) predicate evaluations and averages \((N+1)/2\) for uniformly located unique solutions. Grover uses \(\Theta(\sqrt N)=\Theta(2^{n/2})\) phase queries for constant success. RCP-QI makes \(n\) partition decisions, but **decision count is not runtime**. If \(C(k)\) is the full cost of deciding a partition with \(2^k\) candidates, including quantum operations, state preparation, measurements, verification, and error-control repetitions, then \(T(n)=\sum_{k=1}^{n}C(k)\). A polynomial \(C(k)\) would imply a polynomial sum, but such a generic partition-existence procedure is exactly what remains unproved.
+
+Testing one half at each recursive level with Grover costs a geometric sum \(\sum_{j=1}^{n}O(\sqrt{N/2^j})=O(\sqrt N)\) phase queries for fixed repetitions, plus measurements and verification. This implementation therefore offers **no asymptotic improvement over Grover**. A hypothetical constant-cost exact partition-existence oracle for arbitrary unstructured search would conceal the search cost and conflict with the standard black-box lower bound of \(\Omega(\sqrt N)\) quantum queries for bounded-error search [1, 2]. Any proposal that improves the bound must identify exploitable structure or a different oracle model and include its implementation cost.
+
+## Theoretical obstacles
+
+- Recursive partitioning and SAT self-reduction are established ideas. Any potential novelty must lie in the quantum partition decision and its cost.
+- A superposition does not make all candidate answers simultaneously readable. Deutsch's algorithm distinguishes constant from balanced one-bit functions under its promise, but does not reveal which of two candidates is true when the outputs differ.
+- The unique-solution complement rule fails on zero-solution and multiple-solution spaces. Those cases need explicit treatment, including false positives, false negatives, and confidence control.
+- An ideal partition oracle is useful as a conceptual control, never as evidence of a speedup. The promising direction is to exploit internal constraint structure rather than treat verification as an unstructured black box.
+
+## Experimental roadmap
+
+| Version | Investigation | Status |
+| --- | --- | --- |
+| v0 | Ideal partition oracle as a conceptual control | Documented only; not used as a performance result |
+| v1 | Standard phase oracle and one-iteration interference | Implemented and checked analytically/numerically |
+| v2 | Partition-specific amplitude amplification | Implemented as a measured Grover baseline |
+| v3 | Entangled partition registers | Future work |
+| v4 | Constraint-aware quantum interference | Future work |
+| v5 | Adaptive partitioning from mathematical structure | Future work |
+
+Next benchmarks should include classical constraint-aware SAT solvers, Grover, random and adversarial formulas, and zero/multiple-solution instances. Track candidate verification calls, partition decisions and their oracle calls, qubits and ancillas, gate count, depth, partition-selection accuracy, final-solution accuracy, shots, repetitions, state preparation, oracle construction, execution time, and scaling. The current results record most resource counts and final success; explicit per-level partition accuracy and a competitive classical SAT baseline remain future work. Negative results are part of the record. The working principle is to try to falsify the hypothesis as rigorously as to validate it.
+
+**Central question:** Can an NP-complete problem's internal constraints be encoded into a quantum interference operator that reliably decides whether a partition contains a satisfying assignment without exponential computational cost?
 
 ## Interpretation limits
 
 - Aer statevector simulation is ideal and noiseless. Its classical runtime scales exponentially with qubit count and is **not** quantum execution time or evidence of hardware advantage.
 - The `u`/`cx` counts omit device topology, native gates, routing, error correction, readout error, and fault-tolerant overhead. Transpiled depth is a circuit proxy, not physical latency.
 - `total_predicate_queries` adds quantum phase calls and classical checks for transparency; they are not equal-cost operations. Compare the separate columns as well.
-- The initial experiment covers only 2–4 qubit equality instances and one three-variable unique-solution CNF. Four trials per case give a smoke test, not a reliable scaling exponent. Larger instances, more formulas, noise models, and unknown-solution-count methods are future work.
+- The initial experiment covers only 2–4 qubit equality instances and two three-variable unique-solution CNFs. Four trials per case give a smoke test, not a reliable scaling exponent. Larger instances, more formulas, noise models, and unknown-solution-count methods are future work.
 - The equality target is embedded in the circuit generator. This is a standard toy marked-state oracle, but its construction is not a practical black-box database implementation; no hardware speedup follows from it.
 - The partition decisions are measured and classical. Interference occurs inside each Grover probe, with no coherent interference across partition levels. A genuinely new coherent RCP-QI construction remains to be specified and costed.
 - The CNF chain exposes structure that a specialized classical SAT solver could exploit. The classical comparator here is exhaustive search by design, not the strongest classical SAT baseline.

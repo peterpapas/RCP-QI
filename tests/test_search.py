@@ -13,6 +13,7 @@ from rcp_qi_research import (
 )
 from rcp_qi_research.search import build_grover_circuit
 from rcp_qi_research.experiment import run_experiment
+from rcp_qi_research.interference import analytic_correct_half_probability
 
 
 @pytest.mark.parametrize(
@@ -68,9 +69,29 @@ def test_cnf_search_uses_structured_oracle():
     assert recursive_partition_search(problem, repetitions=3, seed=5).success
 
 
+def test_handover_sat_formula_has_unique_011_solution():
+    problem = CNFProblem(3, ((1, 2), (-2, 3), (-1,), (3,)))
+    assert [x for x in range(8) if problem.evaluate(x)] == [6]
+    assert grover_search(problem, repetitions=3, seed=5).success
+
+
+@pytest.mark.parametrize("n", [2, 3, 4, 5, 6])
+def test_one_iteration_correct_half_formula(n):
+    size = 2**n
+    for target in (0, size - 1):
+        circuit, iterations = build_grover_circuit(EqualityProblem(n, target), iterations=1)
+        probabilities = Statevector.from_instruction(circuit.remove_final_measurements(inplace=False)).probabilities()
+        correct_half = probabilities[: size // 2] if target == 0 else probabilities[size // 2 :]
+        assert iterations == 1
+        assert np.isclose(sum(correct_half), analytic_correct_half_probability(n))
+
+
 def test_experiment_writes_serializable_resource_data(tmp_path):
     report = run_experiment(tmp_path, seed=7, trials=1, max_n=2, repetitions=2)
     saved = json.loads((tmp_path / "initial.json").read_text(encoding="utf-8"))
-    assert len(saved["records"]) == len(report["records"]) == 6
+    assert len(saved["records"]) == len(report["records"]) == 9
     assert (tmp_path / "initial.csv").exists()
     assert (tmp_path / "scaling.png").exists()
+    one_iteration = json.loads((tmp_path / "one_iteration.json").read_text(encoding="utf-8"))
+    assert max(row["absolute_error"] for row in one_iteration["rows"]) < 1e-10
+    assert (tmp_path / "one_iteration.png").exists()

@@ -71,7 +71,9 @@ def _diffuse(circuit: QuantumCircuit, free: list[int]) -> None:
         circuit.h(qubit)
 
 
-def build_grover_circuit(problem: SearchProblem, prefix: tuple[int, ...] = ()) -> tuple[QuantumCircuit, int]:
+def build_grover_circuit(
+    problem: SearchProblem, prefix: tuple[int, ...] = (), *, iterations: int | None = None
+) -> tuple[QuantumCircuit, int]:
     """Build one measured shot restricted to a fixed most-significant-bit prefix."""
     if len(prefix) > problem.n or any(bit not in (0, 1) for bit in prefix):
         raise ValueError("invalid partition prefix")
@@ -83,7 +85,10 @@ def build_grover_circuit(problem: SearchProblem, prefix: tuple[int, ...] = ()) -
     free = list(range(problem.n - len(prefix)))
     for qubit in free:
         circuit.h(qubit)
-    iterations = _grover_iterations(2 ** len(free))
+    if iterations is None:
+        iterations = _grover_iterations(2 ** len(free))
+    elif iterations < 0:
+        raise ValueError("iterations must be nonnegative")
     for _ in range(iterations):
         problem.phase_oracle(circuit, list(range(problem.n)))
         _diffuse(circuit, free)
