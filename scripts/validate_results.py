@@ -14,7 +14,7 @@ def validate() -> list[str]:
     manifest = load("manifest.json")
     errors = []
     for experiment in manifest["experiments"]:
-        for relative in (*experiment["raw"], *experiment["figures"], *experiment.get("processed", [])):
+        for relative in (*experiment["raw"], *experiment["figures"], *experiment.get("processed", []), *experiment.get("theory", [])):
             if not (ROOT / relative).is_file():
                 errors.append(f"missing {relative}")
     for relative in manifest.get("processed", []):

@@ -1,5 +1,11 @@
 # Changelog
 
+## V7 — transformation characterization
+
+- Revisited complementing/preserving maps, quotient search, hidden shifts, constraint subspaces and Boolean Fourier structure against original literature and V1–V6/V5.1 evidence.
+- Added Lean proofs of the one-classical-query complement witness rule, quotient fiber-factorization/existence equivalence, and a Boolean reduction from UNSAT to semantic certification of a supplied symmetry.
+- Derived a target-independent one-sample Walsh distribution for unique marked search and documented a costed V8 operator gate. No new quantum circuit was justified.
+
 ## V5.1 — extended classical structural benchmarks
 
 - Added reproducible 8–512-variable held-out SAT family benchmarks and 1,024/2,048-variable tractable controls, with direct Glucose4/CaDiCaL, DPLL, seven V5 selectors, symmetry breaking, GF(2), and 2-SAT SCC comparisons.

@@ -11,3 +11,5 @@ Use `uv run python scripts/validate_results.py` to check file presence, schema i
 Do not overwrite a committed raw result to hide a negative outcome. Publish a new experiment version with its own seed and explanation.
 
 V5.1 raw outputs are stored in `raw/v5_1_pilot_20261126/`, `raw/v5_1_heldout_20261126/`, and `raw/v5_1_large_controls_20261126/`. Each has an immutable configuration, CNF digest catalog and one JSONL row per attempted method, including timeouts. `processed/v5_1/` and `processed/v5_1_large_controls/` contain the analysis, three scaling/completion/memory plots each, and independently checked tractable-family UNSAT certificates. See `research/v5_1_findings.md` for interpretation and `experiments/v5_1_extended/README.md` for reproduction and limits. These are classical benchmark times, not quantum query costs or circuit simulations.
+
+V7 is a mathematical and literature investigation with no numerical run. Its manifest entry indexes the theory and axiom-audit artifacts under `theory` rather than inventing a raw experiment file. The conditional proofs and limitations are summarized in `research/v7_mathematical_review.md`.

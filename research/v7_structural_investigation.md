@@ -1,6 +1,6 @@
 # V7: structural complementarity investigation
 
-Status: mathematical characterization and candidate-property screen, **no new quantum operator**. This note runs alongside the V5.1 classical scaling benchmark and does not depend on its outcome.
+Status: initial mathematical characterization and candidate-property screen, **no new quantum operator**. The completed V5.1 result and expanded V7 proofs/literature are incorporated in the [full V7 mathematical review](v7_mathematical_review.md). This initial note is preserved as research history.
 
 ## 1. A strong complementing map is incompatible with unique search
 
