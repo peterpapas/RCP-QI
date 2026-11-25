@@ -8,6 +8,6 @@
     {"id": "V2-MULTI-ITERATION", "version": "v2", "raw": ["results/phase2_multi_iteration.json", "results/phase2_thresholds.csv"], "figures": ["results/phase2_accuracy_vs_queries.png", "results/phase2_threshold_costs.png"]},
     {"id": "V3-PARTITION-REGISTER-CONTROL", "version": "v3", "raw": ["results/phase2_partition_register.json"], "figures": ["results/phase2_partition_register.png"]},
     {"id": "V4-STRUCTURED-SAT-CONTROL", "version": "v4", "raw": ["results/phase2_sat.json"], "figures": ["results/phase2_sat.png"]},
-    {"id": "V6-RECURSIVE-BENCHMARK", "version": "v6", "raw": ["results/phase2_recursive.json"], "figures": ["results/phase2_recursive_accuracy.png"]}
+    {"id": "V6-RECURSIVE-BENCHMARK", "version": "v6", "raw": ["results/phase2_recursive.json"], "figures": ["results/phase2_recursive_accuracy.png", "results/figures/phase2_recursive_accuracy_v2.png"]}
   ]
 }
