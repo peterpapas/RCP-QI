@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="1165" viewBox="0 0 420 1165" role="img" aria-labelledby="title desc">
+  <title id="title">RCP-QI V1–V10 timeline and correction, mobile layout</title>
+  <desc id="desc">Seven phases distinguish the first interference signal, tested circuit and classical controls, structural and algebraic reviews, and the post-publication partial-search correction.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091727"/><stop offset="1" stop-color="#111c36"/></linearGradient></defs>
+  <rect width="420" height="1165" rx="18" fill="url(#bg)"/>
+  <text x="21" y="38" fill="#70dfe7" font-family="Arial,sans-serif" font-size="14" letter-spacing="1.3">RESEARCH EVOLUTION · V1–V10</text>
+  <text x="21" y="75" fill="#f0f7ff" font-family="Arial,sans-serif" font-size="26" font-weight="700">From interference to limits</text>
+  <text x="21" y="103" fill="#b8ccdd" font-family="Arial,sans-serif" font-size="15">Findings, negative evidence and correction.</text>
+  <path d="M31 140V1080" stroke="#43627d" stroke-width="3"/>
+
+  <g font-family="Arial,sans-serif">
+    <circle cx="31" cy="164" r="9" fill="#091727" stroke="#58dfe3" stroke-width="3"/>
+    <rect x="52" y="129" width="352" height="114" rx="12" fill="#11283e" stroke="#385975"/>
+    <text x="67" y="154" fill="#6ee3e5" font-size="14">V1 · ANALYTIC + STATEVECTOR</text>
+    <text x="67" y="185" fill="#f0f7ff" font-size="19" font-weight="700">The first signal</text>
+    <text x="67" y="211" fill="#b9ccdd" font-size="15">Bias is real, but falls as O(1/N).</text>
+
+    <circle cx="31" cy="297" r="9" fill="#091727" stroke="#f2bf74" stroke-width="3"/>
+    <rect x="52" y="262" width="352" height="114" rx="12" fill="#11283e" stroke="#385975"/>
+    <text x="67" y="287" fill="#f5c67a" font-size="14">V2–V3 · TESTED CONTROLS</text>
+    <text x="67" y="318" fill="#f0f7ff" font-size="19" font-weight="700">Measurement and reflection</text>
+    <text x="67" y="344" fill="#b9ccdd" font-size="15">Bit-only scope later corrected.</text>
+
+    <circle cx="31" cy="430" r="9" fill="#091727" stroke="#f2bf74" stroke-width="3"/>
+    <rect x="52" y="395" width="352" height="114" rx="12" fill="#11283e" stroke="#385975"/>
+    <text x="67" y="420" fill="#f5c67a" font-size="14">V4–V6 · TESTED CONTROLS</text>
+    <text x="67" y="451" fill="#f0f7ff" font-size="19" font-weight="700">Clauses and recursion</text>
+    <text x="67" y="477" fill="#b9ccdd" font-size="15">Failures and full costs retained.</text>
+
+    <circle cx="31" cy="563" r="9" fill="#091727" stroke="#f2bf74" stroke-width="3"/>
+    <rect x="52" y="528" width="352" height="114" rx="12" fill="#11283e" stroke="#385975"/>
+    <text x="67" y="553" fill="#f5c67a" font-size="14">V5.1 · CLASSICAL SAT STUDY</text>
+    <text x="67" y="584" fill="#f0f7ff" font-size="19" font-weight="700">Harder benchmark families</text>
+    <text x="67" y="610" fill="#b9ccdd" font-size="15">No observed win over direct CDCL.</text>
+
+    <circle cx="31" cy="696" r="9" fill="#091727" stroke="#bba1f7" stroke-width="3"/>
+    <rect x="52" y="661" width="352" height="114" rx="12" fill="#11283e" stroke="#385975"/>
+    <text x="67" y="686" fill="#c8b1ff" font-size="14">V7–V7.1 · MATHEMATICAL REVIEW</text>
+    <text x="67" y="717" fill="#f0f7ff" font-size="19" font-weight="700">Structural promises</text>
+    <text x="67" y="743" fill="#b9ccdd" font-size="15">Certificates and classical costs.</text>
+
+    <circle cx="31" cy="829" r="9" fill="#091727" stroke="#bba1f7" stroke-width="3"/>
+    <rect x="52" y="794" width="352" height="114" rx="12" fill="#11283e" stroke="#385975"/>
+    <text x="67" y="819" fill="#c8b1ff" font-size="14">V8–V10 · MODEL + PROOF REVIEW</text>
+    <text x="67" y="850" fill="#f0f7ff" font-size="19" font-weight="700">Algebraic limits</text>
+    <text x="67" y="876" fill="#b9ccdd" font-size="15">Restricted results, no SAT no-go.</text>
+
+    <circle cx="31" cy="962" r="9" fill="#091727" stroke="#58dfe3" stroke-width="3"/>
+    <rect x="52" y="927" width="352" height="138" rx="12" fill="#153147" stroke="#58c7cd"/>
+    <text x="67" y="952" fill="#74e5e5" font-size="14">POST-PUBLICATION CORRECTION</text>
+    <text x="67" y="985" fill="#f0f7ff" font-size="19" font-weight="700">Partial search baseline</text>
+    <text x="67" y="1013" fill="#b9ccdd" font-size="15">Constant-factor gain for a block;</text>
+    <text x="67" y="1037" fill="#b9ccdd" font-size="15">generic scaling still √N.</text>
+  </g>
+  <text x="21" y="1117" fill="#a9c0d5" font-family="Arial,sans-serif" font-size="15">Archive map · see registry for exact scopes.</text>
+</svg>

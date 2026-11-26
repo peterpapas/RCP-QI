@@ -1,0 +1,85 @@
+{
+  "classification": "Analytical predictions and archived ideal statevector observations; no new quantum experiment.",
+  "sources": {
+    "v1": {
+      "bytes": 7668,
+      "sha256": "97f52d98f733a6bfbf42436d9e09166d218ad09aabe7cc5700979746e335f1f6"
+    },
+    "partial": {
+      "bytes": 767,
+      "sha256": "853c433329283b379facfcbad073d24b0511cc22fa7ce17ee243fafd271407c4"
+    },
+    "v3": {
+      "bytes": 122826,
+      "sha256": "24b6a4187d76df835711af0da7e4b68ba5eaff4c88c848bc381e955b13cb293b"
+    }
+  },
+  "figures": {
+    "interference-bias.svg": {
+      "bytes": 42182,
+      "sha256": "a1e7c7a75b87821090b42211a10898970ef8506cb8f000371cd1038255fc5fd6"
+    },
+    "partial-search-comparison.svg": {
+      "bytes": 15746,
+      "sha256": "373fa789629060f420655c90dd7a550b60bd0242fa39398e1094af7a51f09ae0"
+    },
+    "query-complexity-scaling.svg": {
+      "bytes": 28469,
+      "sha256": "5bc6ba6e43e7bed570c43d28c4efffcbd448a760ae1fb03e2968bb1abf489b69"
+    },
+    "recursive-query-cost.svg": {
+      "bytes": 17241,
+      "sha256": "e1ca9b688132819edf3466197b83e84608b10493c13d8000261161933f5cc8d7"
+    },
+    "interference-bias-mobile.svg": {
+      "bytes": 17917,
+      "sha256": "34c86943cb5c00b03ec0a57c8c91c71a6e9db0b85ae1902244a9ea26aded36a5"
+    },
+    "partial-search-comparison-mobile.svg": {
+      "bytes": 12570,
+      "sha256": "372a836023824a2c114a1ea798a2f633bd542c76c142288974daa67d314b40b0"
+    },
+    "query-complexity-scaling-mobile.svg": {
+      "bytes": 15683,
+      "sha256": "53379df967385dc5660253f9ee5c7cdf85cf2b373d13fbbb8bb989be84c870f7"
+    },
+    "recursive-query-cost-mobile.svg": {
+      "bytes": 13230,
+      "sha256": "ed56becd01e9dd961c39615a8407b81f8d3bc77d0639eb3b0d1e4764f8606f38"
+    }
+  },
+  "static_assets": {
+    "docs/assets/branding/hero-banner.svg": {
+      "bytes": 5764,
+      "sha256": "6df4c49976a57f7ce5f45b2574e1754f3e5ae9106841a23b27190ba203c2a2da"
+    },
+    "docs/assets/branding/hero-banner-mobile.svg": {
+      "bytes": 2958,
+      "sha256": "e868472931ee0b50992c78dcde501f89e6819a13d1daa3545fa5e4d4b0b59ff6"
+    },
+    "docs/assets/concepts/recursive-quantum-partitioning.svg": {
+      "bytes": 7750,
+      "sha256": "dad25f3d099b6e461621b735cad9ac7432636348f01de606c80e628ab5cd31ff"
+    },
+    "docs/assets/concepts/recursive-quantum-partitioning-mobile.svg": {
+      "bytes": 6576,
+      "sha256": "899a0cb43a96e71388a751c034e6f69a1ed2334cbf60f272df7142a42c5f5b01"
+    },
+    "docs/assets/concepts/research-findings.svg": {
+      "bytes": 3486,
+      "sha256": "de067fe17ee0902bd7da3db47da058d37b386038241b7a70d2ca3180bd27a42b"
+    },
+    "docs/assets/concepts/research-findings-mobile.svg": {
+      "bytes": 2820,
+      "sha256": "083212d9733a3cdf0e49a93350bbccd7b50df73875342c093139ae19977dfb34"
+    },
+    "docs/assets/timeline/research-timeline.svg": {
+      "bytes": 5014,
+      "sha256": "4c40721c713c4e70fea7190d83a89a76e0553e02ac98d2d9067145f20b88e6b4"
+    },
+    "docs/assets/timeline/research-timeline-mobile.svg": {
+      "bytes": 4648,
+      "sha256": "47c7602e9e9cfee91fb9cdc63d27ca489aa2e418d48aa0196440489b6233353a"
+    }
+  }
+}

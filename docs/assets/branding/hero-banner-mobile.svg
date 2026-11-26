@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="450" viewBox="0 0 420 450" role="img" aria-labelledby="title desc">
+  <title id="title">RCP-QI research archive mobile banner</title>
+  <desc id="desc">The research title sits above candidate states, an interference waveform and a branching partition diagram marked as a costed hypothesis.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091727"/><stop offset="1" stop-color="#111d38"/></linearGradient><linearGradient id="line" x2="1"><stop stop-color="#74aaff"/><stop offset="1" stop-color="#50e2e1"/></linearGradient></defs>
+  <rect width="420" height="450" rx="18" fill="url(#bg)"/>
+  <rect x="25" y="25" width="143" height="28" rx="14" fill="#14364f" stroke="#65a8cf"/>
+  <text x="40" y="44" fill="#7bdce9" font-family="Arial,sans-serif" font-size="14" letter-spacing="1">OPEN RESEARCH</text>
+  <text x="24" y="121" fill="#f1f7ff" font-family="Arial,sans-serif" font-size="68" font-weight="700" letter-spacing="-4">RCP-QI</text>
+  <path d="M26 136H98" stroke="url(#line)" stroke-width="5" stroke-linecap="round"/>
+  <text x="25" y="173" fill="#e2efff" font-family="Arial,sans-serif" font-size="20">Recursive Complementary Partitioning</text>
+  <text x="25" y="202" fill="#e2efff" font-family="Arial,sans-serif" font-size="20">with Quantum Interference</text>
+  <text x="25" y="232" fill="#abc5da" font-family="Arial,sans-serif" font-size="15">A cost-aware investigation of quantum search.</text>
+  <path d="M27 278H391" stroke="#32506c"/>
+  <g fill="#669ec5"><circle cx="38" cy="265" r="4"/><circle cx="67" cy="265" r="4"/><circle cx="96" cy="265" r="4"/><circle cx="125" cy="265" r="4"/><circle cx="154" cy="265" r="4"/><circle cx="183" cy="265" r="4"/><circle cx="212" cy="265" r="4"/><circle cx="241" cy="265" r="4"/><circle cx="270" cy="265" r="4"/><circle cx="299" cy="265" r="4"/><circle cx="328" cy="265" r="4"/><circle cx="357" cy="265" r="4"/><circle cx="386" cy="265" r="4"/></g>
+  <g fill="#5be1e1"><circle cx="125" cy="265" r="5"/><circle cx="299" cy="265" r="5"/></g>
+  <path d="M29 311C43 281 57 341 71 311S99 281 113 311S141 341 155 311S183 281 197 311S225 341 239 311S267 281 281 311S309 341 323 311S351 281 365 311S393 341 407 311" fill="none" stroke="url(#line)" stroke-width="3"/>
+  <path d="M207 327L115 376M207 327L304 376M115 376L78 405M115 376L154 405" fill="none" stroke="#496781" stroke-width="2"/>
+  <path d="M207 327L115 376L154 405" fill="none" stroke="#61dce3" stroke-width="4"/>
+  <g fill="#112b43" stroke="#66b9e9" stroke-width="2"><rect x="181" y="315" width="52" height="25" rx="8"/><rect x="86" y="363" width="58" height="25" rx="8"/></g>
+  <g fill="#d6f5ff" font-family="Arial,sans-serif" font-size="15" text-anchor="middle"><text x="207" y="333">N</text><text x="115" y="381">N/2</text></g>
+  <text x="24" y="435" fill="#f2c173" font-family="Arial,sans-serif" font-size="14">HYPOTHESIS · THE PARTITION TEST HAS A COST</text>
+</svg>

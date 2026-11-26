@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1280" viewBox="0 0 760 1280" role="img" aria-labelledby="title desc">
+  <title id="title">RCP-QI research evolution, V1 through V10 and correction</title>
+  <desc id="desc">Seven dated phases distinguish analytical findings, tested controls, mathematical investigation and the post-publication partial-search correction.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091827"/><stop offset="1" stop-color="#111b34"/></linearGradient></defs>
+  <rect width="760" height="1280" rx="22" fill="url(#bg)"/>
+  <text x="40" y="58" fill="#68dfe6" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">RESEARCH EVOLUTION · V1–V10</text>
+  <text x="40" y="106" fill="#f1f7ff" font-family="Arial,sans-serif" font-size="34" font-weight="700">From interference to limits</text>
+  <text x="40" y="140" fill="#b5cadf" font-family="Arial,sans-serif" font-size="18">The archive records hypotheses, negative evidence and corrections.</text>
+  <path d="M76 190V1158" stroke="#385979" stroke-width="4"/>
+
+  <g font-family="Arial,sans-serif">
+    <circle cx="76" cy="224" r="13" fill="#071321" stroke="#5fdfe3" stroke-width="4"/>
+    <rect x="113" y="183" width="607" height="112" rx="16" fill="#10263d" stroke="#315370"/>
+    <text x="136" y="214" fill="#66dce4" font-size="15" letter-spacing="1.5">V1 · ANALYTIC + STATEVECTOR</text>
+    <text x="136" y="248" fill="#eff6ff" font-size="23" font-weight="700">The first interference signal</text>
+    <text x="136" y="275" fill="#b7cadc" font-size="17">Correct-half bias is real but falls as O(1/N).</text>
+
+    <circle cx="76" cy="375" r="13" fill="#071321" stroke="#f3bf70" stroke-width="4"/>
+    <rect x="113" y="334" width="607" height="112" rx="16" fill="#10263d" stroke="#315370"/>
+    <text x="136" y="365" fill="#f3bf70" font-size="15" letter-spacing="1.5">V2–V3 · TESTED CONTROLS</text>
+    <text x="136" y="399" fill="#eff6ff" font-size="23" font-weight="700">Measurement and bit-only reflection</text>
+    <text x="136" y="426" fill="#b7cadc" font-size="17">No extra signal in those circuits; V3 scope later corrected.</text>
+
+    <circle cx="76" cy="526" r="13" fill="#071321" stroke="#f3bf70" stroke-width="4"/>
+    <rect x="113" y="485" width="607" height="112" rx="16" fill="#10263d" stroke="#315370"/>
+    <text x="136" y="516" fill="#f3bf70" font-size="15" letter-spacing="1.5">V4–V6 · TESTED CONTROLS</text>
+    <text x="136" y="550" fill="#eff6ff" font-size="23" font-weight="700">Clauses, branching and recursion</text>
+    <text x="136" y="577" fill="#b7cadc" font-size="17">Costs and failures remain visible in the saved runs.</text>
+
+    <circle cx="76" cy="677" r="13" fill="#071321" stroke="#f3bf70" stroke-width="4"/>
+    <rect x="113" y="636" width="607" height="112" rx="16" fill="#10263d" stroke="#315370"/>
+    <text x="136" y="667" fill="#f3bf70" font-size="15" letter-spacing="1.5">V5.1 · LIMITED CLASSICAL BENCHMARK</text>
+    <text x="136" y="701" fill="#eff6ff" font-size="23" font-weight="700">Harder structural SAT controls</text>
+    <text x="136" y="728" fill="#b7cadc" font-size="17">163 held-out CNFs; no observed win over direct CDCL.</text>
+
+    <circle cx="76" cy="828" r="13" fill="#071321" stroke="#bca1ff" stroke-width="4"/>
+    <rect x="113" y="787" width="607" height="112" rx="16" fill="#10263d" stroke="#315370"/>
+    <text x="136" y="818" fill="#c4aaff" font-size="15" letter-spacing="1.5">V7–V7.1 · MATHEMATICAL REVIEW</text>
+    <text x="136" y="852" fill="#eff6ff" font-size="23" font-weight="700">Structural promises and quotients</text>
+    <text x="136" y="879" fill="#b7cadc" font-size="17">Classical exploitation and certificate costs mattered.</text>
+
+    <circle cx="76" cy="979" r="13" fill="#071321" stroke="#bca1ff" stroke-width="4"/>
+    <rect x="113" y="938" width="607" height="112" rx="16" fill="#10263d" stroke="#315370"/>
+    <text x="136" y="969" fill="#c4aaff" font-size="15" letter-spacing="1.5">V8–V10 · MODEL + PROOF ANALYSIS</text>
+    <text x="136" y="1003" fill="#eff6ff" font-size="23" font-weight="700">Algebraic and information limits</text>
+    <text x="136" y="1030" fill="#b7cadc" font-size="17">Restricted results; no general SAT impossibility.</text>
+
+    <circle cx="76" cy="1130" r="13" fill="#071321" stroke="#62dfe3" stroke-width="4"/>
+    <rect x="113" y="1089" width="607" height="112" rx="16" fill="#143046" stroke="#4dbbbf"/>
+    <text x="136" y="1120" fill="#69e4e2" font-size="15" letter-spacing="1.5">POST-PUBLICATION · SCIENTIFIC CORRECTION</text>
+    <text x="136" y="1154" fill="#eff6ff" font-size="23" font-weight="700">Partial search restores a baseline</text>
+    <text x="136" y="1181" fill="#b7cadc" font-size="17">A constant-factor gain; generic scaling stays √N.</text>
+  </g>
+  <text x="40" y="1245" fill="#9bb4cc" font-family="Arial,sans-serif" font-size="16">Version groupings summarise the registry; follow links in the README for exact scopes.</text>
+</svg>

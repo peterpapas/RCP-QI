@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="940" viewBox="0 0 760 940" role="img" aria-labelledby="title desc">
+  <title id="title">What RCP-QI established, did not establish, and leaves open</title>
+  <desc id="desc">An evidence-led summary. Generic black-box partition search needs square-root queries; partial search changes constants; tested controls have scoped negative outcomes. No P versus NP result, novel SAT speedup, or general quantum SAT impossibility was established. Future directions require the restart gate.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#081626"/><stop offset="1" stop-color="#101e37"/></linearGradient></defs>
+  <rect width="760" height="940" rx="22" fill="url(#bg)"/>
+  <text x="39" y="53" fill="#69e0e4" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">RESEARCH FINDINGS · EVIDENCE FIRST</text>
+  <text x="39" y="98" fill="#f0f7ff" font-family="Arial,sans-serif" font-size="33" font-weight="700">What the archive supports</text>
+
+  <rect x="33" y="128" width="694" height="276" rx="19" fill="#103145" stroke="#4cbac0" stroke-width="2"/>
+  <rect x="54" y="150" width="245" height="29" rx="14" fill="#1d5662"/>
+  <text x="72" y="170" fill="#8df2ed" font-family="Arial,sans-serif" font-size="15" letter-spacing="1.5">ESTABLISHED / TESTED</text>
+  <g fill="#ecf6ff" font-family="Arial,sans-serif" font-size="19">
+    <text x="61" y="221">• Generic black-box half identification takes Θ(√N) queries.</text>
+    <text x="61" y="263">• Published partial search can improve the query constant.</text>
+    <text x="61" y="305">• A supplied total complement gives a classical witness.</text>
+    <text x="61" y="347">• V3 bit-only and ancilla controls gave no added signal.</text>
+  </g>
+  <text x="61" y="382" fill="#a9cadd" font-family="Arial,sans-serif" font-size="15">Different statements have different proof and experiment scopes.</text>
+
+  <rect x="33" y="423" width="694" height="245" rx="19" fill="#302737" stroke="#c59467" stroke-width="2"/>
+  <rect x="54" y="445" width="188" height="29" rx="14" fill="#5b4034"/>
+  <text x="72" y="465" fill="#ffd499" font-family="Arial,sans-serif" font-size="15" letter-spacing="1.5">NOT ESTABLISHED</text>
+  <g fill="#f2f4ff" font-family="Arial,sans-serif" font-size="19">
+    <text x="61" y="515">• No resolution of P versus NP.</text>
+    <text x="61" y="555">• No novel quantum advantage for explicit SAT.</text>
+    <text x="61" y="595">• No general impossibility theorem for quantum SAT.</text>
+    <text x="61" y="635">• No independently established publishable novelty.</text>
+  </g>
+
+  <rect x="33" y="687" width="694" height="204" rx="19" fill="#211f40" stroke="#9e8cd8" stroke-width="2"/>
+  <rect x="54" y="709" width="301" height="29" rx="14" fill="#403667"/>
+  <text x="72" y="729" fill="#d8c9ff" font-family="Arial,sans-serif" font-size="15" letter-spacing="1.5">OPEN · RESTART GATE APPLIES</text>
+  <g fill="#ecebff" font-family="Arial,sans-serif" font-size="18">
+    <text x="61" y="778">• Efficiently certified structural promises.</text>
+    <text x="61" y="818">• Quantum-specific extraction after all costs are charged.</text>
+    <text x="61" y="858">• Equally informed classical and quantum comparisons.</text>
+  </g>
+  <text x="39" y="918" fill="#9db5cc" font-family="Arial,sans-serif" font-size="16">Summary illustration · precise statements, data and limitations are linked in the README.</text>
+</svg>

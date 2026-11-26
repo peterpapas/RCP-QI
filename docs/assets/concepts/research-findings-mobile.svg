@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="910" viewBox="0 0 420 910" role="img" aria-labelledby="title desc">
+  <title id="title">RCP-QI evidence summary, mobile layout</title>
+  <desc id="desc">Scoped established and tested findings, absent claims, and open questions requiring a restart gate. No P versus NP proof or novel quantum SAT advantage is claimed.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091727"/><stop offset="1" stop-color="#121d35"/></linearGradient></defs>
+  <rect width="420" height="910" rx="18" fill="url(#bg)"/>
+  <text x="22" y="39" fill="#6de0e4" font-family="Arial,sans-serif" font-size="14" letter-spacing="1.5">RESEARCH FINDINGS</text>
+  <text x="22" y="76" fill="#f0f7ff" font-family="Arial,sans-serif" font-size="26" font-weight="700">What the archive supports</text>
+  <rect x="15" y="99" width="390" height="294" rx="16" fill="#123347" stroke="#50c1c5" stroke-width="2"/>
+  <text x="29" y="132" fill="#91f0ea" font-family="Arial,sans-serif" font-size="16" letter-spacing="1">ESTABLISHED / TESTED</text>
+  <g fill="#f0f7ff" font-family="Arial,sans-serif" font-size="17">
+    <text x="29" y="169">Generic black-box half identification</text><text x="29" y="193">takes Θ(√N) queries.</text>
+    <text x="29" y="237">Partial search improves a constant,</text><text x="29" y="261">not the generic exponent.</text>
+    <text x="29" y="305">A supplied total complement yields</text><text x="29" y="329">a classical witness.</text>
+    <text x="29" y="373">V3 controls gave no added signal.</text>
+  </g>
+  <rect x="15" y="410" width="390" height="261" rx="16" fill="#302838" stroke="#c89967" stroke-width="2"/>
+  <text x="29" y="445" fill="#ffd49a" font-family="Arial,sans-serif" font-size="16" letter-spacing="1">NOT ESTABLISHED</text>
+  <g fill="#f5f2ff" font-family="Arial,sans-serif" font-size="18">
+    <text x="29" y="491">No P versus NP resolution.</text>
+    <text x="29" y="538">No novel quantum SAT advantage.</text>
+    <text x="29" y="585">No general quantum SAT no-go.</text>
+    <text x="29" y="632">No independently established novelty.</text>
+  </g>
+  <rect x="15" y="688" width="390" height="183" rx="16" fill="#222140" stroke="#a893e4" stroke-width="2"/>
+  <text x="29" y="723" fill="#d9c9ff" font-family="Arial,sans-serif" font-size="16" letter-spacing="1">OPEN · RESTART GATE APPLIES</text>
+  <g fill="#f1edff" font-family="Arial,sans-serif" font-size="17">
+    <text x="29" y="766">Cheaply certified structural promises.</text>
+    <text x="29" y="808">Quantum information after all costs.</text>
+    <text x="29" y="850">Equally informed baseline comparisons.</text>
+  </g>
+  <text x="21" y="896" fill="#abc3d9" font-family="Arial,sans-serif" font-size="13">Evidence summary · exact scopes are linked below.</text>
+</svg>
