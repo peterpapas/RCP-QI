@@ -1,5 +1,13 @@
 # SAT Competition 2025 public stress instances
 
+The CNF files are third-party inputs and are **not included in this public Git repository or its reachable history** because the competition download page does not state a redistribution license for individual submissions. To reproduce the public-instance check, download from the official Global Benchmark Database and verify the exact compressed SHA-256 values below:
+
+```powershell
+uv run python scripts/fetch_public_benchmarks.py
+```
+
+This command stores the files locally in this directory, which is Git-ignored. The integration test skips only this optional input check if the files are absent; the public CI workflow fetches and checks them before testing. A failure to download is a source-availability issue, not evidence about the research result. The saved V5.1 raw results remain committed and unchanged.
+
 Both files were downloaded on 2026-11-26 from the [official SAT Competition 2025 benchmark listing](https://satcompetition.github.io/2025/downloads.html) via the [Global Benchmark Database](https://benchmark-database.de/?context=cnf&track=main_2025). They were selected by compressed availability/size and opposite listed outcomes before performance inspection. They are stress controls, not a representative random sample of the competition.
 
 | Local file | Official GBD hash / listed result | Download URL | SHA-256 of compressed file | DIMACS size |

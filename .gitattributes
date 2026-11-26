@@ -1,0 +1,2 @@
+# The closeout inventory hashes the manifest's LF bytes exactly on all hosts.
+results/manifest.json text eol=lf

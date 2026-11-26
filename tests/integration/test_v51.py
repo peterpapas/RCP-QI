@@ -1,5 +1,7 @@
 """Independent checks of V5.1 family promises and dedicated solvers."""
 
+from pathlib import Path
+
 import pytest
 
 from rcp_qi_research.v51_generators import InstanceSpec, generate, instance_digest
@@ -56,6 +58,9 @@ def test_seeded_instance_digest_is_stable() -> None:
 
 
 def test_public_instance_headers_and_hashes() -> None:
+    directory = Path(__file__).resolve().parents[2] / "benchmarks" / "instances" / "satcomp2025"
+    if not all((directory / name).is_file() for name in ("Break_12_50.xml.cnf.xz", "s38417.cnf.xz")):
+        pytest.skip("optional third-party instances absent; run scripts/fetch_public_benchmarks.py")
     for family, n in (("public_sat", 14036), ("public_unsat", 20100)):
         instance = generate(InstanceSpec(family, 0, 0, "official"))
         assert instance.problem.n == n

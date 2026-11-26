@@ -11,3 +11,6 @@ wheels/
 .pytest_cache/
 .ipynb_checkpoints/
 .lake/
+
+# Third-party SAT Competition instances are downloaded locally after checksum verification.
+benchmarks/instances/satcomp2025/*.cnf.xz

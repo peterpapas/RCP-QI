@@ -14,11 +14,20 @@ jobs:
           version: "0.12.5"
       - name: Install locked dependencies
         run: uv sync --locked --python 3.12
+      - name: Fetch optional public SAT instances from original source
+        run: uv run python scripts/fetch_public_benchmarks.py
       - name: Lint source, tests, and scripts
         run: uv run ruff check src tests scripts
       - name: Unit and mathematical consistency tests
         run: uv run pytest -q
       - name: Validate committed results
         run: uv run python scripts/validate_results.py
+      - name: Validate V5.1 saved runs
+        run: |
+          uv run python scripts/validate_v51.py --run-dir results/raw/v5_1_pilot_20261126
+          uv run python scripts/validate_v51.py --run-dir results/raw/v5_1_heldout_20261126
+          uv run python scripts/validate_v51.py --run-dir results/raw/v5_1_large_controls_20261126
+      - name: Verify archive hashes and theorem index
+        run: uv run python scripts/verify_archive.py
       - name: Small quantum simulation smoke test
         run: uv run rcp-qi-phase2 --min-n 2 --max-n 3 --shots 16 --sample-seeds 1 --output-dir "$RUNNER_TEMP/rcp-qi-smoke"
