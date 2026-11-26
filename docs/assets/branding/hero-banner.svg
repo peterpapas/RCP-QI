@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="490" viewBox="0 0 1600 490" role="img" aria-labelledby="title desc">
+  <title id="title">RCP-QI research archive</title>
+  <desc id="desc">An original dark-navy banner. Candidate states and interference waves lead toward an illustrative branching search tree; an amber barrier marks the cost of identifying a partition.</desc>
+  <defs>
+    <linearGradient id="ground" x2="1" y2="1"><stop stop-color="#091727"/><stop offset=".58" stop-color="#0b1930"/><stop offset="1" stop-color="#111a35"/></linearGradient>
+    <linearGradient id="path" x2="1"><stop stop-color="#57a9ff"/><stop offset="1" stop-color="#4fe2e0"/></linearGradient>
+    <linearGradient id="wave" x2="1"><stop stop-color="#8d9eff"/><stop offset=".52" stop-color="#5de3e6"/><stop offset="1" stop-color="#b89df8"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#29415a" stroke-width="1" opacity=".26"/></pattern>
+  </defs>
+  <rect width="1600" height="490" rx="22" fill="url(#ground)"/>
+  <rect width="1600" height="490" rx="22" fill="url(#grid)"/>
+  <path d="M0 426H1600" stroke="#344c64" stroke-width="1"/>
+  <rect x="68" y="57" width="165" height="31" rx="15" fill="#163450" stroke="#4e8bbb"/>
+  <text x="86" y="78" fill="#7bd6f0" font-family="Arial,sans-serif" font-size="16" letter-spacing="2">OPEN RESEARCH</text>
+  <text x="64" y="215" fill="#f2f7ff" font-family="Arial,sans-serif" font-size="114" font-weight="700" letter-spacing="-7">RCP-QI</text>
+  <rect x="69" y="238" width="106" height="5" rx="3" fill="url(#path)"/>
+  <text x="68" y="294" fill="#dbe9f9" font-family="Arial,sans-serif" font-size="34">Recursive Complementary Partitioning</text>
+  <text x="68" y="338" fill="#dbe9f9" font-family="Arial,sans-serif" font-size="34">with Quantum Interference</text>
+  <text x="68" y="385" fill="#a8bfd6" font-family="Arial,sans-serif" font-size="21">A cost-aware investigation of structure, search and quantum limits.</text>
+  <text x="69" y="460" fill="#8eaac2" font-family="Arial,sans-serif" font-size="17" letter-spacing="1.7">HYPOTHESIS  →  EXPERIMENT  →  CORRECTION  →  OPEN REVIEW</text>
+
+  <path d="M795 0V426" stroke="#2b4662" stroke-width="1"/>
+  <text x="837" y="68" fill="#a8bfd6" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">CANDIDATE STATES · N = 2ⁿ</text>
+  <g fill="#5e83a9">
+    <circle cx="854" cy="107" r="5"/><circle cx="888" cy="107" r="5"/><circle cx="922" cy="107" r="5"/><circle cx="956" cy="107" r="5"/><circle cx="990" cy="107" r="5"/><circle cx="1024" cy="107" r="5"/><circle cx="1058" cy="107" r="5"/><circle cx="1092" cy="107" r="5"/><circle cx="1126" cy="107" r="5"/><circle cx="1160" cy="107" r="5"/><circle cx="1194" cy="107" r="5"/><circle cx="1228" cy="107" r="5"/><circle cx="1262" cy="107" r="5"/><circle cx="1296" cy="107" r="5"/><circle cx="1330" cy="107" r="5"/><circle cx="1364" cy="107" r="5"/><circle cx="1398" cy="107" r="5"/><circle cx="1432" cy="107" r="5"/><circle cx="1466" cy="107" r="5"/><circle cx="1500" cy="107" r="5"/>
+    <circle cx="854" cy="131" r="5"/><circle cx="888" cy="131" r="5"/><circle cx="922" cy="131" r="5"/><circle cx="956" cy="131" r="5"/><circle cx="990" cy="131" r="5"/><circle cx="1024" cy="131" r="5"/><circle cx="1058" cy="131" r="5"/><circle cx="1092" cy="131" r="5"/><circle cx="1126" cy="131" r="5"/><circle cx="1160" cy="131" r="5"/><circle cx="1194" cy="131" r="5"/><circle cx="1228" cy="131" r="5"/><circle cx="1262" cy="131" r="5"/><circle cx="1296" cy="131" r="5"/><circle cx="1330" cy="131" r="5"/><circle cx="1364" cy="131" r="5"/><circle cx="1398" cy="131" r="5"/><circle cx="1432" cy="131" r="5"/><circle cx="1466" cy="131" r="5"/><circle cx="1500" cy="131" r="5"/>
+  </g>
+  <g fill="#54e1e3"><circle cx="990" cy="107" r="6"/><circle cx="1126" cy="131" r="6"/><circle cx="1296" cy="107" r="6"/><circle cx="1432" cy="131" r="6"/></g>
+  <path d="M843 177C862 135 881 219 900 177S938 135 957 177S995 219 1014 177S1052 135 1071 177S1109 219 1128 177S1166 135 1185 177S1223 219 1242 177S1280 135 1299 177S1337 219 1356 177S1394 135 1413 177S1451 219 1470 177S1508 135 1527 177" fill="none" stroke="url(#wave)" stroke-width="3.3" opacity=".9"/>
+  <text x="837" y="226" fill="#9eb5cd" font-family="Arial,sans-serif" font-size="16" letter-spacing="1.5">PROPOSED INTERFERENCE-BASED TEST</text>
+  <path d="M1171 260L1040 318M1171 260L1360 318M1040 318L960 385M1040 318L1130 385M1360 318L1292 385M1360 318L1450 385" fill="none" stroke="#48617c" stroke-width="2.3"/>
+  <path d="M1171 260L1040 318L1130 385" fill="none" stroke="url(#path)" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#0f2942" stroke="#74b7ec" stroke-width="2"><rect x="1132" y="241" width="77" height="37" rx="12"/><rect x="997" y="300" width="86" height="37" rx="12"/><rect x="1085" y="367" width="86" height="37" rx="12"/></g>
+  <g fill="#dff7ff" font-family="Arial,sans-serif" font-size="19" text-anchor="middle"><text x="1171" y="266">N</text><text x="1040" y="325">N/2</text><text x="1128" y="392">N/4</text></g>
+  <g fill="#122138" stroke="#39516d" stroke-width="2"><rect x="1316" y="300" width="88" height="37" rx="12"/><rect x="915" y="367" width="88" height="37" rx="12"/><rect x="1248" y="367" width="88" height="37" rx="12"/><rect x="1406" y="367" width="88" height="37" rx="12"/></g>
+  <g fill="#8da3bb" font-family="Arial,sans-serif" font-size="18" text-anchor="middle"><text x="1360" y="325">N/2</text><text x="959" y="392">N/4</text><text x="1292" y="392">N/4</text><text x="1450" y="392">N/4</text></g>
+  <text x="843" y="460" fill="#f5c36b" font-family="Arial,sans-serif" font-size="17" letter-spacing="1">THE PARTITION TEST HAS A COST.</text>
+</svg>

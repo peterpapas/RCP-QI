@@ -24,6 +24,8 @@ jobs:
         run: uv run python scripts/validate_results.py
       - name: Validate post-publication partial-search control
         run: uv run python scripts/validate_partial_search.py
+      - name: Verify README figure sources and SVG assets
+        run: uv run python scripts/build_readme_figures.py --check
       - name: Validate V5.1 saved runs
         run: |
           uv run python scripts/validate_v51.py --run-dir results/raw/v5_1_pilot_20261126

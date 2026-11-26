@@ -9,3 +9,7 @@ results/manifest.json text eol=lf
 # New correction data uses the same pinned CRLF checkout bytes on all hosts.
 results/corrections/**/*.json text eol=crlf
 results/corrections/**/*.csv text eol=crlf
+
+# README graphics and their digest inventory are byte-stable across platforms.
+docs/assets/**/*.svg text eol=lf
+docs/assets/figures/manifest.json text eol=lf

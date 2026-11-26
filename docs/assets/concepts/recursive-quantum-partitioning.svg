@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1450" viewBox="0 0 820 1450" role="img" aria-labelledby="title desc">
+  <title id="title">The original RCP-QI hypothesis and its cost barrier</title>
+  <desc id="desc">Five stages show a uniform search space, two unknown complementary partitions, proposed interference, an illustrative recursive path, and the square-root cost of partition identification. The highlighted path is not a demonstrated free operation.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091626"/><stop offset="1" stop-color="#111d36"/></linearGradient>
+    <linearGradient id="blue" x2="1"><stop stop-color="#6daaff"/><stop offset="1" stop-color="#52e2e1"/></linearGradient>
+    <pattern id="dots" width="32" height="28" patternUnits="userSpaceOnUse"><circle cx="9" cy="11" r="4.5" fill="#65a8dc"/><circle cx="25" cy="11" r="4.5" fill="#9c8cda"/></pattern>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#32516a" opacity=".24"/></pattern>
+  </defs>
+  <rect width="820" height="1450" rx="24" fill="url(#bg)"/>
+  <rect width="820" height="1450" rx="24" fill="url(#grid)"/>
+  <text x="42" y="59" fill="#74dce9" font-family="Arial,sans-serif" font-size="17" letter-spacing="2.5">RCP-QI  ·  ORIGINAL RESEARCH HYPOTHESIS</text>
+  <text x="42" y="105" fill="#f0f6ff" font-family="Arial,sans-serif" font-size="34" font-weight="700">Can a quantum test choose a partition?</text>
+  <text x="43" y="140" fill="#b4c8dd" font-family="Arial,sans-serif" font-size="18">Five steps from the intuition to the central obstruction.</text>
+
+  <rect x="32" y="177" width="756" height="190" rx="20" fill="#0e243a" stroke="#2c4962"/>
+  <circle cx="69" cy="220" r="19" fill="#183e5d" stroke="#62afe8"/><text x="63" y="227" fill="#e8f9ff" font-family="Arial,sans-serif" font-size="19">1</text>
+  <text x="104" y="225" fill="#edf5ff" font-family="Arial,sans-serif" font-size="24" font-weight="700">Prepare a search space</text>
+  <text x="104" y="257" fill="#b4c8dd" font-family="Arial,sans-serif" font-size="18">N = 2ⁿ candidate assignments in a uniform superposition.</text>
+  <rect x="103" y="281" width="580" height="54" rx="12" fill="url(#dots)" opacity=".9"/>
+  <text x="698" y="316" fill="#78dce5" font-family="Arial,sans-serif" font-size="28">|s⟩</text>
+
+  <path d="M410 367V385" stroke="#5c7994" stroke-width="2"/>
+  <rect x="32" y="385" width="756" height="215" rx="20" fill="#0e243a" stroke="#2c4962"/>
+  <circle cx="69" cy="428" r="19" fill="#183e5d" stroke="#62afe8"/><text x="63" y="435" fill="#e8f9ff" font-family="Arial,sans-serif" font-size="19">2</text>
+  <text x="104" y="434" fill="#edf5ff" font-family="Arial,sans-serif" font-size="24" font-weight="700">Split into complementary halves</text>
+  <text x="104" y="465" fill="#b4c8dd" font-family="Arial,sans-serif" font-size="17">Exactly one contains the unique witness. Which half is unknown.</text>
+  <rect x="89" y="492" width="295" height="73" rx="14" fill="#12314b" stroke="#5ca9e9" stroke-width="2"/>
+  <rect x="436" y="492" width="295" height="73" rx="14" fill="#211d42" stroke="#a692e5" stroke-width="2"/>
+  <text x="236" y="537" fill="#aaddff" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">A · N/2 candidates</text>
+  <text x="583" y="537" fill="#d4c3ff" font-family="Arial,sans-serif" font-size="22" text-anchor="middle">B · N/2 candidates</text>
+  <text x="294" y="588" fill="#f0c578" font-family="Arial,sans-serif" font-size="16">G(A) XOR G(B) = 1 is a promise, not a cheap way to evaluate G.</text>
+
+  <path d="M410 600V618" stroke="#5c7994" stroke-width="2"/>
+  <rect x="32" y="618" width="756" height="204" rx="20" fill="#0e243a" stroke="#2c4962"/>
+  <circle cx="69" cy="661" r="19" fill="#183e5d" stroke="#62afe8"/><text x="63" y="668" fill="#e8f9ff" font-family="Arial,sans-serif" font-size="19">3</text>
+  <text x="104" y="667" fill="#edf5ff" font-family="Arial,sans-serif" font-size="24" font-weight="700">Seek an interference signal</text>
+  <text x="104" y="699" fill="#b4c8dd" font-family="Arial,sans-serif" font-size="17">Proposed: a phase oracle and reflections reveal the correct side.</text>
+  <path d="M93 752C110 712 127 792 144 752S178 712 195 752S229 792 246 752S280 712 297 752S331 792 348 752S382 712 399 752S433 792 450 752S484 712 501 752S535 792 552 752S586 712 603 752S637 792 654 752S688 712 705 752" fill="none" stroke="url(#blue)" stroke-width="3"/>
+  <rect x="445" y="781" width="299" height="26" rx="13" fill="#4c3826"/>
+  <text x="458" y="799" fill="#ffd58b" font-family="Arial,sans-serif" font-size="14" letter-spacing=".8">HYPOTHESIS, NOT A FREE ORACLE</text>
+
+  <path d="M410 822V840" stroke="#5c7994" stroke-width="2"/>
+  <rect x="32" y="840" width="756" height="287" rx="20" fill="#0e243a" stroke="#2c4962"/>
+  <circle cx="69" cy="883" r="19" fill="#183e5d" stroke="#62afe8"/><text x="63" y="890" fill="#e8f9ff" font-family="Arial,sans-serif" font-size="19">4</text>
+  <text x="104" y="889" fill="#edf5ff" font-family="Arial,sans-serif" font-size="24" font-weight="700">Repeat on the chosen half</text>
+  <text x="104" y="921" fill="#b4c8dd" font-family="Arial,sans-serif" font-size="17">Illustrative path: N → N/2 → N/4 → N/8 → … → 1.</text>
+  <path d="M410 950L271 1003M410 950L552 1003M271 1003L206 1065M271 1003L335 1065M552 1003L489 1065M552 1003L620 1065" fill="none" stroke="#44617c" stroke-width="2.5"/>
+  <path d="M410 950L271 1003L335 1065" fill="none" stroke="url(#blue)" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#112c45" stroke="#5aaee8" stroke-width="2"><rect x="371" y="934" width="78" height="34" rx="10"/><rect x="228" y="987" width="86" height="34" rx="10"/><rect x="292" y="1049" width="86" height="34" rx="10"/></g>
+  <g fill="#1a263a" stroke="#4a617b" stroke-width="2"><rect x="508" y="987" width="88" height="34" rx="10"/><rect x="162" y="1049" width="88" height="34" rx="10"/><rect x="445" y="1049" width="88" height="34" rx="10"/><rect x="576" y="1049" width="88" height="34" rx="10"/></g>
+  <g fill="#dff6ff" font-family="Arial,sans-serif" font-size="17" text-anchor="middle"><text x="410" y="958">N</text><text x="271" y="1011">N/2</text><text x="335" y="1073">N/4</text></g>
+  <g fill="#9eb3c9" font-family="Arial,sans-serif" font-size="17" text-anchor="middle"><text x="552" y="1011">N/2</text><text x="206" y="1073">N/4</text><text x="489" y="1073">N/4</text><text x="620" y="1073">N/4</text></g>
+  <text x="320" y="1112" fill="#55dfe2" font-family="Arial,sans-serif" font-size="16">Desired branch · illustrative only</text>
+
+  <path d="M410 1127V1145" stroke="#5c7994" stroke-width="2"/>
+  <rect x="32" y="1145" width="756" height="247" rx="20" fill="#292537" stroke="#b78c5a"/>
+  <circle cx="69" cy="1188" r="19" fill="#61482d" stroke="#f3bf70"/><text x="63" y="1195" fill="#fff0d1" font-family="Arial,sans-serif" font-size="19">5</text>
+  <text x="104" y="1194" fill="#ffe0a2" font-family="Arial,sans-serif" font-size="24" font-weight="700">The partition decision has a cost</text>
+  <text x="92" y="1255" fill="#f0f6ff" font-family="Arial,sans-serif" font-size="27">√N + √(N/2) + √(N/4) + … = Θ(√N)</text>
+  <text x="92" y="1291" fill="#c7d3df" font-family="Arial,sans-serif" font-size="17">If each balanced-half test costs Θ(√m) queries, recursion stays</text>
+  <text x="92" y="1319" fill="#c7d3df" font-family="Arial,sans-serif" font-size="17">at square-root scale, before preparation, errors and verification.</text>
+  <text x="43" y="1424" fill="#a9c0d5" font-family="Arial,sans-serif" font-size="16">Conceptual illustration. Highlighted branches are hypothetical, not demonstrated free partition decisions.</text>
+</svg>

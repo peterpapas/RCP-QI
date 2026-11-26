@@ -1,0 +1,53 @@
+{
+  "classification": "Analytical predictions and archived ideal statevector observations; no new quantum experiment.",
+  "sources": {
+    "v1": {
+      "bytes": 7668,
+      "sha256": "97f52d98f733a6bfbf42436d9e09166d218ad09aabe7cc5700979746e335f1f6"
+    },
+    "partial": {
+      "bytes": 767,
+      "sha256": "853c433329283b379facfcbad073d24b0511cc22fa7ce17ee243fafd271407c4"
+    },
+    "v3": {
+      "bytes": 122826,
+      "sha256": "24b6a4187d76df835711af0da7e4b68ba5eaff4c88c848bc381e955b13cb293b"
+    }
+  },
+  "figures": {
+    "interference-bias.svg": {
+      "bytes": 42298,
+      "sha256": "969ab26721e9e84f78714ca6e5711d55deaba954318e009b88e0e3cba2f683fc"
+    },
+    "partial-search-comparison.svg": {
+      "bytes": 15830,
+      "sha256": "78b5a61f2124a2902faea52bb5172007d6a111dbc99df835d4917ae3c1321c61"
+    },
+    "query-complexity-scaling.svg": {
+      "bytes": 28668,
+      "sha256": "506749025ca476b467b15c4c39dd961c398af945f4ae19ab3dab82f4b131ab04"
+    },
+    "recursive-query-cost.svg": {
+      "bytes": 17377,
+      "sha256": "6e982839b3370bf69c4e1c5c33cfc98ac85d2393952098c87616d94b16422427"
+    }
+  },
+  "static_assets": {
+    "docs/assets/branding/hero-banner.svg": {
+      "bytes": 5764,
+      "sha256": "6df4c49976a57f7ce5f45b2574e1754f3e5ae9106841a23b27190ba203c2a2da"
+    },
+    "docs/assets/concepts/recursive-quantum-partitioning.svg": {
+      "bytes": 7750,
+      "sha256": "dad25f3d099b6e461621b735cad9ac7432636348f01de606c80e628ab5cd31ff"
+    },
+    "docs/assets/concepts/research-findings.svg": {
+      "bytes": 3486,
+      "sha256": "de067fe17ee0902bd7da3db47da058d37b386038241b7a70d2ca3180bd27a42b"
+    },
+    "docs/assets/timeline/research-timeline.svg": {
+      "bytes": 5014,
+      "sha256": "4c40721c713c4e70fea7190d83a89a76e0553e02ac98d2d9067145f20b88e6b4"
+    }
+  }
+}
