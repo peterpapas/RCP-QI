@@ -11,3 +11,5 @@ import RCPQI.AlgebraicTransfer
 import RCPQI.BooleanIdeal
 import RCPQI.BooleanOracle
 import RCPQI.QuotientQueries
+import RCPQI.ConflictTree
+import RCPQI.DistributedUnits

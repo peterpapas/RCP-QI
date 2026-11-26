@@ -7,6 +7,8 @@ import RCPQI.AlgebraicTransfer
 import RCPQI.BooleanIdeal
 import RCPQI.BooleanOracle
 import RCPQI.QuotientQueries
+import RCPQI.ConflictTree
+import RCPQI.DistributedUnits
 
 #print axioms RCPQI.unique_solution_partition_complementarity
 #print axioms RCPQI.binary_children_cover
@@ -42,3 +44,9 @@ import RCPQI.QuotientQueries
 #print axioms RCPQI.phaseSign_complement
 #print axioms RCPQI.quotient_transcript_to_original
 #print axioms RCPQI.original_transcript_to_quotient
+#print axioms RCPQI.literal_false_of_prefix
+#print axioms RCPQI.checkClauseConflict_correct
+#print axioms RCPQI.clause_false_of_conflict
+#print axioms RCPQI.conflictTree_sound
+#print axioms RCPQI.conflictTree_root_unsat
+#print axioms RCPQI.distributed_units_sat_iff_disjoint
