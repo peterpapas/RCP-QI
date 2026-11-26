@@ -15,3 +15,7 @@ V5.1 raw outputs are stored in `raw/v5_1_pilot_20261126/`, `raw/v5_1_heldout_202
 V7 is a mathematical and literature investigation with no numerical run. Its manifest entry indexes the theory and axiom-audit artifacts under `theory` rather than inventing a raw experiment file. The conditional proofs and limitations are summarized in `research/v7_mathematical_review.md`.
 
 V7.1 similarly has no raw benchmark or circuit artifact. Its theory-only manifest entry links the structural promise taxonomy, original-source review, Lean local-complementarity/residual/MQ-gadget proofs and axiom audit. See `research/v7_1_structural_promise_discovery.md` for recommendations; historical V1–V7 raw results are unchanged.
+
+## V8 theory-only entry
+
+`V8-ALGEBRAIC-TRANSFER-AUDIT` in `manifest.json` indexes research and Lean artifacts only. No V8 raw data, plots, quantum shots, or new operator were produced; the conditional experiment gate did not pass. See `research/v8/V8_FINAL_REPORT.md`.

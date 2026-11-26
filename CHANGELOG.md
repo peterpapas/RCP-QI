@@ -1,5 +1,11 @@
 # Changelog
 
+## V8 — algebraic complexity and transfer audit
+
+- Pinned and inspected the Anthropic and OpenAI November 2026 VP–VNP primary artifacts, distinguishing claimed border bounds from formalized exact statements and independent review status.
+- Reconstructed tensor-price/balanced-cut and tensor-wire/replay proof mechanisms, then costed CNF algebraic representations, partition counts and proposed lower-bound/quantum transfers.
+- Added a narrow Lean counterexample to Boolean-to-arithmetic identity transfer, an adversarial hypothesis registry and decision D: investigate scoped limitations; no new quantum operator or experiment.
+
 ## V7.1 — structural promise discovery
 
 - Added a source-backed taxonomy and comparison of Simon, Shor, HSP/hidden shift, Fourier, quantum walks/backtracking, affine and quadratic Boolean systems, constraint hypergraphs and local complementarity.
