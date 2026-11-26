@@ -8,3 +8,6 @@ import RCPQI.Structural
 import RCPQI.PartialComplementarity
 import RCPQI.AlgebraicConstraints
 import RCPQI.AlgebraicTransfer
+import RCPQI.BooleanIdeal
+import RCPQI.BooleanOracle
+import RCPQI.QuotientQueries

@@ -4,6 +4,9 @@ import RCPQI.Structural
 import RCPQI.PartialComplementarity
 import RCPQI.AlgebraicConstraints
 import RCPQI.AlgebraicTransfer
+import RCPQI.BooleanIdeal
+import RCPQI.BooleanOracle
+import RCPQI.QuotientQueries
 
 #print axioms RCPQI.unique_solution_partition_complementarity
 #print axioms RCPQI.binary_children_cover
@@ -31,3 +34,10 @@ import RCPQI.AlgebraicTransfer
 #print axioms RCPQI.boolean_relation_nonzero
 #print axioms RCPQI.totalCost_of_minimum_oracle
 #print axioms RCPQI.root_plus_recursive_call_count
+#print axioms RCPQI.booleanIdealGenerator_on_bool
+#print axioms RCPQI.interpolateBool_on_bool
+#print axioms RCPQI.ideal_multiple_same_bool
+#print axioms RCPQI.phaseEntries_eq_iff
+#print axioms RCPQI.phaseSign_complement
+#print axioms RCPQI.quotient_transcript_to_original
+#print axioms RCPQI.original_transcript_to_quotient
