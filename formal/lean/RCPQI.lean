@@ -7,3 +7,4 @@ import RCPQI.Probability
 import RCPQI.Structural
 import RCPQI.PartialComplementarity
 import RCPQI.AlgebraicConstraints
+import RCPQI.AlgebraicTransfer

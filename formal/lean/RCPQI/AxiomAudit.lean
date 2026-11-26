@@ -3,6 +3,7 @@ import RCPQI.Probability
 import RCPQI.Structural
 import RCPQI.PartialComplementarity
 import RCPQI.AlgebraicConstraints
+import RCPQI.AlgebraicTransfer
 
 #print axioms RCPQI.unique_solution_partition_complementarity
 #print axioms RCPQI.binary_children_cover
@@ -25,5 +26,8 @@ import RCPQI.AlgebraicConstraints
 #print axioms RCPQI.constraint_complement_residual_witness
 #print axioms RCPQI.gated_residual_existence_equivalence
 #print axioms RCPQI.clause_quadratic_gadget
+
+#print axioms RCPQI.boolean_relation_vanishes
+#print axioms RCPQI.boolean_relation_nonzero
 #print axioms RCPQI.totalCost_of_minimum_oracle
 #print axioms RCPQI.root_plus_recursive_call_count

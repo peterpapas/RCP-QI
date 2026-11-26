@@ -23,6 +23,7 @@
 | One flipped constraint with invariant residual | Conditional machine-verified theorem | `constraint_complement_residual_witness` converts a given residual witness; it does not find one or imply a quantum advantage |
 | Fresh affine bit with arbitrary residual | Machine-verified Boolean equivalence | `gated_residual_existence_equivalence` states `∃(x,b), b∧H(x) ↔ ∃x,H(x)`; NP-hardness for arbitrary CNF `H` follows from standard SAT reduction outside Lean |
 | Three-clause quadratic gadget | Machine-verified local Boolean equivalence | `clause_quadratic_gadget` checks the auxiliary two-equation gadget; the polynomial-time 3-SAT-to-MQ construction and NP-completeness corollary are documented outside Lean |
+| Arithmetic expression versus Boolean-cube agreement | Machine-verified integer-evaluation counterexample | `boolean_relation_vanishes` proves `z*z-z=0` at Boolean `z`; `boolean_relation_nonzero` proves its value at `2` is nonzero. A formal polynomial-ring/circuit lower-bound theorem is not claimed |
 | Efficient quantum partition-existence oracle | Open problem | No proof or implementation with better complete cost |
 | Polynomial-time RCP-QI on NP-complete families | Unproven conjecture | No claim made |
 | Lean-to-Python/Qiskit correspondence | Pending | No formal refinement proof |
