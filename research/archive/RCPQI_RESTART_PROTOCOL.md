@@ -1,0 +1,19 @@
+# Mandatory research restart protocol
+
+**Current status: SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** No V11, quantum circuit implementation, new generic recursion tuning or speculative operator is authorised by this archive. A proposal remains a proposal until all nine gates below are documented and independently reviewed.
+
+| Gate | Required evidence before active research restarts |
+| --- | --- |
+| 1. Precise hypothesis | A falsifiable mathematical statement with quantifiers, success/error target and explicit failure condition. State whether it concerns decision, witness search, counting, communication, proof size, queries, gates or elapsed time. |
+| 2. Input family | Explicit representation and membership rule, size parameter, promise or restriction, zero/one/multiple-solution behavior, and an NP-hardness proof only if claimed. Separate ordinary SAT from oracle/promise problems. |
+| 3. Structural certificate | A concrete certificate, source of supply/discovery, polynomial-size encoding if claimed, independent verification algorithm and charged production/certification cost. Exclude witness-encoding advice and semantic tests that already solve the instance. |
+| 4. Information task | Exactly what bit, witness, distribution, observable or proof is extracted from which registers/oracles, under what prior and error threshold. A partition bit must be well-defined for multiple solutions. |
+| 5. Model-preserving reduction | A written proof connecting input, promise, allowed access and output to the claimed lower/upper bound. Do not transfer arithmetic symbolic-output, black-box query, distributed communication or restricted proof-system bounds to explicit SAT/quantum gates by analogy. |
+| 6. Complete cost | Charge preprocessing, certificate discovery/check, state preparation and inverse, oracle construction, logical calls, compiled gate count/depth, ancillas, precision, measurements, repetitions, postselection probability, failed runs, verification and classical postprocessing. State uniformity and exact/approximate computation. |
+| 7. Matched baselines | Give the **same** certificate/preprocessing to direct CDCL, specialized family solvers, classical quotient/DP/backtracking and relevant Grover/amplification, quantum backtracking/walk baselines. Compare the same input encoding and success guarantee. |
+| 8. Prior-art gap | Cite original sources; compare with the [theorem catalogue](RCPQI_THEOREM_CATALOGUE.md) and [negative catalogue](RCPQI_NEGATIVE_RESULTS.md). Identify a theorem or algorithmic claim beyond known disjointness, DPLL/resolution, Boolean-ideal and query-search results. New Lean code alone is not novelty. |
+| 9. Independent mathematical review | Obtain review of theorem statement, assumptions, proof/reduction, novelty and complete costs by an independent complexity/quantum researcher; record objections and corrections. A Lean build and numerical agreement cannot substitute for semantic review. |
+
+**Implementation gate:** no new quantum circuit/operator design starts before all nine gates pass and a concrete mathematical mechanism predicts an observable advantage with full cost. If any gate fails, record the counterexample or blocker and leave the project suspended. Previously rejected ideas require **new mathematical evidence addressing their specific obstruction**, not renaming or additional parameter tuning. A successful future proposal should be reviewed as a separately scoped research decision, with new experiment IDs and fresh output paths; it does not retroactively change V1–V10 findings.
+
+This protocol is a scientific gate, not a request to begin V11. Public release, preprint submission or licensing also remains subject to the repository's existing author-approval rule in `AGENTS.md`.
