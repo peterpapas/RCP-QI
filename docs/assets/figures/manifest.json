@@ -16,20 +16,20 @@
   },
   "figures": {
     "interference-bias.svg": {
-      "bytes": 42298,
-      "sha256": "969ab26721e9e84f78714ca6e5711d55deaba954318e009b88e0e3cba2f683fc"
+      "bytes": 42182,
+      "sha256": "a1e7c7a75b87821090b42211a10898970ef8506cb8f000371cd1038255fc5fd6"
     },
     "partial-search-comparison.svg": {
-      "bytes": 15830,
-      "sha256": "78b5a61f2124a2902faea52bb5172007d6a111dbc99df835d4917ae3c1321c61"
+      "bytes": 15746,
+      "sha256": "373fa789629060f420655c90dd7a550b60bd0242fa39398e1094af7a51f09ae0"
     },
     "query-complexity-scaling.svg": {
-      "bytes": 28668,
-      "sha256": "506749025ca476b467b15c4c39dd961c398af945f4ae19ab3dab82f4b131ab04"
+      "bytes": 28469,
+      "sha256": "5bc6ba6e43e7bed570c43d28c4efffcbd448a760ae1fb03e2968bb1abf489b69"
     },
     "recursive-query-cost.svg": {
-      "bytes": 17377,
-      "sha256": "6e982839b3370bf69c4e1c5c33cfc98ac85d2393952098c87616d94b16422427"
+      "bytes": 17241,
+      "sha256": "e1ca9b688132819edf3466197b83e84608b10493c13d8000261161933f5cc8d7"
     }
   },
   "static_assets": {

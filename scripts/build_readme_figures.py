@@ -94,6 +94,7 @@ def save(fig: plt.Figure, path: Path, description: str) -> None:
     plt.close(fig)
     svg = path.read_text(encoding="utf-8").replace("\r\n", "\n")
     svg = svg.replace("</title>", f"</title>\n <desc>{escape(description)}</desc>", 1)
+    svg = "\n".join(line.rstrip() for line in svg.splitlines()) + "\n"
     path.write_bytes(svg.encode("utf-8"))
 
 
