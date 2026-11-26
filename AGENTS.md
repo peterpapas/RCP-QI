@@ -11,6 +11,6 @@ RCP-QI is an unproven research hypothesis. Prioritize mathematical correctness a
 - Record seeds, versions, assumptions, exact commands, input families, statistical uncertainty, negative findings, and limitations in the experiment registry and results manifest.
 - Add Lean theorems without `sorry`, `admit`, or new axioms. Audit dependencies. A conditional proof that assumes a reliable partition oracle is not a proof that the oracle is efficient.
 - Keep new modules proportional to measured needs. Preserve Git history and avoid changing working V2 experiments while they run; use a separate worktree if a concurrent run would conflict.
-- Do not choose a license, make the repository public, publish a preprint, or disclose the research externally without explicit author approval.
+- Public repository release and the licenses in LICENSING.md were authorised by the author on 26 November 2026. Do not change licensing, publish a preprint, or resume research without new author approval and the restart gate.
 
 The central question is whether structure in an NP-complete problem can support a partition-existence interference operator whose **complete** computational cost is below generic search. The unstructured quantum query lower bound remains a constraint.

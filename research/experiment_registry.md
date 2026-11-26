@@ -1,5 +1,7 @@
 # Experiment registry
 
+**Public archive note (26 November 2026):** V1–V10 entries and raw results remain immutable. The [public-history map](../PUBLICATION_PROVENANCE.md) translates commit identifiers after removal of two third-party benchmark binaries; the [publication audit](../PUBLICATION_READINESS.md) records licensing and validation. The research status below remains suspended.
+
 **Archive status: SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** V1–V10 entries below are historical and immutable. The [closeout report](archive/RCPQI_FINAL_RESEARCH_REPORT.md), [theorem catalogue](archive/RCPQI_THEOREM_CATALOGUE.md) and [artifact integrity index](archive/artifact_integrity.json) provide the final review trail. No V11 is initiated.
 
 Every entry uses an immutable ID. Machine-readable raw files and figures are indexed in `results/manifest.json`. Timings are platform-dependent. A new experiment should record its seed, dependency lock, input family, mathematical assumption, baseline, costs, uncertainty, reproduction command, and negative findings before a conclusion is drawn.

@@ -1,9 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this research software, cite this repository and the specific experiment version."
 type: software
-title: "RCP-QI Research Framework"
+title: "Recursive Constraint Partitioning via Quantum Interference: A Computational Complexity Investigation"
 authors:
   - family-names: Papas
     given-names: Peter
 version: 0.1.0
 abstract: "Reproducible experimental and formal research framework for an unproven quantum partition-search hypothesis."
+repository-code: "https://github.com/peterpapas/RCP-QI"
+url: "https://github.com/peterpapas/RCP-QI"

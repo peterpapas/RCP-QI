@@ -16,4 +16,4 @@
 
 **Implementation gate:** no new quantum circuit/operator design starts before all nine gates pass and a concrete mathematical mechanism predicts an observable advantage with full cost. If any gate fails, record the counterexample or blocker and leave the project suspended. Previously rejected ideas require **new mathematical evidence addressing their specific obstruction**, not renaming or additional parameter tuning. A successful future proposal should be reviewed as a separately scoped research decision, with new experiment IDs and fresh output paths; it does not retroactively change V1–V10 findings.
 
-This protocol is a scientific gate, not a request to begin V11. Public release, preprint submission or licensing also remains subject to the repository's existing author-approval rule in `AGENTS.md`.
+This protocol is a scientific gate, not a request to begin V11. The author authorised public repository release and the documented licenses on 26 November 2026. Preprint submission and future licensing changes remain subject to separate author approval under `AGENTS.md`.

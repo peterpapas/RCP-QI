@@ -1,5 +1,7 @@
 # Research roadmap
 
+**Public archive note (26 November 2026):** The completed programme is open for mathematical review and collaboration. Public release does not restart active research. See the [root roadmap](../ROADMAP.md) and [publication audit](../PUBLICATION_READINESS.md).
+
 **Final project status: SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** V1–V10 are a closed research archive. There is no V11 roadmap entry or active circuit/theorem-development workstream. See the [final report](archive/RCPQI_FINAL_RESEARCH_REPORT.md) and [restart protocol](archive/RCPQI_RESTART_PROTOCOL.md).
 
 | Version | Scientific question | Current state |

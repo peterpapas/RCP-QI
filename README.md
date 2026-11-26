@@ -1,6 +1,23 @@
-# RCP-QI research
+# Recursive Constraint Partitioning via Quantum Interference
 
-> **SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** V1–V10 are complete as an unpublished research archive. No V11 or quantum architecture development is authorised. The [executive summary](research/archive/RCPQI_EXECUTIVE_SUMMARY.md), [final research report](research/archive/RCPQI_FINAL_RESEARCH_REPORT.md), [theorem catalogue](research/archive/RCPQI_THEOREM_CATALOGUE.md), [negative-results catalogue](research/archive/RCPQI_NEGATIVE_RESULTS.md), [reproducibility audit](research/archive/RCPQI_REPRODUCIBILITY.md) and [restart protocol](research/archive/RCPQI_RESTART_PROTOCOL.md) are the independent-review entry points.
+**A computational complexity investigation.** This public archive documents the historical RCP-QI programme (originally *Recursive Complementary Partitioning with Quantum Interference*) through V10. The research phase is complete and open for mathematical review and collaboration. Active RCP-QI research and quantum architecture development remain **SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT**.
+
+Start with the [executive summary](research/archive/RCPQI_EXECUTIVE_SUMMARY.md), [full report](research/archive/RCPQI_FINAL_RESEARCH_REPORT.md), [theorem catalogue](THEOREMS.md), [negative results](NEGATIVE_RESULTS.md), and [restart conditions](ROADMAP.md). The [publication audit](PUBLICATION_READINESS.md) explains the public copy, licensing, source provenance and reproducibility checks.
+
+**Research boundaries:** No proof of P = NP or P ≠ NP; no novel quantum computational advantage; no universal impossibility theorem for quantum SAT solving; and no independently established publishable mathematical novelty. Historical results are preserved, with their assumptions and limits.
+
+| Area | Location |
+| --- | --- |
+| V1–V10 mathematics, registry and literature | [`research/`](research/) |
+| Lean 4 formalisation | [`formal/lean/`](formal/lean/) |
+| Experiment notes and Python implementations | [`experiments/`](experiments/), [`src/`](src/) |
+| Immutable experimental artifacts | [`results/`](results/) |
+| Consolidated report and manuscript status | [`papers/`](papers/) |
+| Validation and reproduction | [`tests/`](tests/), [`scripts/`](scripts/) |
+
+Use Python 3.12 with `uv sync --locked`, then run `uv run pytest -q` and `uv run python scripts/verify_archive.py`. The two optional SAT Competition stress files are **not redistributed**; [download them with checksum verification](benchmarks/instances/satcomp2025/README.md) before the public-instance integration test. Code and original research documents have [separate licenses](LICENSING.md).
+
+> **SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** V1–V10 are complete as a public research archive. No V11 or quantum architecture development is authorised. The [executive summary](research/archive/RCPQI_EXECUTIVE_SUMMARY.md), [final research report](research/archive/RCPQI_FINAL_RESEARCH_REPORT.md), [theorem catalogue](research/archive/RCPQI_THEOREM_CATALOGUE.md), [negative-results catalogue](research/archive/RCPQI_NEGATIVE_RESULTS.md), [reproducibility audit](research/archive/RCPQI_REPRODUCIBILITY.md) and [restart protocol](research/archive/RCPQI_RESTART_PROTOCOL.md) are the independent-review entry points.
 
 The project has **no proof of P = NP or P ≠ NP; no novel quantum computational advantage; no universal impossibility theorem for quantum SAT solving; and no independently established publishable mathematical novelty.** All validated restricted-model findings and experimental evidence are preserved.
 
@@ -187,7 +204,7 @@ Working Python modules remain in `src/rcp_qi_research` to preserve imports and C
 
 The pinned Lean build proves unique-solution partition complementarity, preservation under a reliable existence decision, structural termination and decision count, conditional bitstring correctness, and a cost-sum bound **conditional on a bounded partition-oracle cost**. The V1 and V2 probability formulas remain analytical derivations with statevector checks, not Lean theorems. No efficient partition-existence oracle, polynomial-time NP-complete algorithm, or Lean-to-Qiskit correspondence has been proved.
 
-Python and Lean checks run in separate GitHub Actions workflows. `uv run python scripts/validate_results.py` checks the committed result schema and accounting invariants; it does not re-execute every expensive experiment. The [paper draft](paper/README.md) is not a publication or preprint. `CITATION.cff` uses the author name already present in `pyproject.toml` and contains no DOI. No final license has been selected; public release, external disclosure, and licensing remain subject to author approval.
+Python and Lean checks run in separate GitHub Actions workflows. `uv run python scripts/validate_results.py` checks the committed result schema and accounting invariants; it does not re-execute every expensive experiment. The [paper draft](paper/README.md) is not a publication or preprint. `CITATION.cff` uses the author name already present in `pyproject.toml` and contains no DOI. Code and original research documents use the licenses in [LICENSING.md](LICENSING.md). This public archive was authorised for release on 26 November 2026; no preprint has been published.
 The [resource accounting contract](docs/resource_accounting.md) defines each cost field and its comparison limits.
 
 ## Interpretation limits
