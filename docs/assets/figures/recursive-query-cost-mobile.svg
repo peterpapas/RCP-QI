@@ -360,7 +360,7 @@ L 315.73957 115.38
    <text style="font-size: 11px; font-family: 'Arial'; text-anchor: start; fill: #b5c8dc" x="30.61957" y="63.859219" transform="rotate(-0 30.61957 63.859219)">Model: N=2¹⁶, C(m)=√m</text>
   </g>
   <g id="text_15">
-   <text style="font-size: 10.5px; font-family: 'Arial'; text-anchor: start; fill: #edf5ff" x="30.61957" y="369.828" transform="rotate(-0 30.61957 369.828)">Blue  per decision    Cyan  cumulative</text>
+   <text style="font-size: 10.5px; font-family: 'Arial'; text-anchor: start; fill: #edf5ff" x="30.61957" y="369.828" transform="rotate(-0 30.61957 369.828)">Blue = each test  ·  Cyan = cumulative</text>
   </g>
   <g id="text_16">
    <text style="font-size: 10.5px; font-family: 'Arial'; text-anchor: start; fill: #58e2df" x="30.61957" y="385.4232" transform="rotate(-0 30.61957 385.4232)">Total ≈ 871 = Θ(√N) in this model.</text>

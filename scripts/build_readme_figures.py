@@ -238,7 +238,7 @@ def bias_mobile_figure(path: Path) -> None:
     ax.xaxis.label.set_size(13)
     ax.yaxis.label.set_size(13)
     ax.grid(axis="y")
-    fig.text(0.07, 0.115, "Blue: formula   Cyan: V1 statevector", color=TEXT, fontsize=11)
+    fig.text(0.07, 0.115, "Blue = formula  ·  Cyan = V1 statevector", color=TEXT, fontsize=11)
     fig.text(0.07, 0.075, "Amber: random half (50%)", color=AMBER, fontsize=11)
     fig.text(0.07, 0.038, "Points through N=256; later curve analytical.", color=MUTED, fontsize=10)
     save(fig, path, "Mobile analytical one-iteration correct-half probability and archived statevector points; random baseline 50 percent.")
@@ -268,8 +268,8 @@ def partial_mobile_figure(path: Path) -> None:
         for value, color, offset in values:
             ax.barh(y + offset, value, height=0.18, color=color)
             ax.text(value + 0.15, y + offset, str(value), va="center", color=TEXT, fontsize=11, fontweight="bold")
-    fig.text(0.07, 0.125, "Cyan  partial half    Blue  Grover half", color=TEXT, fontsize=10.5)
-    fig.text(0.07, 0.085, "Violet  Grover exact item (harder output)", color=MUTED, fontsize=10)
+    fig.text(0.07, 0.125, "Cyan = partial half  ·  Blue = Grover half", color=TEXT, fontsize=10.5)
+    fig.text(0.07, 0.085, "Violet = Grover exact item (harder output)", color=MUTED, fontsize=10)
     fig.text(0.07, 0.045, "V3 bit-only: 50% at tested N=4–64 only.", color=AMBER, fontsize=10)
     save(fig, path, "Mobile N=256 thresholds: partial half 7, 8, 9; global Grover half 9, 10, 11; global Grover exact 10, 11, 12.")
 
@@ -308,7 +308,7 @@ def recursive_mobile_figure(path: Path) -> None:
     ax.yaxis.label.set_size(13)
     ax.grid(axis="y")
     ax.set_axisbelow(True)
-    fig.text(0.07, 0.12, "Blue  per decision    Cyan  cumulative", color=TEXT, fontsize=10.5)
+    fig.text(0.07, 0.12, "Blue = each test  ·  Cyan = cumulative", color=TEXT, fontsize=10.5)
     fig.text(0.07, 0.082, "Total ≈ 871 = Θ(√N) in this model.", color=CYAN, fontsize=10.5)
     fig.text(0.07, 0.044, "Preparation, errors and verification add cost.", color=MUTED, fontsize=10)
     save(fig, path, "Mobile conditional recursion model: per-level square-root query costs shrink, cumulative cost is about 871 for N=65536.")

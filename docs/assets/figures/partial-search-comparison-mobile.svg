@@ -304,10 +304,10 @@ L 308.16 115.38
    <text style="font-size: 11px; font-family: 'Arial'; text-anchor: start; fill: #b5c8dc" x="23.04" y="61.834531" transform="rotate(-0 23.04 61.834531)">Queries to reach one-shot accuracy</text>
   </g>
   <g id="text_22">
-   <text style="font-size: 10.5px; font-family: 'Arial'; text-anchor: start; fill: #edf5ff" x="23.04" y="367.776" transform="rotate(-0 23.04 367.776)">Cyan  partial half    Blue  Grover half</text>
+   <text style="font-size: 10.5px; font-family: 'Arial'; text-anchor: start; fill: #edf5ff" x="23.04" y="367.776" transform="rotate(-0 23.04 367.776)">Cyan = partial half  ·  Blue = Grover half</text>
   </g>
   <g id="text_23">
-   <text style="font-size: 10px; font-family: 'Arial'; text-anchor: start; fill: #b5c8dc" x="23.04" y="384.192" transform="rotate(-0 23.04 384.192)">Violet  Grover exact item (harder output)</text>
+   <text style="font-size: 10px; font-family: 'Arial'; text-anchor: start; fill: #b5c8dc" x="23.04" y="384.192" transform="rotate(-0 23.04 384.192)">Violet = Grover exact item (harder output)</text>
   </g>
   <g id="text_24">
    <text style="font-size: 10px; font-family: 'Arial'; text-anchor: start; fill: #f6c36c" x="23.04" y="400.608" transform="rotate(-0 23.04 400.608)">V3 bit-only: 50% at tested N=4–64 only.</text>
