@@ -53,3 +53,5 @@ Result validation checks schema, saved V1/V2 analytic-statevector agreement and 
 ## Closeout check record
 
 The final run results, including test count, Ruff, Lean build, axiom audit, result validation, V5.1 validators and archive hash check, are recorded in [the final report](RCPQI_FINAL_RESEARCH_REPORT.md) and the Git closeout commits. There are no outstanding validation failures or intentional raw-data edits.
+
+The post-commit repository audit found an empty `git status --porcelain`; `git diff --check 536cc3c..HEAD` passed, and the changed-path list contained only the closeout documents, index, verifier and README/registry/roadmap links. `git fsck --connectivity-only --no-reflogs` exited successfully and reported one **dangling, unreferenced blob** (`62202814c89a529647ad3c09c610225d3e635c2c`), which does not affect reachable committed objects or the verified historical artifacts. It was left untouched to preserve repository history.
