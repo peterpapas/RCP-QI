@@ -1,2 +1,7 @@
-# The closeout inventory hashes the manifest's LF bytes exactly on all hosts.
+# The closeout inventory hashes generated text artifacts with CRLF bytes.
+results/**/*.json text eol=crlf
+results/**/*.jsonl text eol=crlf
+results/**/*.csv text eol=crlf
+
+# The manifest itself was authored with LF bytes and is hashed separately.
 results/manifest.json text eol=lf
