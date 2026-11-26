@@ -94,7 +94,7 @@ uv run python scripts/validate_partial_search.py
 uv run python scripts/build_readme_figures.py --check
 ```
 
-Run Ruff, the three V5.1 validators, archive integrity checks and the pinned Lean build using the [complete reproducibility instructions](research/archive/RCPQI_REPRODUCIBILITY.md). Regenerate the four README charts with `uv run python scripts/build_readme_figures.py`; [figure provenance and design notes](docs/README_VISUAL_DESIGN.md) explain every visual.
+Run Ruff, the three V5.1 validators, archive integrity checks and the pinned Lean build using the [complete reproducibility instructions](research/archive/RCPQI_REPRODUCIBILITY.md). Regenerate the four README charts and their mobile layouts with `uv run python scripts/build_readme_figures.py`; [figure provenance and design notes](docs/README_VISUAL_DESIGN.md) explain every visual.
 
 ## Explore the archive
 

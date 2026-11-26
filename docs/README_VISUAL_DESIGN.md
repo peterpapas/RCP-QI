@@ -43,4 +43,13 @@ The script regenerates the four desktop charts and four narrow-screen variants i
 
 Inspect the [rendered README](https://github.com/peterpapas/RCP-QI) at desktop and narrow widths, including light and dark GitHub themes. The SVGs use local paths and no script, external font or external image. The README captions repeat the figure category, axes, units, source and assumptions in selectable text. The [archived V5.1 classical figures](../results/processed/v5_1/) remain linked rather than mixing their wall-clock times into quantum oracle-query charts.
 
-The local SVGs were rendered and inspected at desktop widths; the concept and timeline were also inspected as tall single-column graphics. The complete README rendering and final screenshots are part of the pull-request review record.
+The local SVGs were rendered and inspected at desktop widths; the concept and timeline were also inspected as tall single-column graphics. GitHub's actual README preview was checked at 1,280 px and 390 px viewports with light and dark color schemes. All eight `<picture>` elements selected their desktop or mobile SVG as intended; no image had zero natural width. The first mobile pass revealed crowded plot labels, which were separated and rerendered before the final audit.
+
+Rendered GitHub previews from the design branch:
+
+- [Desktop, light theme](preview/readme-desktop-light.png)
+- [Desktop, dark theme](preview/readme-desktop-dark.png)
+- [Mobile opening](preview/readme-mobile-top.png)
+- [Mobile concept](preview/readme-mobile-concept.png)
+
+These screenshots are review aids, not scientific figures or new measurements. GitHub's interface and badges can change after capture.
