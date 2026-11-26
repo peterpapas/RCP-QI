@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "POSTPUB-PARTIAL-SEARCH-20261127",
+  "scope": "New correction artifacts only; V1\u2013V10 manifest and closeout inventory remain untouched.",
+  "artifacts": {
+    "partial_search.json": {
+      "bytes": 56496,
+      "sha256": "fee5c19c07df3ec0a2916ff39176b0d302c05a50f885ea8ec2259df868c755b8"
+    },
+    "thresholds.csv": {
+      "bytes": 767,
+      "sha256": "853c433329283b379facfcbad073d24b0511cc22fa7ce17ee243fafd271407c4"
+    },
+    "accuracy_vs_queries.png": {
+      "bytes": 157560,
+      "sha256": "ce36d3b86b29d6c38eb21ad756aaf603f067c51572ba8858ef94dd424db4109c"
+    }
+  }
+}
