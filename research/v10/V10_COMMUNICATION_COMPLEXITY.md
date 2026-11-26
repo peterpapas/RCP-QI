@@ -1,0 +1,17 @@
+# Distributed SAT partitions and communication
+
+## Model
+
+Two parties have private inputs `a,b∈{0,1}^n`. Alice owns the positive unit clauses `x_i` for `a_i=1`; Bob owns the negative unit clauses `¬x_i` for `b_i=1`. Variable names, `n` and the encoding rule are public. Neither party receives the other's clause set or a central copy of the whole CNF for free. They must output whether the **union** is satisfiable. Local computation is free; communication bits/qubits, rounds and pre-shared entanglement are specified. No input-dependent joint preprocessing is free. This is a distributed **clause-ownership** problem, distinct from an ordinary public-CNF SAT solver or assignment-variable partition.
+
+## T2 reduction and bounds
+
+The union has a satisfying assignment iff no `i` requires both `x_i=1` and `x_i=0`, equivalently `∀i ¬(a_i∧b_i)` or `DISJ_n(a,b)`. If disjoint, the witness `x=a` satisfies every positive and negative unit clause. If they intersect, that index is an immediate contradiction. `RCPQI.distributed_units_sat_iff_disjoint` checks this Boolean reduction in Lean for arbitrary `n`; it does **not** prove communication complexity.
+
+The communication matrix is `M[a,b]=1[∀i ¬(a_i∧b_i)]`, the tensor power of the `2×2` matrix `[[1,1],[1,0]]`. Its real rank is `2^n`, giving deterministic communication at least `n` bits by the standard rank bound; sending Alice's `n` bits plus Bob's answer gives `n+1`. Randomized bounded-error communication is `Ω(n)` by [Razborov's original disjointness result](https://people.cs.uchicago.edu/~razborov/files/dis.pdf). Entanglement-assisted bounded-error quantum communication is `Ω(√n)` by [Razborov's quantum result](https://arxiv.org/abs/quant-ph/0204025). This is a direct encoding of **known** disjointness, not a new communication lower bound or a centralized SAT lower bound. Rectangles and discrepancy apply to this matrix under their own distribution/error conventions; a large deterministic rank alone does not establish the randomized or quantum rates.
+
+## Assignment split and transfer counterexample
+
+Alternatively make a **public** CNF `E(u,v)=∧_i(u_i↔v_i)` using two 2-clauses per pair. If Alice privately chooses `u` and Bob privately chooses `v`, the evaluation matrix of `E` is the `2^n×2^n` identity, rank `2^n`; deterministic communication is at least `n`. Yet SAT existence for the public CNF is trivial: `u=v=0` is a witness, and its primal graph is a matching of width one. Even a high communication rank for **distributed evaluation** says nothing about centralized existential SAT difficulty. Converting a communication bound to a restricted RCP-QI architecture would require a proof that every allowed computation implements a low-communication protocol while preserving who knows the CNF/assignment and what output is required. No such nontrivial simulation for the existing RCP-QI quantum architecture is established.
+
+Quantum entanglement can change protocol costs and must be included in a claimed bound; the cited disjointness bound already allows it. [Buhrman–Cleve–Wigderson](https://arxiv.org/abs/quant-ph/9802040) gives query-to-communication simulations under stated distributed oracle constructions. Their direction cannot be reversed into a general explicit-input SAT gate bound without a new reduction. This candidate stops at an exact, Lean-checked encoding plus inherited classical/quantum communication bounds.
