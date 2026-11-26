@@ -1,0 +1,159 @@
+{
+  "artifacts": {
+    "results/figures/phase2_recursive_accuracy_v2.png": {
+      "bytes": 85970,
+      "sha256": "507a25649243b0b53b4820499b28c60ea671f98c0551636a920c953016dd1420"
+    },
+    "results/initial.csv": {
+      "bytes": 8273,
+      "sha256": "67a9a33c6e69d9ed30c6bffaff3153868122e0fbe2a00e29d37261c48f850784"
+    },
+    "results/initial.json": {
+      "bytes": 49564,
+      "sha256": "59825c95bf46028cea049c9044e6a4b4d49be56d1f59d211e9a030805c09c983"
+    },
+    "results/one_iteration.json": {
+      "bytes": 7668,
+      "sha256": "97f52d98f733a6bfbf42436d9e09166d218ad09aabe7cc5700979746e335f1f6"
+    },
+    "results/one_iteration.png": {
+      "bytes": 52968,
+      "sha256": "c433a03f05932404e176aa4c4292394a02ffdacf385b232d6710782677776c7d"
+    },
+    "results/phase2_accuracy_vs_queries.png": {
+      "bytes": 135680,
+      "sha256": "be542da41073e4f0bf696cea5b11f7965fc026de97295304b09fa1f1beba6eff"
+    },
+    "results/phase2_multi_iteration.json": {
+      "bytes": 184407,
+      "sha256": "c994324da2186f41f371da87073cae1b31e7e3f45eb6edac8d6c154b395d4817"
+    },
+    "results/phase2_partition_register.json": {
+      "bytes": 122826,
+      "sha256": "24b6a4187d76df835711af0da7e4b68ba5eaff4c88c848bc381e955b13cb293b"
+    },
+    "results/phase2_partition_register.png": {
+      "bytes": 83720,
+      "sha256": "0eace6345ab5ea6179ba5340a26dd7772500d821ae624bff02eced8c79c63156"
+    },
+    "results/phase2_recursive.json": {
+      "bytes": 453265,
+      "sha256": "e2ea3106d3c13eb4076c4299a7e36ad8a3f8f8f515ce5d534815ff7be958b2fd"
+    },
+    "results/phase2_recursive_accuracy.png": {
+      "bytes": 66992,
+      "sha256": "e5faa7dcf34ccb5b31beed7fa037a33b51a756ac9fc19bcf87c8f011ebea69be"
+    },
+    "results/phase2_sat.json": {
+      "bytes": 76822,
+      "sha256": "b4f2339e814a4797deb6f8cd8e798f46945bd8dd9340c73beb60cfc1045a9770"
+    },
+    "results/phase2_sat.png": {
+      "bytes": 69383,
+      "sha256": "413cbe854a822f83dfff79a7f777d5c2d42c9d4a1accc355faf18809101660c8"
+    },
+    "results/phase2_structural.json": {
+      "bytes": 213426,
+      "sha256": "a2eb524783cedeec7d544a1c14a4d54c620fc66dcbdca1ea1b95b966dcc1320d"
+    },
+    "results/phase2_structural.png": {
+      "bytes": 94101,
+      "sha256": "b1dfcfaef52409b2a142aa9050fc49161432b605ec702aaa56e0e6ec7977e3d0"
+    },
+    "results/phase2_threshold_costs.png": {
+      "bytes": 109543,
+      "sha256": "65c4e3d0865de6e2a88ce6e8b9cca05f77a3774330c60ec436d5bcdf019f9adf"
+    },
+    "results/phase2_thresholds.csv": {
+      "bytes": 2826,
+      "sha256": "617e955cbe0307bc9738f7708e6e637baa97f4b8d82686cc690cf8cd13790362"
+    },
+    "results/processed/phase2_summary.csv": {
+      "bytes": 5089,
+      "sha256": "1c1f7bde57101372dba54c05d379492c8dec9e2f0b85b3965003b1100cbb70e3"
+    },
+    "results/processed/v5_1/heldout_certificates.jsonl": {
+      "bytes": 25460,
+      "sha256": "eed19efa758472d4050be5279cac3a99c2dc5ff4b5de245309d9c4fb7ab61f8b"
+    },
+    "results/processed/v5_1/v5_1_analysis.json": {
+      "bytes": 859701,
+      "sha256": "d96f02a1a3d71167eaff9259c7ee09ea841538030c03a81f0a19f0c179fb7367"
+    },
+    "results/processed/v5_1/v5_1_completion.png": {
+      "bytes": 128130,
+      "sha256": "945ba432028a105c8d494d90fce400db23f1dfd38da2647a5f3c607f4cfe076f"
+    },
+    "results/processed/v5_1/v5_1_memory.png": {
+      "bytes": 333791,
+      "sha256": "69d8880af5bef3fd07bd9bcd1730d759e84dd1032a9418f347b95a64da906c33"
+    },
+    "results/processed/v5_1/v5_1_scaling_par2.png": {
+      "bytes": 266093,
+      "sha256": "6562e56105df18f181fe7675cc36f3c063f2e10fea26815ae0554ad6c48caafb"
+    },
+    "results/processed/v5_1_large_controls/certificates.jsonl": {
+      "bytes": 71096,
+      "sha256": "b564725b3587090dd937fad69e8b7fb7e55594e74bc7145aefe262df237e369c"
+    },
+    "results/processed/v5_1_large_controls/v5_1_analysis.json": {
+      "bytes": 105682,
+      "sha256": "68b183680dccc8c9736d00560c24668563678c32a11fae9f09c54e7feadf4ad3"
+    },
+    "results/processed/v5_1_large_controls/v5_1_completion.png": {
+      "bytes": 160769,
+      "sha256": "5f3d46e8c4f765eb002a15a5ef51506aa2ab4c438e513a2f550859c16429757a"
+    },
+    "results/processed/v5_1_large_controls/v5_1_memory.png": {
+      "bytes": 238713,
+      "sha256": "041659a3d37594d55632ecd864ba9a6a18efe52f30420124b91f2b81af1f0b55"
+    },
+    "results/processed/v5_1_large_controls/v5_1_scaling_par2.png": {
+      "bytes": 168258,
+      "sha256": "f00c09f1ab6c3fd8153fe2a76b1f244d96a348fcab7beb04ae33857a37e7da3c"
+    },
+    "results/raw/v5_1_heldout_20261126/config.json": {
+      "bytes": 555,
+      "sha256": "91335e458512a4efae1a0febebb71080bb3da31d7e775b43f8d06fd383a85400"
+    },
+    "results/raw/v5_1_heldout_20261126/instances.jsonl": {
+      "bytes": 73076,
+      "sha256": "ddaa7c99d02897af73b7cf0c47bb6e31f6c938845707f8cc51584af84817f34e"
+    },
+    "results/raw/v5_1_heldout_20261126/runs.jsonl": {
+      "bytes": 846687,
+      "sha256": "a458fd6f13a6032165188e9d2d13714521876741412a8bb8574e6b7dc28bbeba"
+    },
+    "results/raw/v5_1_large_controls_20261126/config.json": {
+      "bytes": 579,
+      "sha256": "133b035785476e9a8e2c5f40f4449801c8049846ab5e049c06855ef4e3cff3b4"
+    },
+    "results/raw/v5_1_large_controls_20261126/instances.jsonl": {
+      "bytes": 8491,
+      "sha256": "894f51f486e671d101ecb81765364c1b354760f450484afcc90aeafa5c8c303d"
+    },
+    "results/raw/v5_1_large_controls_20261126/runs.jsonl": {
+      "bytes": 142930,
+      "sha256": "3f2c6ed9850219d196712d9bb93a4d16c8ecd26e1dd966f3a4e971b59fda97de"
+    },
+    "results/raw/v5_1_pilot_20261126/config.json": {
+      "bytes": 541,
+      "sha256": "9e4abcbd00700b610956bb42fffc48d557d2ea3328d07ce13bceceb83b4c5e8e"
+    },
+    "results/raw/v5_1_pilot_20261126/instances.jsonl": {
+      "bytes": 22774,
+      "sha256": "f9041fd16a1aef141615144e6e3cf17ac5323272820705cde6d9f93cf2cde824"
+    },
+    "results/raw/v5_1_pilot_20261126/runs.jsonl": {
+      "bytes": 250999,
+      "sha256": "79350698b1dae8845163bafa30ca11e0877fe8c1691fdc1590ad44bc118fa69e"
+    },
+    "results/scaling.png": {
+      "bytes": 85564,
+      "sha256": "3e5ddc8ea1e38ce952caf1fc30c53b4c972565b359bf75796e19bfdca391fd69"
+    }
+  },
+  "manifest_sha256": "f3d7dc93db0bbfbd99a9eb6f48533c95f4a4784b94901347cd5cc67991aa9099",
+  "schema_version": 1,
+  "scope": "Manifest-indexed historical raw, processed and figure artifacts; theory files are Git-versioned separately."
+}
