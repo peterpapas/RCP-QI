@@ -37,7 +37,7 @@ The [V7 mathematical review](v7_mathematical_review.md) derives a one-classical-
 3. What certificate distinguishes a structural promise that is easy to recognize from one that merely restates the hard existence question?
 4. For a family with genuine automorphisms, does symmetry reduction change query complexity after charging group discovery and orbit representation? Compare direct CDCL, symmetry-aware CDCL, quantum backtracking, and any proposed operator.
 
-No source above establishes a polynomial-time quantum algorithm for unrestricted NP-complete SAT. The V1–V3/V6 experiments establish narrower negative results for the tested circuits and inputs only.
+No source above establishes a polynomial-time quantum algorithm for unrestricted NP-complete SAT. The V1–V3/V6 experiments establish narrower negative results for the tested circuits and inputs only. **Correction:** V3 tested a partition-bit-only reflection, not intra-block diffusion; [Grover–Radhakrishnan partial search](corrections/PARTIAL_SEARCH_PRIOR_ART.md) is essential prior art. The [post-publication review](corrections/SAT_AND_COMPLEXITY_PRIOR_ART.md) adds Valiant–Vazirani, quantum 3-SAT local search, QSETH, SAT backdoors and amplitude-estimation distinctions. The [future reading guide](corrections/FUTURE_READING_GUIDE.md) covers structurally promised interference examples without claiming transfer to worst-case SAT.
 
 ## V7.1: promises versus explicit SAT structure
 

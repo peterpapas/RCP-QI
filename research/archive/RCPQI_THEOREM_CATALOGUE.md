@@ -2,6 +2,8 @@
 
 **Archive status:** SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT. This catalogue records the actual V1–V10 statements, not stronger interpretations. In the tables, `L` means a Lean 4 theorem with the identifier shown; `A` means an analytic proof in the cited note; `E` means an external theorem cited but **not Lean-verified here**. Every `RCPQI.*` identifier below is in `formal/lean/RCPQI/<module>.lean`; the pinned build and axiom audit cover the named theorems. Trivial helper lemmas are included because their assumptions matter. No entry proves `P≠NP`, `NP⊄BQP`, a general SAT lower bound or a quantum circuit advantage.
 
+**Post-publication classification:** Entries marked `L` include elementary identities, mathematical modelling lemmas, reduction correctness and restricted-model soundness; the named-theorem count is an inventory, not a novelty or depth score. Grover–Radhakrishnan partial-search bounds, Valiant–Vazirani, quantum 3-SAT time bounds and amplitude estimation are [cited external prior art](../corrections/SAT_AND_COMPLEXITY_PRIOR_ART.md), not newly Lean-proved complexity results. The [V3 correction](../corrections/PARTIAL_SEARCH_PRIOR_ART.md) does not alter theorem statements.
+
 ## Partition, recursion and probability
 
 | ID | Precise statement and assumptions / model | Proof location and status | Implication, limit, dependency and novelty |

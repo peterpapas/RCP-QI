@@ -2,6 +2,8 @@
 
 **Public archive note (26 November 2026):** The completed programme is open for mathematical review and collaboration. Public release does not restart active research. See the [root roadmap](../ROADMAP.md) and [publication audit](../PUBLICATION_READINESS.md).
 
+**Post-publication correction (27 November 2026):** An established partial-search baseline was omitted from V3, whose “local” reflection acted on the partition bit only. The [adjudication](corrections/REVIEWER_ADJUDICATION.md) and [new results](corrections/PARTIAL_SEARCH_RESULTS.md) narrow the historical negative conclusion. This maintenance entry does not reopen research or authorize V11.
+
 **Final project status: SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** V1–V10 are a closed research archive. There is no V11 roadmap entry or active circuit/theorem-development workstream. See the [final report](archive/RCPQI_FINAL_RESEARCH_REPORT.md) and [restart protocol](archive/RCPQI_RESTART_PROTOCOL.md).
 
 | Version | Scientific question | Current state |
