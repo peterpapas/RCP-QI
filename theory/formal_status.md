@@ -34,4 +34,6 @@
 | Polynomial-time RCP-QI on NP-complete families | Unproven conjecture | No claim made |
 | Lean-to-Python/Qiskit correspondence | Pending | No formal refinement proof |
 
+**Presentation scope:** The catalogue's named Lean statements range from elementary identities and modelling lemmas to reduction correctness and restricted classical certificate soundness. A theorem count does not establish novelty or the depth of a complexity result. The Grover–Radhakrishnan partial-search algorithm and bounds, Valiant–Vazirani reduction, quantum 3-SAT running times, amplitude-estimation bounds, and BBBV/Zalka/adversary lower bounds are **external citations**, not Lean-formalised in this repository. No Lean module proves a quantum circuit or gate-cost bound for the post-publication control.
+
 Run `lake build` and `lake env lean RCPQI/AxiomAudit.lean` in `formal/lean/`. The axiom audit reports no axioms for partition complementarity and only Lean's standard `propext`, `Classical.choice`, and `Quot.sound` for the new probability and structural algebra. No project axioms or unfinished proofs are used.

@@ -37,7 +37,7 @@ Every entry uses an immutable ID. Machine-readable raw files and figures are ind
 
 ## V3-PARTITION-REGISTER-CONTROL
 
-- **Hypothesis:** A partition-local diffuser or dedicated ancilla may expose extra correct-half information.
+- **Hypothesis:** A partition-bit-only diffuser or dedicated ancilla may expose extra correct-half information. **Post-publication correction:** this did not test intra-block diffusion as in established partial quantum search; see `POSTPUB-PARTIAL-SEARCH-20261127` below.
 - **Assumptions and inputs:** Unique equality target in either half, `N=4..64`, zero/one/near-peak iterations, ideal statevectors.
 - **Methods and baselines:** Full diffuser, partition-bit diffuser, oracle-only control; ancilla label before/after Grover and phase-kickback control.
 - **Expected/actual:** Local diffusion and oracle-only controls leave half probability at `1/2`; an ancilla labeled before data-only operations has zero left/right trace distance. Labeling after exposes exactly the existing bias.
@@ -142,3 +142,11 @@ Every entry uses an immutable ID. Machine-readable raw files and figures are ind
 - **Deliverables:** Six archive notes under `research/archive/`, a 38-artifact SHA-256 inventory and `scripts/verify_archive.py`; README and roadmap mark suspension. The theorem catalogue indexes all 47 named Lean results and scoped analytic/external results. The negative catalogue states reopening conditions for rejected mechanisms.
 - **Integrity and verification:** Root pytest/Ruff/result validation; three V5.1 run validators; regenerated 28+8 tractable UNSAT certificates matched archived bytes; pinned Lean build/axiom audit; archive manifest/hash verification. The exact commands, environment and limits are in `archive/RCPQI_REPRODUCIBILITY.md`.
 - **Decision:** **SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** No V11, speculative operator, or new quantum experiment. The nine-part restart protocol must be met before any future implementation.
+
+## POSTPUB-PARTIAL-SEARCH-20261127
+
+- **Status/scope:** Post-publication correction and established-algorithm control, not V11 or a new RCP-QI operator. Branch `research/partial-search-prior-art-corrections` starts from public `main` commit `b1c645911ea16fad207e3a268eb65903fc5158d4`. V1–V10 raw files and `results/manifest.json` are unchanged.
+- **Hypothesis and correction:** Historical V3's bit-only reflection is not intra-block diffusion. The [original-source analysis](corrections/PARTIAL_SEARCH_PRIOR_ART.md) identifies the established Grover–Radhakrishnan/Korepin global/local/final-global sequence, its `Θ(√N)` black-box scale, and the error assumptions for recursion.
+- **Protocol:** Unique equality marker, two equal blocks, `N=16,64,256,512`. For each confidence 90/95/99%, enumerate all nonnegative `j1,j2` with `j1+j2+1=q` and choose the first qualifying `q` from the exact three-amplitude recurrence. The schedule depends on size/threshold only, not target. Five target positions per size are statevector checked. Match standard full-space Grover plus one partition-bit measurement. Equality-oracle calls, compiled `u,cx` gates/depth, state preparation, one measurement, ancillas and host times are separately recorded.
+- **Outcome:** At `N=256`, partial-search half thresholds use 7/8/9 calls versus V2's 9/10/11 under the specified one-shot protocols. Maximum analytic/statevector probability error over 60 runs is `2.8×10⁻¹⁴`. The new baseline improves finite-size and asymptotic constants for a **coarser answer**; it does not change generic square-root scaling or produce a quantum SAT advantage. [Results and limitations](corrections/PARTIAL_SEARCH_RESULTS.md).
+- **Reproduce:** `uv run python -m rcp_qi_research.partial_search --output-dir <new-empty-directory>`; committed [correction artifacts](../results/corrections/partial_search_20261127/) are pinned by their own manifest and checked by `uv run python scripts/validate_partial_search.py`. The [correction audit](corrections/CORRECTION_REPRODUCIBILITY.md) records validation and versions.

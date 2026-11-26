@@ -5,3 +5,7 @@ results/**/*.csv text eol=crlf
 
 # The manifest itself was authored with LF bytes and is hashed separately.
 results/manifest.json text eol=lf
+
+# New correction data uses the same pinned CRLF checkout bytes on all hosts.
+results/corrections/**/*.json text eol=crlf
+results/corrections/**/*.csv text eol=crlf
