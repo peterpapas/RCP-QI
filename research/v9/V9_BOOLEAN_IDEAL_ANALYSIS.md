@@ -1,0 +1,13 @@
+# Boolean-ideal equivalence
+
+Let `K` be **any field**, `A=K[x₁,…,xₙ]`, and `I=⟨x₁²−x₁,…,xₙ²−xₙ⟩`. The evaluation homomorphism `ev:A→K^{ {0,1}ⁿ }` maps a formal polynomial to its Boolean truth table. Every polynomial reduces modulo `I` to a multilinear one by replacing `x_i^d` with `x_i` for `d≥1`. The unique representative of a table `f` is
+
+`M_f(x)=Σ_{a∈{0,1}ⁿ} f(a) ∏_i (a_i x_i + (1−a_i)(1−x_i))`.
+
+For a Boolean point `b`, the product indexed by `a` is `1` iff `a=b`, otherwise `0`. Hence `M_f(b)=f(b)`. If a multilinear polynomial vanishes on the cube, induct on `n`: write it `A(x₁,…,xₙ₋₁)+xₙ B(x₁,…,xₙ₋₁)` and evaluate at `xₙ=0,1`; both `A` and `B` vanish, hence are zero by induction. Thus `ker(ev)=I` and `A/I ≅ K^{ {0,1}ⁿ }`. This works in characteristic 2 because `0` and `1` remain distinct. Formal equality implies Boolean equality; the reverse holds **modulo `I`**, not in `A`.
+
+V8's `x²−x` versus zero extends to `Q_k=(z²−z)∏_{i=1}^k(1+a_i b_i)`. `Q_k` is formally nonzero but is the zero Boolean function for every `k`. It has an `O(k)` arithmetic DAG. Across the coefficient flattening `({z,a_i})|({b_i})`, expansion gives `2^k` independent diagonal monomial pairs, so its *raw formal coefficient matrix* has rank `2^k`; the zero polynomial has rank zero. Formal degree, raw monomial count, partial-derivative spaces and this raw coefficient rank therefore fail Boolean invariance. The rank example is **not** a general circuit lower bound: its own DAG is small.
+
+The canonical multilinear representative makes degree and its coefficient measures representation-independent. It does not make them cheap to obtain. The displayed interpolation uses `2^n` table entries and may take exponential output space when expanded. Conversely, `∏_i(1+x_i)` has `2^n` expanded monomials but an `O(n)` DAG. An explicit table or expanded polynomial and a circuit are different cost models. No universal exponential lower bound for constructing a *compressed* canonical circuit is claimed.
+
+An arithmetic circuit for a CNF's Boolean verifier can be evaluated on assignments, but a lower bound for some **particular formal polynomial** representing it cannot be transferred to every Boolean-equivalent verifier. The right invariant for a functional lower bound must be defined on `A/I` or on a canonical function representation, and its lower-bound theorem must explicitly target the intended Boolean/quantum computational model. The Lean module `BooleanIdeal.lean` proves one-variable interpolation and ideal-generator evaluation over integers; the general `n`-variable quotient-ring isomorphism above is an analytic proof, not a Lean theorem in this repository.
