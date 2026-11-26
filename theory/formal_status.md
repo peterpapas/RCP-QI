@@ -24,6 +24,10 @@
 | Fresh affine bit with arbitrary residual | Machine-verified Boolean equivalence | `gated_residual_existence_equivalence` states `∃(x,b), b∧H(x) ↔ ∃x,H(x)`; NP-hardness for arbitrary CNF `H` follows from standard SAT reduction outside Lean |
 | Three-clause quadratic gadget | Machine-verified local Boolean equivalence | `clause_quadratic_gadget` checks the auxiliary two-equation gadget; the polynomial-time 3-SAT-to-MQ construction and NP-completeness corollary are documented outside Lean |
 | Arithmetic expression versus Boolean-cube agreement | Machine-verified integer-evaluation counterexample | `boolean_relation_vanishes` proves `z*z-z=0` at Boolean `z`; `boolean_relation_nonzero` proves its value at `2` is nonzero. A formal polynomial-ring/circuit lower-bound theorem is not claimed |
+| V9 one-variable Boolean-ideal evaluation/interpolation | Machine-verified narrow integer lemmas | `booleanIdealGenerator_on_bool`, `interpolateBool_on_bool`, `ideal_multiple_same_bool`; the general `n`-variable quotient-ring theorem remains analytic, not Lean-verified |
+| V9 literal phase-oracle signs | Machine-verified entrywise lemma | `phaseEntries_eq_iff` and `phaseSign_complement` concern integer signs, not Hilbert-space channels, controlled access or circuit costs |
+| V9 known-quotient fixed query transcripts | Conditional machine-verified list equalities | `quotient_transcript_to_original` and `original_transcript_to_quotient`; the latter assumes fiber constancy. Adaptive coherent simulation and reversible map costs remain outside Lean |
+| V9 permanent CNF / matching decision / adversary query bound | Analytic proof and cited external theorem, not Lean-verified | Exact scopes in `research/v9/`; no general SAT or quantum gate lower bound |
 | Efficient quantum partition-existence oracle | Open problem | No proof or implementation with better complete cost |
 | Polynomial-time RCP-QI on NP-complete families | Unproven conjecture | No claim made |
 | Lean-to-Python/Qiskit correspondence | Pending | No formal refinement proof |

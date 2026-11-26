@@ -6,6 +6,8 @@ An initial, reproducible investigation of **Recursive Complementary Partitioning
 
 **V8 theory decision:** The [source audit and final report](research/v8/V8_FINAL_REPORT.md) examine the November 2026 VP–VNP claims as unaccepted research claims, reconstruct their arithmetic proof mechanisms and identify a formal-polynomial versus Boolean transfer barrier. No mathematically justified quantum operator or V8 experiment emerged. The primary recommendation is a scoped lower-bound/impossibility investigation, with V8 circuit implementation suspended.
 
+**V9 theory decision:** The [V9 final report](research/v9/V9_FINAL_REPORT.md) defines an exact symbolic partition model and shows that a perfect-matching CNF produces the permanent as its full generating polynomial while each partition-existence decision is polynomial-time matching. Boolean-ideal equivalence prevents raw formal-expression measures from directly lower-bounding Boolean verifiers, and a standard adversary argument gives `Θ(√N)` black-box queries for a unique-marker half label. These are scoped findings; the VP–VNP claims remain conditional premises, and no new quantum operator is authorized. [Decision brief](research/v9/V9_DECISION_BRIEF.md).
+
 1. Classical exhaustive search over `0, ..., 2^n - 1`.
 2. Grover search over the full space, with measured and classically verified candidates.
 3. Recursive partition search. At each bit, a measured Grover subroutine probes the left half; a verified hit selects left, otherwise the traversal selects right. The final leaf is verified. This is a concrete, costed interpretation of a partition-existence test, **not** a free coherent partition oracle. A hit already reveals a witness, so deliberately continuing the partition traversal is inefficient; the experiment keeps it to measure the proposed recursive structure.
@@ -118,6 +120,8 @@ Testing one half at each recursive level with Grover costs a geometric sum \(\su
 | v6 | End-to-end recursive benchmarking | Initial confidence/restart benchmark completed |
 | v7 | Structural complementarity | Transformation and quotient characterizations, counterexamples, verified literature and Lean proofs; no justified V8 operator |
 | v7.1 | Structural promise discovery | Partial complementarity, affine/nonlinear residual, MQ and oracle-promise screen completed; V8 remains suspended |
+| v8 | Algebraic complexity and transfer audit | Public VP–VNP claims authenticated but not independently accepted; formal-to-Boolean transfer barrier and scoped Lean counterexample; decision D |
+| v9 | Boolean-ideal and query-transfer audit | Permanent-generating CNF versus easy matching decision; Boolean-invariant screen and black-box half-label bound; no circuit or general SAT lower bound; decision D |
 
 V5/V5.1 compare prefix, occurrence, connectivity, propagation lookahead, symmetry scoring, residual score, and Jeroslow–Wang branching with direct Glucose4/CaDiCaL, DPLL and dedicated tractable-family algorithms. The partition-existence calls are **classical PySAT calls**. V5.1 found a limited branch-choice gain over prefix on 256-variable random 3-SAT, but no observed gain over direct CDCL. The [protocol](experiments/v5_1_extended/README.md) and [findings](research/v5_1_findings.md) give reproducible commands, full costs and limits. Future work needs more independent hard instances and a property-derived quantum operator compared with matched quantum backtracking and Grover costs. Negative results remain part of the record.
 
