@@ -10,7 +10,7 @@ The redesigned README opens with the research question and a five-stage original
 
 ## Visual language
 
-Every asset uses a self-contained midnight-navy canvas so it remains legible in GitHub light and dark themes. Cyan means candidate information or a supported signal; blue means established search operations; violet means analytical or structural relationships; amber marks barriers, hypothetical access or negative limitations. Text and numeric labels supplement every colour distinction. Arial/sans-serif text, high-contrast labels, restrained grids and explicit units keep the figures readable at typical desktop widths. The four tall illustrations have short Markdown summaries alongside their alternative text for smaller screens.
+Every asset uses a self-contained midnight-navy canvas so it remains legible in GitHub light and dark themes. Cyan means candidate information or a supported signal; blue means established search operations; violet means analytical or structural relationships; amber marks barriers, hypothetical access or negative limitations. Text and numeric labels supplement every colour distinction. Arial/sans-serif text, high-contrast labels, restrained grids and explicit units keep the figures readable at typical desktop widths. Each of the eight visuals has a narrow-screen SVG selected by GitHub-supported `<picture>` / `<source media>` markup. The text captions and alternative text remain available when graphics are scaled or unavailable.
 
 ## Asset register
 
@@ -25,6 +25,8 @@ Every asset uses a self-contained midnight-navy canvas so it remains legible in 
 | [Recursive cost](assets/figures/recursive-query-cost.svg) | Conditional analytical illustration | `N=2¹⁶`, assumed `C(m)=√m` (illustrative coefficient 1), per-stage and cumulative cost. It excludes preparation, errors and final verification. |
 | [Research timeline](assets/timeline/research-timeline.svg) | Conceptual archive map | Version groups and outcomes checked against the [roadmap](../research/roadmap.md) and [registry](../research/experiment_registry.md). It does not imply continuous algorithmic progress. |
 
+The narrow-screen companions use the same names with `-mobile.svg` before the extension. They reflow or simplify the same statements; they are not additional evidence. The mobile scaling chart omits the separate hypothetical panel and states that model as text, while the desktop chart keeps the models in separate panels.
+
 ## Rebuild and verify
 
 Python 3.12, locked `uv` dependencies and Matplotlib already belong to the project; no new runtime dependency was added. From the root:
@@ -35,7 +37,7 @@ uv run python scripts/build_readme_figures.py
 uv run python scripts/build_readme_figures.py --check
 ```
 
-The script regenerates only the four data/analytical charts in `docs/assets/figures/`. It never rewrites `results/`. The editable conceptual SVGs are version-controlled in `docs/assets/branding/`, `concepts/` and `timeline/`. [`manifest.json`](assets/figures/manifest.json) records SHA-256 and byte lengths for three archived inputs, four generated SVGs and four static SVGs. `--check` verifies these bytes, SVG title/description elements and README image paths/alternative text. Platform-dependent regenerated SVG bytes are not claimed to match a different font stack; the committed integrity check covers the published assets. Analytic values and source-row assertions run during regeneration.
+The script regenerates the four desktop charts and four narrow-screen variants in `docs/assets/figures/`. It never rewrites `results/`. The editable conceptual SVGs are version-controlled in `docs/assets/branding/`, `concepts/` and `timeline/`. [`manifest.json`](assets/figures/manifest.json) records SHA-256 and byte lengths for three archived inputs, eight generated SVGs and eight static SVGs. `--check` verifies these bytes, SVG title/description elements and README image paths/alternative text. Platform-dependent regenerated SVG bytes are not claimed to match a different font stack; the committed integrity check covers the published assets. Analytic values and source-row assertions run during regeneration.
 
 ## Visual QA
 

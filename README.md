@@ -1,4 +1,7 @@
-![RCP-QI research archive: candidate states, an illustrative partition tree and a cost barrier](docs/assets/branding/hero-banner.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/branding/hero-banner-mobile.svg">
+  <img src="docs/assets/branding/hero-banner.svg" alt="RCP-QI research archive: candidate states, an illustrative partition tree and a cost barrier">
+</picture>
 
 # RCP-QI
 
@@ -12,13 +15,19 @@
 
 ## The original idea, and its barrier
 
-![Five stages of the original RCP-QI hypothesis, ending with the square-root partition-test cost](docs/assets/concepts/recursive-quantum-partitioning.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/concepts/recursive-quantum-partitioning-mobile.svg">
+  <img src="docs/assets/concepts/recursive-quantum-partitioning.svg" alt="Five stages of the original RCP-QI hypothesis, ending with the square-root partition-test cost">
+</picture>
 
 *Conceptual illustration.* The highlighted path is the desired outcome, not a demonstrated free partition choice. For a unique solution, `G(A) XOR G(B)=1` for disjoint exhaustive halves, but computing either existence bit is the hard step. [Grover–Radhakrishnan partial search](research/corrections/PARTIAL_SEARCH_PRIOR_ART.md) is established prior art: it can improve the constant for identifying a block while generic black-box search remains at `Θ(√N)` queries.
 
 ## What the archive supports
 
-![Research findings grouped as established or tested, not established, and open under the restart gate](docs/assets/concepts/research-findings.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/concepts/research-findings-mobile.svg">
+  <img src="docs/assets/concepts/research-findings.svg" alt="Research findings grouped as established or tested, not established, and open under the restart gate">
+</picture>
 
 *Evidence summary.* The V3 correction matters: its historical “local” reflection acted on the **partition bit only**, so its negative result does not cover intra-block partial search. The [reviewer adjudication](research/corrections/REVIEWER_ADJUDICATION.md) records which claims changed. RCP-QI establishes no proof of `P=NP` or `P≠NP`, no novel quantum SAT speedup, and no universal impossibility theorem for quantum SAT.
 
@@ -26,25 +35,37 @@
 
 ### 1. A real signal that vanishes
 
-![V1 analytical correct-half probability approaches 50 percent as N grows, with archived ideal-statevector points through N 256](docs/assets/figures/interference-bias.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/figures/interference-bias-mobile.svg">
+  <img src="docs/assets/figures/interference-bias.svg" alt="V1 analytical correct-half probability approaches 50 percent as N grows, with archived ideal-statevector points through N 256">
+</picture>
 
 *Analytical prediction and archived ideal-statevector observations.* After one Grover iteration, `P(correct half)=1/2+4/N−8/N²`. The source points are in [V1's unchanged result file](results/one_iteration.json); the curve beyond `N=256` is analytical, not new measurement. Repeating that fixed circuit independently to resolve its `Θ(1/N)` bias takes `Θ(N²)` samples. Other coherent algorithms are a different task and cost model.
 
 ### 2. Partial search restores a missing baseline
 
-![For N 256, partial-search half-label thresholds use 7 8 9 queries, global Grover half-label uses 9 10 11, and exact-item Grover uses 10 11 12](docs/assets/figures/partial-search-comparison.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/figures/partial-search-comparison-mobile.svg">
+  <img src="docs/assets/figures/partial-search-comparison.svg" alt="For N 256, partial-search half-label thresholds use 7 8 9 queries, global Grover half-label uses 9 10 11, and exact-item Grover uses 10 11 12">
+</picture>
 
 *Analytical threshold counts with statevector verification.* At `N=256`, the established global/local/final-global family reaches 90/95/99% **half-label** accuracy in 7/8/9 phase queries, versus 9/10/11 for the V2 global-Grover half-label control. Exact-item Grover answers a harder output task. The historical V3 partition-bit-only control stayed at 50% on its tested `N=4…64`; it was **not** tested at `N=256`. See the [corrected experiment, schedule restrictions and physical gate counts](research/corrections/PARTIAL_SEARCH_RESULTS.md).
 
 ### 3. The oracle model sets the scaling story
 
-![Separate panels show analytical phase-query scaling and hypothetical logarithmic decisions from an unavailable cheap partition oracle](docs/assets/figures/query-complexity-scaling.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/figures/query-complexity-scaling-mobile.svg">
+  <img src="docs/assets/figures/query-complexity-scaling.svg" alt="Analytical classical and quantum query growth; a separate hypothetical logarithmic model requires an unavailable cheap partition oracle">
+</picture>
 
 *Analytical and hypothetical comparison.* Classical exhaustive verification grows as `N`; full Grover and established two-block partial search have different `√N` coefficients under their stated high-success regimes. The dashed logarithmic panel assumes a cheap partition-existence oracle whose construction was never achieved. Its calls are **not interchangeable** with phase-oracle queries or explicit-SAT runtime.
 
 ### 4. Recursive decisions still add up
 
-![For a hypothetical square-root-cost half test, per-level cost shrinks but cumulative cost remains order square root of the original space](docs/assets/figures/recursive-query-cost.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/figures/recursive-query-cost-mobile.svg">
+  <img src="docs/assets/figures/recursive-query-cost.svg" alt="For a hypothetical square-root-cost half test, per-level cost shrinks but cumulative cost remains order square root of the original space">
+</picture>
 
 *Analytical model, not an observed runtime.* If a size-`m` half test costs `α√m` compatible queries, its idealized balanced recursion sums to roughly `α√N/(1−1/√2)`. Errors, repetitions, preparation and final witness verification add costs. The [partial-search review](research/corrections/PARTIAL_SEARCH_PRIOR_ART.md) states the exact-versus-bounded-error limits of this argument.
 
@@ -52,7 +73,10 @@ The [V5.1 classical SAT plots](results/processed/v5_1/) retain timeouts and reso
 
 ## Research evolution
 
-![A vertical timeline from V1 interference through V10 mathematical review to the post-publication partial-search correction](docs/assets/timeline/research-timeline.svg)
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/timeline/research-timeline-mobile.svg">
+  <img src="docs/assets/timeline/research-timeline.svg" alt="A vertical timeline from V1 interference through V10 mathematical review to the post-publication partial-search correction">
+</picture>
 
 *Archive map, not a claim of continuous algorithmic progress.* The [version registry](research/experiment_registry.md), [roadmap](research/roadmap.md) and [full closeout report](research/archive/RCPQI_FINAL_RESEARCH_REPORT.md) give the exact scope, seeds and disposition of each phase.
 

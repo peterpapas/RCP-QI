@@ -30,6 +30,22 @@
     "recursive-query-cost.svg": {
       "bytes": 17241,
       "sha256": "e1ca9b688132819edf3466197b83e84608b10493c13d8000261161933f5cc8d7"
+    },
+    "interference-bias-mobile.svg": {
+      "bytes": 17918,
+      "sha256": "0b6c4a09b5962fe9dfa89fcb92eedd94a5762c9cbc4da0d09fb328536d67cfa4"
+    },
+    "partial-search-comparison-mobile.svg": {
+      "bytes": 12396,
+      "sha256": "75e63c1d10288aecdc7bb4ca04ca169e0b3d581f94e5a3dff0dc3f09f4dcf28a"
+    },
+    "query-complexity-scaling-mobile.svg": {
+      "bytes": 15660,
+      "sha256": "f96ea2f0499e41769b90d9671acb7d5920823287c49ba2ac4b3ba24f2e7ffc6b"
+    },
+    "recursive-query-cost-mobile.svg": {
+      "bytes": 13131,
+      "sha256": "8b98086075fef64eab9b4ad9207614997140a560a290d67417536bfd0caefa25"
     }
   },
   "static_assets": {
@@ -37,17 +53,33 @@
       "bytes": 5764,
       "sha256": "6df4c49976a57f7ce5f45b2574e1754f3e5ae9106841a23b27190ba203c2a2da"
     },
+    "docs/assets/branding/hero-banner-mobile.svg": {
+      "bytes": 2958,
+      "sha256": "e868472931ee0b50992c78dcde501f89e6819a13d1daa3545fa5e4d4b0b59ff6"
+    },
     "docs/assets/concepts/recursive-quantum-partitioning.svg": {
       "bytes": 7750,
       "sha256": "dad25f3d099b6e461621b735cad9ac7432636348f01de606c80e628ab5cd31ff"
+    },
+    "docs/assets/concepts/recursive-quantum-partitioning-mobile.svg": {
+      "bytes": 6576,
+      "sha256": "899a0cb43a96e71388a751c034e6f69a1ed2334cbf60f272df7142a42c5f5b01"
     },
     "docs/assets/concepts/research-findings.svg": {
       "bytes": 3486,
       "sha256": "de067fe17ee0902bd7da3db47da058d37b386038241b7a70d2ca3180bd27a42b"
     },
+    "docs/assets/concepts/research-findings-mobile.svg": {
+      "bytes": 2820,
+      "sha256": "083212d9733a3cdf0e49a93350bbccd7b50df73875342c093139ae19977dfb34"
+    },
     "docs/assets/timeline/research-timeline.svg": {
       "bytes": 5014,
       "sha256": "4c40721c713c4e70fea7190d83a89a76e0553e02ac98d2d9067145f20b88e6b4"
+    },
+    "docs/assets/timeline/research-timeline-mobile.svg": {
+      "bytes": 4648,
+      "sha256": "47c7602e9e9cfee91fb9cdc63d27ca489aa2e418d48aa0196440489b6233353a"
     }
   }
 }

@@ -29,12 +29,20 @@ FIGURES = (
     "partial-search-comparison.svg",
     "query-complexity-scaling.svg",
     "recursive-query-cost.svg",
+    "interference-bias-mobile.svg",
+    "partial-search-comparison-mobile.svg",
+    "query-complexity-scaling-mobile.svg",
+    "recursive-query-cost-mobile.svg",
 )
 STATIC = (
     ROOT / "docs" / "assets" / "branding" / "hero-banner.svg",
+    ROOT / "docs" / "assets" / "branding" / "hero-banner-mobile.svg",
     ROOT / "docs" / "assets" / "concepts" / "recursive-quantum-partitioning.svg",
+    ROOT / "docs" / "assets" / "concepts" / "recursive-quantum-partitioning-mobile.svg",
     ROOT / "docs" / "assets" / "concepts" / "research-findings.svg",
+    ROOT / "docs" / "assets" / "concepts" / "research-findings-mobile.svg",
     ROOT / "docs" / "assets" / "timeline" / "research-timeline.svg",
+    ROOT / "docs" / "assets" / "timeline" / "research-timeline-mobile.svg",
 )
 
 BG = "#071321"
@@ -80,6 +88,14 @@ def frame(title: str, subtitle: str, *, width: float = 12, height: float = 5.8) 
     fig.subplots_adjust(left=0.085, right=0.965, top=0.79, bottom=0.21, wspace=0.27)
     fig.suptitle(title, x=0.055, y=0.96, ha="left", fontsize=21, fontweight="bold", color=TEXT)
     fig.text(0.055, 0.89, subtitle, ha="left", va="top", color=MUTED, fontsize=10.5)
+    return fig
+
+
+def mobile_frame(title: str, subtitle: str, *, height: float = 5.6) -> plt.Figure:
+    fig = plt.figure(figsize=(4.5, height))
+    fig.subplots_adjust(left=0.18, right=0.95, top=0.74, bottom=0.19)
+    fig.suptitle(title, x=0.07, y=0.965, ha="left", fontsize=18, fontweight="bold", color=TEXT)
+    fig.text(0.07, 0.89, subtitle, ha="left", va="top", color=MUTED, fontsize=11)
     return fig
 
 
@@ -206,6 +222,98 @@ def recursive_figure(path: Path) -> None:
     save(fig, path, "Analytical per-stage square-root costs shrink through recursion, while cumulative cost remains order square root of initial N.")
 
 
+def bias_mobile_figure(path: Path) -> None:
+    data = json.loads(SOURCES["v1"].read_text(encoding="utf-8"))
+    points = sorted({int(row["N"]) for row in data["rows"]})
+    observed = [float(np.mean([row["statevector_probability"] for row in data["rows"] if int(row["N"]) == n])) for n in points]
+    ns = np.array([2**k for k in range(2, 13)])
+    fig = mobile_frame("The fading signal", "One iteration · unique marker", height=5.5)
+    ax = fig.add_subplot()
+    ax.plot(ns, 0.5 + 4 / ns - 8 / ns**2, color=BLUE, linewidth=3)
+    ax.scatter(points, observed, color=CYAN, edgecolors=BG, s=65, zorder=3)
+    ax.axhline(0.5, color=AMBER, linestyle="--", linewidth=2)
+    ax.set(xscale="log", ylim=(0.48, 1.04), xlabel="Candidates N", ylabel="Correct-half probability")
+    ax.set_xticks([4, 16, 64, 256, 4096], ["4", "16", "64", "256", "4k"])
+    ax.tick_params(labelsize=12)
+    ax.xaxis.label.set_size(13)
+    ax.yaxis.label.set_size(13)
+    ax.grid(axis="y")
+    fig.text(0.07, 0.115, "Blue: formula   Cyan: V1 statevector", color=TEXT, fontsize=11)
+    fig.text(0.07, 0.075, "Amber: random half (50%)", color=AMBER, fontsize=11)
+    fig.text(0.07, 0.038, "Points through N=256; later curve analytical.", color=MUTED, fontsize=10)
+    save(fig, path, "Mobile analytical one-iteration correct-half probability and archived statevector points; random baseline 50 percent.")
+
+
+def partial_mobile_figure(path: Path) -> None:
+    import csv
+
+    with SOURCES["partial"].open(newline="", encoding="utf-8") as stream:
+        rows = sorted((r for r in csv.DictReader(stream) if int(r["N"]) == 256), key=lambda r: float(r["threshold"]))
+    theta = asin(1 / 16)
+    fig = mobile_frame("Partial search, N=256", "Queries to reach one-shot accuracy", height=5.7)
+    ax = fig.add_subplot()
+    ax.set(xlim=(0, 14), ylim=(-0.6, 2.7), xlabel="Phase-oracle queries")
+    ax.set_yticks([2, 1, 0], ["90%", "95%", "99%"])
+    ax.tick_params(labelsize=12)
+    ax.xaxis.label.set_size(13)
+    ax.grid(axis="x")
+    ax.set_axisbelow(True)
+    for i, row in enumerate(rows):
+        y = 2 - i
+        values = (
+            (int(row["partial_calls"]), CYAN, 0.22),
+            (int(row["v2_full_grover_calls"]), BLUE, 0),
+            (next(k for k in range(30) if sin((2 * k + 1) * theta) ** 2 >= float(row["threshold"])), VIOLET, -0.22),
+        )
+        for value, color, offset in values:
+            ax.barh(y + offset, value, height=0.18, color=color)
+            ax.text(value + 0.15, y + offset, str(value), va="center", color=TEXT, fontsize=11, fontweight="bold")
+    fig.text(0.07, 0.125, "Cyan  partial half    Blue  Grover half", color=TEXT, fontsize=10.5)
+    fig.text(0.07, 0.085, "Violet  Grover exact item (harder output)", color=MUTED, fontsize=10)
+    fig.text(0.07, 0.045, "V3 bit-only: 50% at tested N=4–64 only.", color=AMBER, fontsize=10)
+    save(fig, path, "Mobile N=256 thresholds: partial half 7, 8, 9; global Grover half 9, 10, 11; global Grover exact 10, 11, 12.")
+
+
+def scaling_mobile_figure(path: Path) -> None:
+    n = np.arange(4, 31)
+    root = 2.0 ** (n / 2)
+    fig = mobile_frame("Different access models", "Asymptotic theory · no measured time", height=6.3)
+    ax = fig.add_subplot()
+    ax.plot(n, 2.0**n, color=AMBER, linewidth=2.5)
+    ax.plot(n, pi / 4 * root, color=BLUE, linewidth=2.5)
+    ax.plot(n, pi / (4 * sqrt(2)) * root, color=CYAN, linewidth=2.5)
+    ax.set(yscale="log", xlim=(4, 30), xlabel="Address bits n", ylabel="Verification-oracle calls")
+    ax.tick_params(labelsize=11)
+    ax.xaxis.label.set_size(13)
+    ax.yaxis.label.set_size(13)
+    ax.grid()
+    fig.text(0.07, 0.137, "Amber  classical N", color=AMBER, fontsize=11)
+    fig.text(0.07, 0.108, "Blue  full Grover ~ √N", color=BLUE, fontsize=11)
+    fig.text(0.07, 0.079, "Cyan  partial block ~ √N", color=CYAN, fontsize=11)
+    fig.text(0.07, 0.034, "Ideal n partition decisions need an unavailable cheap oracle.", color=MUTED, fontsize=9.2)
+    save(fig, path, "Mobile phase-query asymptotic growth: classical N and square-root Grover/partial search; cheap partition oracle is hypothetical.")
+
+
+def recursive_mobile_figure(path: Path) -> None:
+    levels = np.arange(16)
+    costs = np.sqrt(2.0 ** (16 - levels))
+    fig = mobile_frame("Recursion still costs", "Model: N=2¹⁶, C(m)=√m", height=5.7)
+    ax = fig.add_subplot()
+    ax.bar(levels, costs, color=BLUE, width=0.75)
+    ax.plot(levels, np.cumsum(costs), color=CYAN, linewidth=2.6)
+    ax.set(xlim=(-0.7, 15.7), ylim=(0, 920), xlabel="Decision level", ylabel="Illustrative queries")
+    ax.set_xticks([0, 4, 8, 12, 15])
+    ax.tick_params(labelsize=12)
+    ax.xaxis.label.set_size(13)
+    ax.yaxis.label.set_size(13)
+    ax.grid(axis="y")
+    ax.set_axisbelow(True)
+    fig.text(0.07, 0.12, "Blue  per decision    Cyan  cumulative", color=TEXT, fontsize=10.5)
+    fig.text(0.07, 0.082, "Total ≈ 871 = Θ(√N) in this model.", color=CYAN, fontsize=10.5)
+    fig.text(0.07, 0.044, "Preparation, errors and verification add cost.", color=MUTED, fontsize=10)
+    save(fig, path, "Mobile conditional recursion model: per-level square-root query costs shrink, cumulative cost is about 871 for N=65536.")
+
+
 def build(output: Path) -> None:
     output.mkdir(parents=True, exist_ok=True)
     style()
@@ -213,6 +321,10 @@ def build(output: Path) -> None:
     partial_figure(output / FIGURES[1])
     scaling_figure(output / FIGURES[2])
     recursive_figure(output / FIGURES[3])
+    bias_mobile_figure(output / FIGURES[4])
+    partial_mobile_figure(output / FIGURES[5])
+    scaling_mobile_figure(output / FIGURES[6])
+    recursive_mobile_figure(output / FIGURES[7])
     manifest = {
         "classification": "Analytical predictions and archived ideal statevector observations; no new quantum experiment.",
         "sources": {name: digest(path) for name, path in SOURCES.items()},
@@ -244,6 +356,12 @@ def check(output: Path) -> None:
             raise ValueError("README image lacks alternative text")
         if not target.startswith("https://") and not (ROOT / target).is_file():
             raise ValueError(f"README image missing: {target}")
+    for tag in re.findall(r"<(?:img|source)\b[^>]*>", readme):
+        if tag.startswith("<img") and not re.search(r'alt="[^"]+"', tag):
+            raise ValueError("README HTML image lacks alternative text")
+        target = re.search(r'(?:src|srcset)="([^"]+)"', tag)
+        if target is None or not (ROOT / target.group(1)).is_file():
+            raise ValueError(f"README picture asset missing: {tag}")
     print(f"Verified {len(FIGURES)} generated figures, {len(STATIC)} static SVGs and {len(SOURCES)} archived sources")
 
 
