@@ -28,6 +28,8 @@
 | V9 literal phase-oracle signs | Machine-verified entrywise lemma | `phaseEntries_eq_iff` and `phaseSign_complement` concern integer signs, not Hilbert-space channels, controlled access or circuit costs |
 | V9 known-quotient fixed query transcripts | Conditional machine-verified list equalities | `quotient_transcript_to_original` and `original_transcript_to_quotient`; the latter assumes fiber constancy. Adaptive coherent simulation and reversible map costs remain outside Lean |
 | V9 permanent CNF / matching decision / adversary query bound | Analytic proof and cited external theorem, not Lean-verified | Exact scopes in `research/v9/`; no general SAT or quantum gate lower bound |
+| V10 original-clause conflict checker and tree soundness | Machine-verified restricted classical certificate | `checkClauseConflict_correct`, `clause_false_of_conflict`, `conflictTree_sound`, `conflictTree_root_unsat`; no Lean resolution proof translation, size bound, quantum-oracle or CDCL simulation |
+| V10 distributed positive/negative unit requirements | Machine-verified Boolean reduction | `distributed_units_sat_iff_disjoint` proves SAT iff set disjointness; randomized/quantum communication lower bounds are external citations, not Lean theorems |
 | Efficient quantum partition-existence oracle | Open problem | No proof or implementation with better complete cost |
 | Polynomial-time RCP-QI on NP-complete families | Unproven conjecture | No claim made |
 | Lean-to-Python/Qiskit correspondence | Pending | No formal refinement proof |
