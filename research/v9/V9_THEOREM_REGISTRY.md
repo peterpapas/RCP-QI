@@ -4,7 +4,7 @@ Statuses distinguish local analytic proof, Lean verification, conditional extern
 
 | ID | Statement, assumptions and evidence | Complexity scope / prior art | Status |
 | --- | --- | --- | --- |
-| T1a | `p` and `q` induce the same Boolean table iff `p−q∈⟨x_i²−x_i⟩` over any field; prove via multilinear reduction and cube interpolation | Standard Boolean quotient result; general `n` proof analytic, one-variable identity Lean | Conditionally established (analytic); narrow Lean component formally established |
+| T1a | `p` and `q` induce the same Boolean table iff `p−q∈⟨x_i²−x_i⟩` over any field; prove via multilinear reduction and cube interpolation | Standard Boolean quotient result; full ideal theorem analytic, finite-cube interpolation evaluation and one-variable identity Lean | Analytically established; narrow Lean components formally established |
 | T1b | Identical Boolean verifiers have identical literal diagonal phase signs, and conversely | Entrywise Lean proof; uncontrolled channels also identify global sign, which Lean does not model | Formally established for signs |
 | T2a | Exactly-one row/column CNF has generating polynomial `perm_m`; its explicit monomial list has `m!` entries | Analytic bijection; unconditional output-size lower bound only | Conditionally established (analytic) |
 | T2b | All exact arithmetic-DAG symbolic outputs for this family require superpolynomial size | Follows **only conditional on accepted permanent/VP–VNP circuit lower bound** for `char≠2`; public 2026 claims not independently accepted | Inconclusive as unconditional theorem |

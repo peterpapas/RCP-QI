@@ -37,6 +37,7 @@ import RCPQI.QuotientQueries
 #print axioms RCPQI.booleanIdealGenerator_on_bool
 #print axioms RCPQI.interpolateBool_on_bool
 #print axioms RCPQI.ideal_multiple_same_bool
+#print axioms RCPQI.interpolateCube_on_bool
 #print axioms RCPQI.phaseEntries_eq_iff
 #print axioms RCPQI.phaseSign_complement
 #print axioms RCPQI.quotient_transcript_to_original

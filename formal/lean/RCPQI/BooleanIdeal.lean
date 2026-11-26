@@ -23,4 +23,33 @@ theorem ideal_multiple_same_bool (p h : Int → Int) (b : Bool) :
       p (if b then 1 else 0) := by
   simp [booleanIdealGenerator_on_bool]
 
+/-- Integer encoding of a Boolean coordinate. -/
+def boolCoordinate (b : Bool) : Int := if b then 1 else 0
+
+/-- Shannon interpolation of a table on an `n`-coordinate Boolean cube. -/
+def interpolateCube : (n : Nat) → (List Bool → Int) → List Int → Int
+  | 0, f, _ => f []
+  | _ + 1, _, [] => 0
+  | n + 1, f, z :: zs =>
+      (1 - z) * interpolateCube n (fun bs => f (false :: bs)) zs +
+        z * interpolateCube n (fun bs => f (true :: bs)) zs
+
+/-- The recursive multilinear expression agrees with its table at all Boolean points. -/
+theorem interpolateCube_on_bool (n : Nat) (f : List Bool → Int) (bs : List Bool)
+    (h : bs.length = n) :
+    interpolateCube n f (bs.map boolCoordinate) = f bs := by
+  induction n generalizing f bs with
+  | zero =>
+      cases bs with
+      | nil => simp [interpolateCube]
+      | cons _ _ => simp at h
+  | succ n ih =>
+      cases bs with
+      | nil => simp at h
+      | cons b rest =>
+          have hr : rest.length = n := by simpa using h
+          cases b
+          · simp [interpolateCube, boolCoordinate, ih, hr]
+          · simp [interpolateCube, boolCoordinate, ih, hr]
+
 end RCPQI

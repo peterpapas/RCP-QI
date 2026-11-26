@@ -7,6 +7,7 @@ The existing standalone Lean 4.36.0 project was preserved. New modules are `RCPQ
 | `booleanIdealGenerator_on_bool` | Integer `z*z−z` evaluates to zero at one Boolean point. It is not a multivariable polynomial-ideal isomorphism. |
 | `interpolateBool_on_bool` | One-variable interpolation recovers an arbitrary integer-valued Boolean table at `0,1`. |
 | `ideal_multiple_same_bool` | Adding any integer-valued multiple of the one-variable relation preserves Boolean evaluation. It does not prove a general ideal-membership converse. |
+| `interpolateCube_on_bool` | Recursive Shannon interpolation of any integer-valued table on `n` Boolean coordinates evaluates to that table on every length-`n` Boolean assignment. This does not prove uniqueness of a polynomial normal form or identify the quotient ideal. |
 | `phaseEntries_eq_iff` and `phaseSign_complement` | Equality of literal integer phase signs iff Boolean verifiers equal, and complement changes sign. Hilbert-space channels, controlled oracles and physical indistinguishability are not formalised. |
 | `quotient_transcript_to_original` and `original_transcript_to_quotient` | One-for-one equality of **fixed classical query-list answers** under a supplied fiber-constancy assumption. Adaptive quantum query simulation, reversible map cost and discovery are not formalised. |
 
