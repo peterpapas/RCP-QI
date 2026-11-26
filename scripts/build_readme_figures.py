@@ -93,7 +93,7 @@ def frame(title: str, subtitle: str, *, width: float = 12, height: float = 5.8) 
 
 def mobile_frame(title: str, subtitle: str, *, height: float = 5.6) -> plt.Figure:
     fig = plt.figure(figsize=(4.5, height))
-    fig.subplots_adjust(left=0.18, right=0.95, top=0.74, bottom=0.19)
+    fig.subplots_adjust(left=0.18, right=0.95, top=0.74, bottom=0.27)
     fig.suptitle(title, x=0.07, y=0.965, ha="left", fontsize=18, fontweight="bold", color=TEXT)
     fig.text(0.07, 0.89, subtitle, ha="left", va="top", color=MUTED, fontsize=11)
     return fig

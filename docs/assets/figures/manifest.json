@@ -32,20 +32,20 @@
       "sha256": "e1ca9b688132819edf3466197b83e84608b10493c13d8000261161933f5cc8d7"
     },
     "interference-bias-mobile.svg": {
-      "bytes": 17918,
-      "sha256": "0b6c4a09b5962fe9dfa89fcb92eedd94a5762c9cbc4da0d09fb328536d67cfa4"
+      "bytes": 17912,
+      "sha256": "db8c85d4e203074f8266a83f7e11f5c45d869b7ded04a65fd87043672d9f1519"
     },
     "partial-search-comparison-mobile.svg": {
-      "bytes": 12396,
-      "sha256": "75e63c1d10288aecdc7bb4ca04ca169e0b3d581f94e5a3dff0dc3f09f4dcf28a"
+      "bytes": 12565,
+      "sha256": "9d500f0fb957c751a22823bebe61e342991a5b662bc7c4bb43d333da202764be"
     },
     "query-complexity-scaling-mobile.svg": {
-      "bytes": 15660,
-      "sha256": "f96ea2f0499e41769b90d9671acb7d5920823287c49ba2ac4b3ba24f2e7ffc6b"
+      "bytes": 15683,
+      "sha256": "53379df967385dc5660253f9ee5c7cdf85cf2b373d13fbbb8bb989be84c870f7"
     },
     "recursive-query-cost-mobile.svg": {
-      "bytes": 13131,
-      "sha256": "8b98086075fef64eab9b4ad9207614997140a560a290d67417536bfd0caefa25"
+      "bytes": 13229,
+      "sha256": "d3a6e509325a5ea14f44ad08d05da019fffff9772d1b4cfdedb5a54b744498f5"
     }
   },
   "static_assets": {
