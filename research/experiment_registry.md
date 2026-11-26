@@ -1,5 +1,7 @@
 # Experiment registry
 
+**Archive status: SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** V1–V10 entries below are historical and immutable. The [closeout report](archive/RCPQI_FINAL_RESEARCH_REPORT.md), [theorem catalogue](archive/RCPQI_THEOREM_CATALOGUE.md) and [artifact integrity index](archive/artifact_integrity.json) provide the final review trail. No V11 is initiated.
+
 Every entry uses an immutable ID. Machine-readable raw files and figures are indexed in `results/manifest.json`. Timings are platform-dependent. A new experiment should record its seed, dependency lock, input family, mathematical assumption, baseline, costs, uncertainty, reproduction command, and negative findings before a conclusion is drawn.
 
 ## V1-BASELINES
@@ -131,3 +133,10 @@ Every entry uses an immutable ID. Machine-readable raw files and figures are ind
 - **Adversarial controls:** Width-one equality CNF has high evaluation communication rank yet trivial SAT existence. A supplied affine certificate can leave arbitrary 3-SAT residual difficulty. A listed target set reduces to standard black-box search; direct partition-existence access is a stronger oracle whose construction is charged.
 - **Reproduction and uncertainty:** Files are indexed in `results/manifest.json`. Reproduce with `uv sync --locked`, Ruff, pytest, `scripts/validate_results.py`, pinned `lake build` and `lake env lean RCPQI/AxiomAudit.lean`; exact results are in the V10 final report. Statistical uncertainty does not apply; external communication/proof lower bounds remain citations, not Lean theorems.
 - **Decision:** **D — suspend active RCP-QI development pending a genuinely new mathematical insight.** T2/T3 reduce directly to established frameworks, no efficiently obtainable certificate supports a distinct quantum mechanism, and a novel limitations paper is not yet justified.
+
+## ARCHIVE-CLOSEOUT-20261126
+
+- **Status/scope:** Final read-only consolidation of V1–V10, not a new research version or experiment. No historical result files, seeds, theories or conclusions were rewritten.
+- **Deliverables:** Six archive notes under `research/archive/`, a 38-artifact SHA-256 inventory and `scripts/verify_archive.py`; README and roadmap mark suspension. The theorem catalogue indexes all 47 named Lean results and scoped analytic/external results. The negative catalogue states reopening conditions for rejected mechanisms.
+- **Integrity and verification:** Root pytest/Ruff/result validation; three V5.1 run validators; regenerated 28+8 tractable UNSAT certificates matched archived bytes; pinned Lean build/axiom audit; archive manifest/hash verification. The exact commands, environment and limits are in `archive/RCPQI_REPRODUCIBILITY.md`.
+- **Decision:** **SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** No V11, speculative operator, or new quantum experiment. The nine-part restart protocol must be met before any future implementation.

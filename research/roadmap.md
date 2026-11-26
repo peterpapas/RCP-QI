@@ -1,5 +1,7 @@
 # Research roadmap
 
+**Final project status: SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** V1–V10 are a closed research archive. There is no V11 roadmap entry or active circuit/theorem-development workstream. See the [final report](archive/RCPQI_FINAL_RESEARCH_REPORT.md) and [restart protocol](archive/RCPQI_RESTART_PROTOCOL.md).
+
 | Version | Scientific question | Current state |
 | --- | --- | --- |
 | V0 | What would an exact ideal partition oracle imply? | Conceptual control only; never a speedup result |

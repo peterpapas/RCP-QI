@@ -1,5 +1,7 @@
 # Negative results and inconclusive outcomes
 
+**Archive status: SUSPENDED — PENDING NEW MATHEMATICAL INSIGHT.** The final [negative-results catalogue](archive/RCPQI_NEGATIVE_RESULTS.md) adds the original rationale, evidence and mandatory reopening condition for each mechanism. This historical log is retained unchanged below.
+
 1. **V1 one-iteration bias vanishes asymptotically.** The analytic correct-half advantage is (4/N-8/N^2). Repeated independent partition-bit sampling at one iteration needs order (N^2) shots for fixed confidence. See `results/one_iteration.json`.
 2. **V2 full-space Grover does not give cheap partition existence.** Correct-half probability is algebraically linked to exact-solution probability; fixed-accuracy detection still takes order (\sqrt N) phase queries. The plotted small cases support this relationship, not a speedup.
 3. **V3 partition-bit-only diffusion fails in tested cases.** It leaves correct-half probability at `0.5`. An ancilla copied before data-only Grover has zero left/right trace distance; copied after Grover it exposes no more than the existing data bias. See `results/phase2_partition_register.json`.
